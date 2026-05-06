@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "description": "Default suspicious-event rules for MariaDB and Node-RED logs. See docs/RULES.md.",
+  "mariadb": {
+    "patterns": [
+      { "id": "mdb_oom",            "regex": "(?i)out of memory",                    "severity": "CRITICAL", "category": "Resource exhaustion",  "description": "Out-of-memory condition." },
+      { "id": "mdb_disk_full",      "regex": "(?i)(no space left|disk full)",        "severity": "CRITICAL", "category": "Resource exhaustion",  "description": "Disk space exhausted." },
+      { "id": "mdb_crash",          "regex": "(?i)(signal\\s+\\d+|crash|crashing)",  "severity": "CRITICAL", "category": "Crash",                "description": "Possible crash signal." },
+      { "id": "mdb_deadlock",       "regex": "(?i)deadlock",                         "severity": "ERROR",    "category": "Concurrency",          "description": "Deadlock detected." },
+      { "id": "mdb_lock_wait",      "regex": "Lock wait timeout exceeded",           "severity": "ERROR",    "category": "Concurrency",          "description": "Lock wait timeout." },
+      { "id": "mdb_access_denied",  "regex": "Access denied",                        "severity": "ERROR",    "category": "Authentication",       "description": "Access denied for user." },
+      { "id": "mdb_innodb_error",   "regex": "InnoDB:\\s+Error",                     "severity": "ERROR",    "category": "Storage engine",       "description": "InnoDB engine error." },
+      { "id": "mdb_aborted",        "regex": "Aborted connection",                   "severity": "WARN",     "category": "Connection",           "description": "Aborted client connection." },
+      { "id": "mdb_error",          "regex": "\\[ERROR\\]",                          "severity": "ERROR",    "category": "MariaDB error",        "description": "Generic MariaDB ERROR-level line." },
+      { "id": "mdb_warning",        "regex": "\\[Warning\\]",                        "severity": "WARN",     "category": "MariaDB warning",      "description": "Generic MariaDB WARNING-level line." }
+    ],
+    "startupMarkers": [
+      { "regex": "Starting MariaDB.*as process",  "kind": "container start" },
+      { "regex": "ready for connections",         "kind": "ready" }
+    ],
+    "ignoreNoteCategories": [
+      "InnoDB: Buffer pool",
+      "InnoDB: Loading buffer pool",
+      "InnoDB: log sequence number",
+      "InnoDB: Setting file",
+      "InnoDB: File '",
+      "InnoDB: 128 rollback",
+      "Server socket created",
+      "Plugin '",
+      "Event Scheduler",
+      "Loaded 7 events"
+    ]
+  },
+  "nodered": {
+    "patterns": [
+      { "id": "nr_unhandled",       "regex": "(?i)(uncaught|unhandled).*?(exception|rejection)",  "severity": "CRITICAL", "category": "Node.js exception",     "description": "Unhandled JS exception or promise rejection." },
+      { "id": "nr_fatal",           "regex": "\\[fatal\\]",                                       "severity": "CRITICAL", "category": "Node-RED fatal",        "description": "Node-RED fatal-level log." },
+      { "id": "nr_typeerror",       "regex": "TypeError:",                                        "severity": "ERROR",    "category": "Node.js exception",     "description": "JavaScript TypeError." },
+      { "id": "nr_referror",        "regex": "ReferenceError:",                                   "severity": "ERROR",    "category": "Node.js exception",     "description": "JavaScript ReferenceError." },
+      { "id": "nr_syntaxerror",     "regex": "SyntaxError:",                                      "severity": "ERROR",    "category": "Node.js exception",     "description": "JavaScript SyntaxError." },
+      { "id": "nr_econnrefused",    "regex": "ECONNREFUSED",                                      "severity": "ERROR",    "category": "Connection",            "description": "Connection refused by remote host." },
+      { "id": "nr_econnreset",      "regex": "ECONNRESET",                                        "severity": "WARN",     "category": "Connection",            "description": "Connection reset by peer." },
+      { "id": "nr_etimedout",       "regex": "ETIMEDOUT",                                         "severity": "WARN",     "category": "Connection",            "description": "Connection timeout." },
+      { "id": "nr_mssql_disc",      "regex": "(?i)\\[MSSQL-CN[^\\]]*\\].*disconnect",             "severity": "WARN",     "category": "MSSQL connection",      "description": "MSSQL connector disconnected." },
+      { "id": "nr_opcua_pending",   "regex": "NODE-OPCUA-W2[12]",                                 "severity": "WARN",     "category": "OPC-UA pending",        "description": "OPC-UA client has pending transactions." },
+      { "id": "nr_unencrypted",     "regex": "Using unencrypted credentials",                     "severity": "WARN",     "category": "Security",              "description": "Node-RED is using unencrypted credentials file." },
+      { "id": "nr_job_unexpected",  "regex": "JOB_CODE imprevisto",                               "severity": "WARN",     "category": "Application",           "description": "Application reported an unexpected JOB_CODE." },
+      { "id": "nr_error",           "regex": "\\[error\\]",                                       "severity": "ERROR",    "category": "Node-RED error",        "description": "Generic Node-RED error-level line." },
+      { "id": "nr_warn",            "regex": "\\[warn\\]",                                        "severity": "WARN",     "category": "Node-RED warning",      "description": "Generic Node-RED warning-level line." }
+    ],
+    "startupMarkers": [
+      { "regex": "Server now running at",  "kind": "process up" },
+      { "regex": "Started flows",          "kind": "flows started" }
+    ]
+  },
+  "slowQuery": {
+    "minQueryTimeSeconds": 1.0,
+    "minLockTimeSeconds": 0.5,
+    "minRowsExaminedToSentRatio": 1000,
+    "minRowsExaminedAbsolute": 10000,
+    "topN": 20,
+    "repeatWindowSeconds": 60,
+    "repeatThreshold": 5
+  },
+  "axLog": {
+    "includeDebug": false,
+    "warnState": 1,
+    "errorState": 2
+  },
+  "report": {
+    "timelineLimit": 200,
+    "excerptMaxChars": 240
+  }
+}

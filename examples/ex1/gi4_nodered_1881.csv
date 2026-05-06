@@ -1,0 +1,1090 @@
+gi4_nodered_1881
+date,stream,content
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Started flows
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Starting flows
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [warn] Using unencrypted credentials
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Flows file     : /data/projects/gi4_db_tasks/flows.json
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Active project : gi4_db_tasks
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Server now running at http://127.0.0.1:1880/
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Projects directory: /data/projects
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] User directory : /data
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Context store  : 'default' [module=memory]
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Settings file  : /data/settings.js
+
+2026/05/05 06:44:52,stdout,5 May 06:44:52 - [info] Dashboard version 3.6.5 started at /ui
+
+2026/05/05 06:44:43,stdout,5 May 06:44:43 - [info] Loading palette nodes
+
+2026/05/05 06:44:42,stdout,5 May 06:44:42 - [info] Linux 5.10.55+ x64 LE
+
+2026/05/05 06:44:42,stdout,5 May 06:44:42 - [info] Node.js  version: v20.19.4
+
+2026/05/05 06:44:42,stdout,5 May 06:44:42 - [info] Node-RED version: v4.1.0
+
+2026/05/05 06:44:42,stdout,
+
+2026/05/05 06:44:42,stdout,===================
+
+2026/05/05 06:44:42,stdout,Welcome to Node-RED
+
+2026/05/05 06:44:42,stdout,
+
+2026/05/05 06:44:42,stdout,5 May 06:44:42 - [info] 
+
+2026/05/05 06:44:42,stdout,[uuid] ACTIVATED
+
+2026/05/05 06:44:42,stdout,[path] ACTIVATED
+
+2026/05/05 06:44:42,stdout,[fs] ACTIVATED
+
+2026/05/05 06:44:42,stdout,[OPCUA] OPCUA nodes will be DISABLED (PLC_TYPE != OPC-UA)
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: RECIPE_CONF_TYPE = NODERED
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: FLY_RUN_STATUS = ICO_FUNZ_IPM_0_1_11_21
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: LOT_TERMINATE_TYPE = PLC
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: PLC_TYPE = S7
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: PROD_RESUME_TYPE = NO
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_INDEX_MADATORY = false
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_ERR = 0
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: LOT_CONF_TYPE = GI4
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_MANDATORY = false
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: PROD_STATUS_TYPE = NODERED
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: USE_GI4_DB = true
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: TRACKING_TYPE = PROD_GOOD_BAD
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_OK = 0
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: FLY_PROD_GOOD_BAD = YES_GOOD_BAD_01
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: AUTO_LOTTO = 0
+
+2026/05/05 06:44:42,stdout,[appParams] Overridden from ENV: waitSecOnRecipeChange = 3
+
+2026/05/05 06:44:42,stdout,[appParams] CREATED with configuration nessuno and path /data/projects/
+
+2026/05/05 06:44:42,stdout,"Creation TAppParams(nessuno, /data/projects/)
+"
+2026/05/05 06:44:42,stdout,TAppParams ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TAppParams.js
+
+2026/05/05 06:44:42,stdout,TValueSendWait ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueSendWait.js
+
+2026/05/05 06:44:42,stdout,TValueOpcDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueOpcDisp.js
+
+2026/05/05 06:44:42,stdout,TStsDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TStsDisp.js
+
+2026/05/05 06:44:42,stdout,TSetValueOnTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TSetValueOnTag.js
+
+2026/05/05 06:44:42,stdout,TQuery ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQuery.js
+
+2026/05/05 06:44:42,stdout,TQueries ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQueries.js
+
+2026/05/05 06:44:42,stdout,TFormatSQL ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TFormatSQL.js
+
+2026/05/05 06:44:42,stdout,TDebugGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TDebugGem.js
+
+2026/05/05 06:44:42,stdout,TConvKeysightE4980 ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvKeysightE4980.js
+
+2026/05/05 06:44:42,stdout,TConvert ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvert.js
+
+2026/05/05 06:44:42,stdout,TConsoleGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConsoleGem.js
+
+2026/05/05 06:44:42,stdout,TBaseMacchinaStatiValueTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiValueTag.js
+
+2026/05/05 06:44:42,stdout,TBaseMacchinaStatiDB ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiDB.js
+
+2026/05/05 06:44:42,stdout,TBaseMacchinaStati ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStati.js
+
+2026/05/05 06:44:42,stdout,TBaseConv ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseConv.js
+
+2026/05/05 06:44:42,stdout,TArrayCircolare ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TArrayCircolare.js
+
+2026/05/05 06:44:39,stdout,Avviando Node-RED con entrypoint originale...
+
+2026/05/05 06:44:39,stdout,Configurazione SSH completata!
+
+2026/05/05 06:44:39,stdout,"Hi lucagem! You've successfully authenticated, but GitHub does not provide shell access.
+"
+2026/05/05 06:44:37,stdout,Test connessione GitHub...
+
+2026/05/05 06:44:37,stdout,✓ Chiave pubblica trovata e permessi impostati
+
+2026/05/05 06:44:37,stdout,✓ Chiave privata trovata e permessi impostati
+
+2026/05/05 06:44:37,stdout,Inizializzazione configurazione SSH...
+
+2026/05/05 06:44:37,stdout,Eseguendo inizializzazione SSH...
+
+2026/05/05 06:44:37,stdout,=== Custom entrypoint avviato ===
+
+2026/05/05 06:43:29,stdout,5 May 06:43:29 - [info] Stopped flows
+
+2026/05/05 06:43:29,stdout,5 May 06:43:29 - [info] Stopping flows
+
+2026/05/05 06:43:28,stdout,5 May 06:43:28 - [error] [function:ms_OEEtasks] dbError - Error: connect ECONNREFUSED 172.19.0.9:3306
+
+2026/05/05 06:43:28,stdout,5 May 06:43:28 - [error] [function:ms_OEEtasks] dbErrorInit - Error: connect ECONNREFUSED 172.19.0.9:3306
+
+2026/05/05 06:43:28,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT te.ID, te.MACHINE_ID, te.LOT_ID, te.TASK_TYPE, te.PARAMS FROM TASK_EXECUTE te WHERE te.TASK_STATE = 10 AND te.TASK_TYPE = 440 ORDER BY te.ID LIMIT 1\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: connect ECONNREFUSED 172.19.0.9:3306\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 06:43:28,stderr,"TBaseMacchinaStatiDB: QueryError0: {\"uuid\":null,\"query\":\"SELECT te.ID, te.MACHINE_ID, te.LOT_ID, te.TASK_TYPE, te.PARAMS FROM TASK_EXECUTE te WHERE te.TASK_STATE = 10 AND te.TASK_TYPE = 440 ORDER BY te.ID LIMIT 1\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: connect ECONNREFUSED 172.19.0.9:3306\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 06:43:28,stdout,5 May 06:43:28 - [error] [function:ms_OEEtasks] QueryError - Error: connect ECONNREFUSED 172.19.0.9:3306
+
+2026/05/05 06:43:28,stdout,}
+
+2026/05/05 06:43:28,stdout,  }
+
+2026/05/05 06:43:28,stdout,      '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)'
+
+2026/05/05 06:43:28,stdout,    stack: 'Error: connect ECONNREFUSED 172.19.0.9:3306\n' +
+
+2026/05/05 06:43:28,stdout,"    code: 'ECONNREFUSED',
+"
+2026/05/05 06:43:28,stdout,"    },
+"
+2026/05/05 06:43:28,stdout,      count: 1
+
+2026/05/05 06:43:28,stdout,"      name: 'DBmain:QueriesExec',
+"
+2026/05/05 06:43:28,stdout,"      type: 'mysql',
+"
+2026/05/05 06:43:28,stdout,"      id: '4c3b740d5ae93b7e',
+"
+2026/05/05 06:43:28,stdout,    source: {
+
+2026/05/05 06:43:28,stdout,"    message: 'Error: connect ECONNREFUSED 172.19.0.9:3306',
+"
+2026/05/05 06:43:28,stdout,  error: {
+
+2026/05/05 06:43:28,stdout,"  _msgid: 'dce59086be16e3f6',
+"
+2026/05/05 06:43:28,stdout,"  queryUrl: 'ms_OEEtasks.queryW',
+"
+2026/05/05 06:43:28,stdout,"  topic: 'SELECT te.ID, te.MACHINE_ID, te.LOT_ID, te.TASK_TYPE, te.PARAMS FROM TASK_EXECUTE te WHERE te.TASK_STATE = 10 AND te.TASK_TYPE = 440 ORDER BY te.ID LIMIT 1',
+"
+2026/05/05 06:43:28,stdout,{
+
+2026/05/05 06:43:28,stdout,5 May 06:43:28 - [info] [debug:SqlErr] 
+
+2026/05/04 16:00:46,stdout,4 May 16:00:46 - [info] Started flows
+
+2026/05/04 16:00:46,stdout,4 May 16:00:46 - [info] Starting flows
+
+2026/05/04 16:00:46,stdout,4 May 16:00:46 - [info] Updated flows
+
+2026/05/04 16:00:46,stdout,4 May 16:00:46 - [info] Stopped flows
+
+2026/05/04 16:00:46,stdout,4 May 16:00:46 - [info] Stopping flows
+
+2026/05/04 15:59:20,stdout,4 May 15:59:20 - [info] Started flows
+
+2026/05/04 15:59:20,stdout,4 May 15:59:20 - [info] Starting flows
+
+2026/05/04 15:59:20,stdout,4 May 15:59:20 - [info] Updated flows
+
+2026/05/04 15:59:20,stdout,4 May 15:59:20 - [info] Stopped flows
+
+2026/05/04 15:59:20,stdout,4 May 15:59:20 - [info] Stopping flows
+
+2026/05/04 14:46:34,stdout,4 May 14:46:34 - [error] [function:ms_OEEtasks] dbErrorEnd - Error: connect ECONNREFUSED 172.19.0.9:3306
+
+2026/05/04 14:46:03,stdout,4 May 14:46:03 - [error] [function:ms_OEEtasks] dbError - Error: connect ECONNREFUSED 172.19.0.9:3306
+
+2026/05/04 14:46:03,stdout,4 May 14:46:03 - [error] [function:ms_OEEtasks] dbErrorInit - Error: connect ECONNREFUSED 172.19.0.9:3306
+
+2026/05/04 14:46:03,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT fe_LotMachineMinuteInStatusProd('c05dcd762e4b4b5a99224c48445d7683', '2026-05-04 00:00:00.000000', '2026-05-04 14:46:02.922933', -1) AS MINUTI\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: connect ECONNREFUSED 172.19.0.9:3306\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 14:46:03,stderr,"TBaseMacchinaStatiDB: QueryError0: {\"uuid\":null,\"query\":\"SELECT fe_LotMachineMinuteInStatusProd('c05dcd762e4b4b5a99224c48445d7683', '2026-05-04 00:00:00.000000', '2026-05-04 14:46:02.922933', -1) AS MINUTI\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: connect ECONNREFUSED 172.19.0.9:3306\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 14:46:03,stdout,4 May 14:46:03 - [error] [function:ms_OEEtasks] QueryError - Error: connect ECONNREFUSED 172.19.0.9:3306
+
+2026/05/04 14:46:03,stdout,}
+
+2026/05/04 14:46:03,stdout,  }
+
+2026/05/04 14:46:03,stdout,      '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)'
+
+2026/05/04 14:46:03,stdout,    stack: 'Error: connect ECONNREFUSED 172.19.0.9:3306\n' +
+
+2026/05/04 14:46:03,stdout,"    code: 'ECONNREFUSED',
+"
+2026/05/04 14:46:03,stdout,"    },
+"
+2026/05/04 14:46:03,stdout,      count: 1
+
+2026/05/04 14:46:03,stdout,"      name: 'DBmain:QueriesExec',
+"
+2026/05/04 14:46:03,stdout,"      type: 'mysql',
+"
+2026/05/04 14:46:03,stdout,"      id: '4c3b740d5ae93b7e',
+"
+2026/05/04 14:46:03,stdout,    source: {
+
+2026/05/04 14:46:03,stdout,"    message: 'Error: connect ECONNREFUSED 172.19.0.9:3306',
+"
+2026/05/04 14:46:03,stdout,  error: {
+
+2026/05/04 14:46:03,stdout,"  _msgid: 'e36bdfb70bd0a76d',
+"
+2026/05/04 14:46:03,stdout,"  queryUrl: 'ms_OEEtasks.queryW',
+"
+2026/05/04 14:46:03,stdout,"  topic: \"SELECT fe_LotMachineMinuteInStatusProd('c05dcd762e4b4b5a99224c48445d7683', '2026-05-04 00:00:00.000000', '2026-05-04 14:46:02.922933', -1) AS MINUTI\",
+"
+2026/05/04 14:46:03,stdout,{
+
+2026/05/04 14:46:03,stdout,4 May 14:46:03 - [info] [debug:SqlErr] 
+
+2026/05/04 14:20:20,stdout,4 May 14:20:20 - [error] [function:ms_OEEtasks] dbErrorEnd - Database not connected
+
+2026/05/04 14:19:49,stdout,4 May 14:19:49 - [error] [function:ms_OEEtasks] dbError - Database not connected
+
+2026/05/04 14:19:49,stdout,4 May 14:19:49 - [error] [function:ms_OEEtasks] dbErrorInit - Database not connected
+
+2026/05/04 14:19:49,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT m.ID, m.CALC_OEE_TYPE from MACHINE m WHERE m.DISABLED = 0 ORDER BY m.LINE_ID, m.ROW_INDEX\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Database not connected\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 14:19:49,stderr,"TBaseMacchinaStatiDB: QueryError0: {\"uuid\":null,\"query\":\"SELECT m.ID, m.CALC_OEE_TYPE from MACHINE m WHERE m.DISABLED = 0 ORDER BY m.LINE_ID, m.ROW_INDEX\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Database not connected\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 14:19:49,stdout,4 May 14:19:49 - [error] [function:ms_OEEtasks] QueryError - Database not connected
+
+2026/05/04 14:19:49,stdout,}
+
+2026/05/04 14:19:49,stdout,  }
+
+2026/05/04 14:19:49,stdout,    }
+
+2026/05/04 14:19:49,stdout,      count: 1
+
+2026/05/04 14:19:49,stdout,"      name: 'DBmain:QueriesExec',
+"
+2026/05/04 14:19:49,stdout,"      type: 'mysql',
+"
+2026/05/04 14:19:49,stdout,"      id: '4c3b740d5ae93b7e',
+"
+2026/05/04 14:19:49,stdout,    source: {
+
+2026/05/04 14:19:49,stdout,"    message: 'Database not connected',
+"
+2026/05/04 14:19:49,stdout,  error: {
+
+2026/05/04 14:19:49,stdout,"  _msgid: '2fbeab5f1b49f68a',
+"
+2026/05/04 14:19:49,stdout,"  queryUrl: 'ms_OEEtasks.queryW',
+"
+2026/05/04 14:19:49,stdout,"  topic: 'SELECT m.ID, m.CALC_OEE_TYPE from MACHINE m WHERE m.DISABLED = 0 ORDER BY m.LINE_ID, m.ROW_INDEX',
+"
+2026/05/04 14:19:49,stdout,{
+
+2026/05/04 14:19:49,stdout,4 May 14:19:49 - [info] [debug:SqlErr] 
+
+2026/05/04 14:19:41,stdout,4 May 14:19:41 - [error] [mysql:Is Alive & Reconnect] Database not connected
+
+2026/05/04 14:19:31,stdout,4 May 14:19:31 - [error] [mysql:Is Alive & Reconnect] Database not connected
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [error] [MySQLdatabase:e3223b3a.53a268] Error: connect ECONNREFUSED 172.19.0.9:3306
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] Started flows
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] Starting flows
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [warn] Using unencrypted credentials
+
+2026/05/04 14:19:28,stdout,4 May 14:19:28 - [info] Flows file     : /data/projects/gi4_db_tasks/flows.json
+
+2026/05/04 14:19:28,stdout,4 May 14:19:28 - [info] Active project : gi4_db_tasks
+
+2026/05/04 14:19:28,stdout,4 May 14:19:28 - [info] Server now running at http://127.0.0.1:1880/
+
+2026/05/04 14:19:28,stdout,4 May 14:19:28 - [info] Projects directory: /data/projects
+
+2026/05/04 14:19:28,stdout,4 May 14:19:28 - [info] User directory : /data
+
+2026/05/04 14:19:28,stdout,4 May 14:19:28 - [info] Context store  : 'default' [module=memory]
+
+2026/05/04 14:19:28,stdout,4 May 14:19:28 - [info] Settings file  : /data/settings.js
+
+2026/05/04 14:19:27,stdout,4 May 14:19:27 - [info] Dashboard version 3.6.5 started at /ui
+
+2026/05/04 14:19:19,stdout,4 May 14:19:19 - [info] Loading palette nodes
+
+2026/05/04 14:19:18,stdout,4 May 14:19:18 - [info] Linux 5.10.55+ x64 LE
+
+2026/05/04 14:19:18,stdout,4 May 14:19:18 - [info] Node.js  version: v20.19.4
+
+2026/05/04 14:19:18,stdout,4 May 14:19:18 - [info] Node-RED version: v4.1.0
+
+2026/05/04 14:19:18,stdout,
+
+2026/05/04 14:19:18,stdout,===================
+
+2026/05/04 14:19:18,stdout,Welcome to Node-RED
+
+2026/05/04 14:19:18,stdout,
+
+2026/05/04 14:19:18,stdout,4 May 14:19:18 - [info] 
+
+2026/05/04 14:19:18,stdout,[uuid] ACTIVATED
+
+2026/05/04 14:19:18,stdout,[path] ACTIVATED
+
+2026/05/04 14:19:18,stdout,[fs] ACTIVATED
+
+2026/05/04 14:19:18,stdout,[OPCUA] OPCUA nodes will be DISABLED (PLC_TYPE != OPC-UA)
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: RECIPE_CONF_TYPE = NODERED
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: FLY_RUN_STATUS = ICO_FUNZ_IPM_0_1_11_21
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: LOT_TERMINATE_TYPE = PLC
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: PLC_TYPE = S7
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: PROD_RESUME_TYPE = NO
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_INDEX_MADATORY = false
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_ERR = 0
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: LOT_CONF_TYPE = GI4
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_MANDATORY = false
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: PROD_STATUS_TYPE = NODERED
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: USE_GI4_DB = true
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: TRACKING_TYPE = PROD_GOOD_BAD
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_OK = 0
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: FLY_PROD_GOOD_BAD = YES_GOOD_BAD_01
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: AUTO_LOTTO = 0
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: waitSecOnRecipeChange = 3
+
+2026/05/04 14:19:18,stdout,[appParams] CREATED with configuration nessuno and path /data/projects/
+
+2026/05/04 14:19:18,stdout,"Creation TAppParams(nessuno, /data/projects/)
+"
+2026/05/04 14:19:18,stdout,TAppParams ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TAppParams.js
+
+2026/05/04 14:19:18,stdout,TValueSendWait ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueSendWait.js
+
+2026/05/04 14:19:18,stdout,TValueOpcDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueOpcDisp.js
+
+2026/05/04 14:19:18,stdout,TStsDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TStsDisp.js
+
+2026/05/04 14:19:18,stdout,TSetValueOnTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TSetValueOnTag.js
+
+2026/05/04 14:19:18,stdout,TQuery ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQuery.js
+
+2026/05/04 14:19:18,stdout,TQueries ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQueries.js
+
+2026/05/04 14:19:18,stdout,TFormatSQL ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TFormatSQL.js
+
+2026/05/04 14:19:18,stdout,TDebugGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TDebugGem.js
+
+2026/05/04 14:19:18,stdout,TConvKeysightE4980 ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvKeysightE4980.js
+
+2026/05/04 14:19:18,stdout,TConvert ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvert.js
+
+2026/05/04 14:19:18,stdout,TConsoleGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConsoleGem.js
+
+2026/05/04 14:19:18,stdout,TBaseMacchinaStatiValueTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiValueTag.js
+
+2026/05/04 14:19:18,stdout,TBaseMacchinaStatiDB ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiDB.js
+
+2026/05/04 14:19:18,stdout,TBaseMacchinaStati ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStati.js
+
+2026/05/04 14:19:18,stdout,TBaseConv ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseConv.js
+
+2026/05/04 14:19:18,stdout,TArrayCircolare ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TArrayCircolare.js
+
+2026/05/04 14:18:30,stdout,Avviando Node-RED con entrypoint originale...
+
+2026/05/04 14:18:30,stdout,Configurazione SSH completata!
+
+2026/05/04 14:18:30,stdout,"Hi lucagem! You've successfully authenticated, but GitHub does not provide shell access.
+"
+2026/05/04 14:18:29,stdout,Test connessione GitHub...
+
+2026/05/04 14:18:29,stdout,✓ Chiave pubblica trovata e permessi impostati
+
+2026/05/04 14:18:29,stdout,✓ Chiave privata trovata e permessi impostati
+
+2026/05/04 14:18:29,stdout,Inizializzazione configurazione SSH...
+
+2026/05/04 14:18:29,stdout,Eseguendo inizializzazione SSH...
+
+2026/05/04 14:18:29,stdout,=== Custom entrypoint avviato ===
+
+2026/05/04 14:17:10,stdout,4 May 14:17:10 - [info] Stopped flows
+
+2026/05/04 14:17:10,stdout,4 May 14:17:10 - [info] Stopping flows
+
+2026/05/04 14:17:09,stdout,4 May 14:17:09 - [error] [function:ms_OEEtasks] dbError - Error: connect ECONNREFUSED 172.19.0.5:3306
+
+2026/05/04 14:17:09,stdout,4 May 14:17:09 - [error] [function:ms_OEEtasks] dbErrorInit - Error: connect ECONNREFUSED 172.19.0.5:3306
+
+2026/05/04 14:17:09,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT te.ID, te.MACHINE_ID, te.LOT_ID, te.TASK_TYPE, te.PARAMS FROM TASK_EXECUTE te WHERE te.TASK_STATE = 10 AND te.TASK_TYPE = 440 ORDER BY te.ID LIMIT 1\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: connect ECONNREFUSED 172.19.0.5:3306\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 14:17:09,stderr,"TBaseMacchinaStatiDB: QueryError0: {\"uuid\":null,\"query\":\"SELECT te.ID, te.MACHINE_ID, te.LOT_ID, te.TASK_TYPE, te.PARAMS FROM TASK_EXECUTE te WHERE te.TASK_STATE = 10 AND te.TASK_TYPE = 440 ORDER BY te.ID LIMIT 1\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: connect ECONNREFUSED 172.19.0.5:3306\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 14:17:09,stdout,4 May 14:17:09 - [error] [function:ms_OEEtasks] QueryError - Error: connect ECONNREFUSED 172.19.0.5:3306
+
+2026/05/04 14:17:09,stdout,}
+
+2026/05/04 14:17:09,stdout,  }
+
+2026/05/04 14:17:09,stdout,      '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1611:16)'
+
+2026/05/04 14:17:09,stdout,    stack: 'Error: connect ECONNREFUSED 172.19.0.5:3306\n' +
+
+2026/05/04 14:17:09,stdout,"    code: 'ECONNREFUSED',
+"
+2026/05/04 14:17:09,stdout,"    },
+"
+2026/05/04 14:17:09,stdout,      count: 1
+
+2026/05/04 14:17:09,stdout,"      name: 'DBmain:QueriesExec',
+"
+2026/05/04 14:17:09,stdout,"      type: 'mysql',
+"
+2026/05/04 14:17:09,stdout,"      id: '4c3b740d5ae93b7e',
+"
+2026/05/04 14:17:09,stdout,    source: {
+
+2026/05/04 14:17:09,stdout,"    message: 'Error: connect ECONNREFUSED 172.19.0.5:3306',
+"
+2026/05/04 14:17:09,stdout,  error: {
+
+2026/05/04 14:17:09,stdout,"  _msgid: '527553597ca85015',
+"
+2026/05/04 14:17:09,stdout,"  queryUrl: 'ms_OEEtasks.queryW',
+"
+2026/05/04 14:17:09,stdout,"  topic: 'SELECT te.ID, te.MACHINE_ID, te.LOT_ID, te.TASK_TYPE, te.PARAMS FROM TASK_EXECUTE te WHERE te.TASK_STATE = 10 AND te.TASK_TYPE = 440 ORDER BY te.ID LIMIT 1',
+"
+2026/05/04 14:17:09,stdout,{
+
+2026/05/04 14:17:09,stdout,4 May 14:17:09 - [info] [debug:SqlErr] 
+
+2026/05/04 13:52:55,stdout, machine:c05dcd762e4b4b5a99224c48445d7683 lot:39915f8a00ff428aad193121f7840999
+
+2026/05/04 13:52:55,stdout,4 May 13:52:55 - [warn] [function:ms_RecalcTotLots] LotMachineRecalDone
+
+2026/05/04 13:49:36,stdout,4 May 13:49:36 - [error] [function:ms_RecalcTotLots] dbErrorEnd - null
+
+2026/05/04 13:49:05,stdout,4 May 13:49:05 - [error] [function:ms_RecalcTotLots] dbError - null
+
+2026/05/04 13:49:05,stdout,4 May 13:49:05 - [error] [function:ms_RecalcTotLots] dbErrorInit - null
+
+2026/05/04 13:49:05,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:49:05,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:48:36,stdout,4 May 13:48:36 - [error] [function:ms_RecalcTotLots] dbErrorEnd - null
+
+2026/05/04 13:48:05,stdout,4 May 13:48:05 - [error] [function:ms_RecalcTotLots] dbError - null
+
+2026/05/04 13:48:05,stdout,4 May 13:48:05 - [error] [function:ms_RecalcTotLots] dbErrorInit - null
+
+2026/05/04 13:48:05,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:48:05,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:47:36,stdout,4 May 13:47:36 - [error] [function:ms_RecalcTotLots] dbErrorEnd - null
+
+2026/05/04 13:47:05,stdout,4 May 13:47:05 - [error] [function:ms_RecalcTotLots] dbError - null
+
+2026/05/04 13:47:05,stdout,4 May 13:47:05 - [error] [function:ms_RecalcTotLots] dbErrorInit - null
+
+2026/05/04 13:47:05,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:47:05,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:46:36,stdout,4 May 13:46:36 - [error] [function:ms_RecalcTotLots] dbErrorEnd - null
+
+2026/05/04 13:46:11,stdout,4 May 13:46:11 - [error] [function:ms_OEEtasks] dbErrorEnd - null
+
+2026/05/04 13:46:05,stdout,4 May 13:46:05 - [error] [function:ms_RecalcTotLots] dbError - null
+
+2026/05/04 13:46:05,stdout,4 May 13:46:05 - [error] [function:ms_RecalcTotLots] dbErrorInit - null
+
+2026/05/04 13:46:05,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:46:05,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:45:40,stdout,4 May 13:45:40 - [error] [function:ms_OEEtasks] dbError - null
+
+2026/05/04 13:45:40,stdout,4 May 13:45:40 - [error] [function:ms_OEEtasks] dbErrorInit - null
+
+2026/05/04 13:45:40,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT mo.ID,  fx_DateTimeToStr(mo.FROM_DATE) AS DATA_CALC, fx_DateTimeToStr(mo.TO_DATE) AS DATA_END, mo.TOTALE_MINUTI, mo.OFFLINE_TIME, mo.PRODUCTION_TIME, mo.HELD_TIME, mo.NO_LOT_TIME, mo.PRODUZIONE, mo.SCARTI, mo.ESTIMATED_HOURLY_PROD FROM MACHINE_OEE_DAY mo WHERE mo.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683' AND mo.DATE_ = DATE('2026-05-04') AND mo.LOT_ID  = 'acf90f52f147428b88e53cb275e0258c' AND mo.USER_SHIFT  = 0 LIMIT 1\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:45:40,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT mo.ID,  fx_DateTimeToStr(mo.FROM_DATE) AS DATA_CALC, fx_DateTimeToStr(mo.TO_DATE) AS DATA_END, mo.TOTALE_MINUTI, mo.OFFLINE_TIME, mo.PRODUCTION_TIME, mo.HELD_TIME, mo.NO_LOT_TIME, mo.PRODUZIONE, mo.SCARTI, mo.ESTIMATED_HOURLY_PROD FROM MACHINE_OEE_DAY mo WHERE mo.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683' AND mo.DATE_ = DATE('2026-05-04') AND mo.LOT_ID  = 'acf90f52f147428b88e53cb275e0258c' AND mo.USER_SHIFT  = 0 LIMIT 1\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:35:55,stdout, machine:c05dcd762e4b4b5a99224c48445d7683 lot:39915f8a00ff428aad193121f7840999
+
+2026/05/04 13:35:55,stdout,4 May 13:35:55 - [warn] [function:ms_RecalcTotLots] LotMachineRecalDone
+
+2026/05/04 13:34:55,stdout, machine:c05dcd762e4b4b5a99224c48445d7683 lot:a2b559f19d4e410192c119928097b9cc
+
+2026/05/04 13:34:55,stdout,4 May 13:34:55 - [warn] [function:ms_RecalcTotLots] LotMachineRecalDone
+
+2026/05/04 13:32:55,stdout, machine:c05dcd762e4b4b5a99224c48445d7683 lot:acf90f52f147428b88e53cb275e0258c
+
+2026/05/04 13:32:55,stdout,4 May 13:32:55 - [warn] [function:ms_RecalcTotLots] LotMachineRecalDone
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Started flows
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Starting flows
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [warn] Using unencrypted credentials
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Flows file     : /data/projects/gi4_db_tasks/flows.json
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Active project : gi4_db_tasks
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Server now running at http://127.0.0.1:1880/
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Projects directory: /data/projects
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] User directory : /data
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Context store  : 'default' [module=memory]
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Settings file  : /data/settings.js
+
+2026/05/04 13:29:32,stdout,4 May 13:29:32 - [info] Dashboard version 3.6.5 started at /ui
+
+2026/05/04 13:29:24,stdout,4 May 13:29:24 - [info] Loading palette nodes
+
+2026/05/04 13:29:24,stdout,4 May 13:29:24 - [info] Linux 5.10.55+ x64 LE
+
+2026/05/04 13:29:24,stdout,4 May 13:29:24 - [info] Node.js  version: v20.19.4
+
+2026/05/04 13:29:24,stdout,4 May 13:29:24 - [info] Node-RED version: v4.1.0
+
+2026/05/04 13:29:24,stdout,
+
+2026/05/04 13:29:24,stdout,===================
+
+2026/05/04 13:29:24,stdout,Welcome to Node-RED
+
+2026/05/04 13:29:24,stdout,
+
+2026/05/04 13:29:24,stdout,4 May 13:29:24 - [info] 
+
+2026/05/04 13:29:23,stdout,[uuid] ACTIVATED
+
+2026/05/04 13:29:23,stdout,[path] ACTIVATED
+
+2026/05/04 13:29:23,stdout,[fs] ACTIVATED
+
+2026/05/04 13:29:23,stdout,[OPCUA] OPCUA nodes will be DISABLED (PLC_TYPE != OPC-UA)
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: RECIPE_CONF_TYPE = NODERED
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: FLY_RUN_STATUS = ICO_FUNZ_IPM_0_1_11_21
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: LOT_TERMINATE_TYPE = PLC
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: PLC_TYPE = S7
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: PROD_RESUME_TYPE = NO
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_INDEX_MADATORY = false
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_ERR = 0
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: LOT_CONF_TYPE = GI4
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_MANDATORY = false
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: PROD_STATUS_TYPE = NODERED
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: USE_GI4_DB = true
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: TRACKING_TYPE = PROD_GOOD_BAD
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_OK = 0
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: FLY_PROD_GOOD_BAD = YES_GOOD_BAD_01
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: AUTO_LOTTO = 0
+
+2026/05/04 13:29:23,stdout,[appParams] Overridden from ENV: waitSecOnRecipeChange = 3
+
+2026/05/04 13:29:23,stdout,[appParams] CREATED with configuration nessuno and path /data/projects/
+
+2026/05/04 13:29:23,stdout,"Creation TAppParams(nessuno, /data/projects/)
+"
+2026/05/04 13:29:23,stdout,TAppParams ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TAppParams.js
+
+2026/05/04 13:29:23,stdout,TValueSendWait ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueSendWait.js
+
+2026/05/04 13:29:23,stdout,TValueOpcDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueOpcDisp.js
+
+2026/05/04 13:29:23,stdout,TStsDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TStsDisp.js
+
+2026/05/04 13:29:23,stdout,TSetValueOnTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TSetValueOnTag.js
+
+2026/05/04 13:29:23,stdout,TQuery ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQuery.js
+
+2026/05/04 13:29:23,stdout,TQueries ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQueries.js
+
+2026/05/04 13:29:23,stdout,TFormatSQL ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TFormatSQL.js
+
+2026/05/04 13:29:23,stdout,TDebugGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TDebugGem.js
+
+2026/05/04 13:29:23,stdout,TConvKeysightE4980 ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvKeysightE4980.js
+
+2026/05/04 13:29:23,stdout,TConvert ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvert.js
+
+2026/05/04 13:29:23,stdout,TConsoleGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConsoleGem.js
+
+2026/05/04 13:29:23,stdout,TBaseMacchinaStatiValueTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiValueTag.js
+
+2026/05/04 13:29:23,stdout,TBaseMacchinaStatiDB ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiDB.js
+
+2026/05/04 13:29:23,stdout,TBaseMacchinaStati ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStati.js
+
+2026/05/04 13:29:23,stdout,TBaseConv ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseConv.js
+
+2026/05/04 13:29:23,stdout,TArrayCircolare ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TArrayCircolare.js
+
+2026/05/04 13:29:22,stdout,Avviando Node-RED con entrypoint originale...
+
+2026/05/04 13:29:22,stdout,Configurazione SSH completata!
+
+2026/05/04 13:29:22,stdout,Connection timed out during banner exchange
+
+2026/05/04 13:29:17,stdout,Test connessione GitHub...
+
+2026/05/04 13:29:17,stdout,✓ Chiave pubblica trovata e permessi impostati
+
+2026/05/04 13:29:17,stdout,✓ Chiave privata trovata e permessi impostati
+
+2026/05/04 13:29:17,stdout,Inizializzazione configurazione SSH...
+
+2026/05/04 13:29:17,stdout,Eseguendo inizializzazione SSH...
+
+2026/05/04 13:29:17,stdout,=== Custom entrypoint avviato ===
+
+2026/05/04 13:27:50,stdout,4 May 13:27:50 - [error] [function:ms_RecalcTotLots] dbError - null
+
+2026/05/04 13:27:50,stdout,4 May 13:27:50 - [error] [function:ms_RecalcTotLots] dbErrorInit - null
+
+2026/05/04 13:27:50,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:27:50,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:27:21,stdout,4 May 13:27:21 - [error] [function:ms_RecalcTotLots] dbErrorEnd - null
+
+2026/05/04 13:27:09,stdout,"4 May 13:27:09 - [error] [function:ms_OEEtasks] dbErrorEnd - Error: Cannot add or update a child row: a foreign key constraint fails (`GI4`.`MACHINE_OEE_WEEK`, CONSTRAINT `FK_MACHINE_OEE_WEEK_ON_LOT` FOREIGN KEY (`LOT_ID`) REFERENCES `LOT` (`ID`) ON DELETE CASCADE)
+"
+2026/05/04 13:26:50,stdout,4 May 13:26:50 - [error] [function:ms_RecalcTotLots] dbError - null
+
+2026/05/04 13:26:50,stdout,4 May 13:26:50 - [error] [function:ms_RecalcTotLots] dbErrorInit - null
+
+2026/05/04 13:26:50,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:26:50,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:26:38,stdout,"4 May 13:26:38 - [error] [function:ms_OEEtasks] dbError - Error: Cannot add or update a child row: a foreign key constraint fails (`GI4`.`MACHINE_OEE_WEEK`, CONSTRAINT `FK_MACHINE_OEE_WEEK_ON_LOT` FOREIGN KEY (`LOT_ID`) REFERENCES `LOT` (`ID`) ON DELETE CASCADE)
+"
+2026/05/04 13:26:38,stdout,"4 May 13:26:38 - [error] [function:ms_OEEtasks] dbErrorInit - Error: Cannot add or update a child row: a foreign key constraint fails (`GI4`.`MACHINE_OEE_WEEK`, CONSTRAINT `FK_MACHINE_OEE_WEEK_ON_LOT` FOREIGN KEY (`LOT_ID`) REFERENCES `LOT` (`ID`) ON DELETE CASCADE)
+"
+2026/05/04 13:26:38,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"WITH qq AS (select DATE_FORMAT('2026-05-04', '%Y-%m-%d') AS DD, fx_DateTimeToStr(fx_DateNormalizeByMachine(DATE_FORMAT('2026-05-04', '%Y-%m-%d'), 'c05dcd762e4b4b5a99224c48445d7683')) AS DD_START) SELECT DD, DD_START, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_DateEndDay('2026-05-04'), 'c05dcd762e4b4b5a99224c48445d7683')) AS DD_END, YEAR( '2026-05-04' ) AS YY, WEEKOFYEAR( '2026-05-04' ) AS WW, MONTH ( '2026-05-04' ) AS MM, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_WeekToDate (YEAR ( '2026-05-04' ), WEEKOFYEAR( '2026-05-04' )), 'c05dcd762e4b4b5a99224c48445d7683')) AS WW_START, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_LastDateTimeInWeek ( '2026-05-04' ), 'c05dcd762e4b4b5a99224c48445d7683')) AS WW_END, fx_DateTimeToStr(fx_DateNormalizeByMachine(DATE_FORMAT('2026-05-04', '%Y-%m-01'), 'c05dcd762e4b4b5a99224c48445d7683')) AS MM_START, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_LastDateTimeInMonth( '2026-05-04' ), 'c05dcd762e4b4b5a99224c48445d7683')) AS MM_END FROM qq\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:26:38,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"WITH qq AS (select DATE_FORMAT('2026-05-04', '%Y-%m-%d') AS DD, fx_DateTimeToStr(fx_DateNormalizeByMachine(DATE_FORMAT('2026-05-04', '%Y-%m-%d'), 'c05dcd762e4b4b5a99224c48445d7683')) AS DD_START) SELECT DD, DD_START, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_DateEndDay('2026-05-04'), 'c05dcd762e4b4b5a99224c48445d7683')) AS DD_END, YEAR( '2026-05-04' ) AS YY, WEEKOFYEAR( '2026-05-04' ) AS WW, MONTH ( '2026-05-04' ) AS MM, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_WeekToDate (YEAR ( '2026-05-04' ), WEEKOFYEAR( '2026-05-04' )), 'c05dcd762e4b4b5a99224c48445d7683')) AS WW_START, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_LastDateTimeInWeek ( '2026-05-04' ), 'c05dcd762e4b4b5a99224c48445d7683')) AS WW_END, fx_DateTimeToStr(fx_DateNormalizeByMachine(DATE_FORMAT('2026-05-04', '%Y-%m-01'), 'c05dcd762e4b4b5a99224c48445d7683')) AS MM_START, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_LastDateTimeInMonth( '2026-05-04' ), 'c05dcd762e4b4b5a99224c48445d7683')) AS MM_END FROM qq\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:26:21,stdout,4 May 13:26:21 - [error] [function:ms_RecalcTotLots] dbErrorEnd - null
+
+2026/05/04 13:25:50,stdout,4 May 13:25:50 - [error] [function:ms_RecalcTotLots] dbError - null
+
+2026/05/04 13:25:50,stdout,4 May 13:25:50 - [error] [function:ms_RecalcTotLots] dbErrorInit - null
+
+2026/05/04 13:25:50,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:25:50,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:25:21,stdout,4 May 13:25:21 - [error] [function:ms_RecalcTotLots] dbErrorEnd - null
+
+2026/05/04 13:24:50,stdout,4 May 13:24:50 - [error] [function:ms_RecalcTotLots] dbError - null
+
+2026/05/04 13:24:50,stdout,4 May 13:24:50 - [error] [function:ms_RecalcTotLots] dbErrorInit - null
+
+2026/05/04 13:24:50,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:24:50,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:12:04,stdout,"4 May 13:12:04 - [error] [function:ms_OEEtasks] dbErrorEnd - Error: Cannot add or update a child row: a foreign key constraint fails (`GI4`.`MACHINE_OEE_WEEK`, CONSTRAINT `FK_MACHINE_OEE_WEEK_ON_LOT` FOREIGN KEY (`LOT_ID`) REFERENCES `LOT` (`ID`) ON DELETE CASCADE)
+"
+2026/05/04 13:11:33,stdout,"4 May 13:11:33 - [error] [function:ms_OEEtasks] dbError - Error: Cannot add or update a child row: a foreign key constraint fails (`GI4`.`MACHINE_OEE_WEEK`, CONSTRAINT `FK_MACHINE_OEE_WEEK_ON_LOT` FOREIGN KEY (`LOT_ID`) REFERENCES `LOT` (`ID`) ON DELETE CASCADE)
+"
+2026/05/04 13:11:33,stdout,"4 May 13:11:33 - [error] [function:ms_OEEtasks] dbErrorInit - Error: Cannot add or update a child row: a foreign key constraint fails (`GI4`.`MACHINE_OEE_WEEK`, CONSTRAINT `FK_MACHINE_OEE_WEEK_ON_LOT` FOREIGN KEY (`LOT_ID`) REFERENCES `LOT` (`ID`) ON DELETE CASCADE)
+"
+2026/05/04 13:11:33,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"INSERT INTO MACHINE_OEE_WEEK (ID, MACHINE_ID, LOT_ID, USER_SHIFT, ANNO, SETTIMANA, TOTALE_MINUTI, OFFLINE_TIME, PRODUCTION_TIME, HELD_TIME, NO_LOT_TIME, PRODUZIONE, SCARTI, FROM_DATE, TO_DATE) VALUES (fx_GetNewOidV4(), 'c05dcd762e4b4b5a99224c48445d7683', 'b6c2fa0c1f204c84ae834a981e787112',  NULL, 2026, 19, 0, 0, 0, 0, 0, 0, 0, '2026-05-04 00:00:00.000000', '2026-05-04 13:11:10.792870')\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: Cannot add or update a child row: a foreign key constraint fails (`GI4`.`MACHINE_OEE_WEEK`, CONSTRAINT `FK_MACHINE_OEE_WEEK_ON_LOT` FOREIGN KEY (`LOT_ID`) REFERENCES `LOT` (`ID`) ON DELETE CASCADE)\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:11:33,stderr,"TBaseMacchinaStatiDB: QueryError0: {\"uuid\":null,\"query\":\"INSERT INTO MACHINE_OEE_WEEK (ID, MACHINE_ID, LOT_ID, USER_SHIFT, ANNO, SETTIMANA, TOTALE_MINUTI, OFFLINE_TIME, PRODUCTION_TIME, HELD_TIME, NO_LOT_TIME, PRODUZIONE, SCARTI, FROM_DATE, TO_DATE) VALUES (fx_GetNewOidV4(), 'c05dcd762e4b4b5a99224c48445d7683', 'b6c2fa0c1f204c84ae834a981e787112',  NULL, 2026, 19, 0, 0, 0, 0, 0, 0, 0, '2026-05-04 00:00:00.000000', '2026-05-04 13:11:10.792870')\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: Cannot add or update a child row: a foreign key constraint fails (`GI4`.`MACHINE_OEE_WEEK`, CONSTRAINT `FK_MACHINE_OEE_WEEK_ON_LOT` FOREIGN KEY (`LOT_ID`) REFERENCES `LOT` (`ID`) ON DELETE CASCADE)\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:11:33,stdout,"4 May 13:11:33 - [error] [function:ms_OEEtasks] QueryError - Error: Cannot add or update a child row: a foreign key constraint fails (`GI4`.`MACHINE_OEE_WEEK`, CONSTRAINT `FK_MACHINE_OEE_WEEK_ON_LOT` FOREIGN KEY (`LOT_ID`) REFERENCES `LOT` (`ID`) ON DELETE CASCADE)
+"
+2026/05/04 13:11:33,stdout,}
+
+2026/05/04 13:11:33,stdout,  }
+
+2026/05/04 13:11:33,stdout,      '    at Socket.Readable.push (node:internal/streams/readable:392:5)'
+
+2026/05/04 13:11:33,stdout,      '    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n' +
+
+2026/05/04 13:11:33,stdout,      '    at addChunk (node:internal/streams/readable:561:12)\n' +
+
+2026/05/04 13:11:33,stdout,      '    at Socket.emit (node:events:524:28)\n' +
+
+2026/05/04 13:11:33,stdout,      '    at Socket.<anonymous> (/data/node_modules/mysql2/lib/base/connection.js:100:25)\n' +
+
+2026/05/04 13:11:33,stdout,      '    at PacketParser.executeStart (/data/node_modules/mysql2/lib/packet_parser.js:75:16)\n' +
+
+2026/05/04 13:11:33,stdout,      '    at PacketParser.onPacket (/data/node_modules/mysql2/lib/base/connection.js:93:12)\n' +
+
+2026/05/04 13:11:33,stdout,      '    at PoolConnection.handlePacket (/data/node_modules/mysql2/lib/base/connection.js:475:34)\n' +
+
+2026/05/04 13:11:33,stdout,      '    at Query.execute (/data/node_modules/mysql2/lib/commands/command.js:29:26)\n' +
+
+2026/05/04 13:11:33,stdout,      '    at Packet.asError (/data/node_modules/mysql2/lib/packets/packet.js:740:17)\n' +
+
+2026/05/04 13:11:33,stdout,"    stack: 'Error: Cannot add or update a child row: a foreign key constraint fails (`GI4`.`MACHINE_OEE_WEEK`, CONSTRAINT `FK_MACHINE_OEE_WEEK_ON_LOT` FOREIGN KEY (`LOT_ID`) REFERENCES `LOT` (`ID`) ON DELETE CASCADE)\n' +
+"
+2026/05/04 13:11:33,stdout,"    code: 'ER_NO_REFERENCED_ROW_2',
+"
+2026/05/04 13:11:33,stdout,"    },
+"
+2026/05/04 13:11:33,stdout,      count: 1
+
+2026/05/04 13:11:33,stdout,"      name: 'DBmain:QueriesExec',
+"
+2026/05/04 13:11:33,stdout,"      type: 'mysql',
+"
+2026/05/04 13:11:33,stdout,"      id: '4c3b740d5ae93b7e',
+"
+2026/05/04 13:11:33,stdout,    source: {
+
+2026/05/04 13:11:33,stdout,"    message: 'Error: Cannot add or update a child row: a foreign key constraint fails (`GI4`.`MACHINE_OEE_WEEK`, CONSTRAINT `FK_MACHINE_OEE_WEEK_ON_LOT` FOREIGN KEY (`LOT_ID`) REFERENCES `LOT` (`ID`) ON DELETE CASCADE)',
+"
+2026/05/04 13:11:33,stdout,  error: {
+
+2026/05/04 13:11:33,stdout,"  _msgid: '35009d1e187a5897',
+"
+2026/05/04 13:11:33,stdout,"  queryUrl: 'ms_OEEtasks.queryW',
+"
+2026/05/04 13:11:33,stdout,"  topic: \"INSERT INTO MACHINE_OEE_WEEK (ID, MACHINE_ID, LOT_ID, USER_SHIFT, ANNO, SETTIMANA, TOTALE_MINUTI, OFFLINE_TIME, PRODUCTION_TIME, HELD_TIME, NO_LOT_TIME, PRODUZIONE, SCARTI, FROM_DATE, TO_DATE) VALUES (fx_GetNewOidV4(), 'c05dcd762e4b4b5a99224c48445d7683', 'b6c2fa0c1f204c84ae834a981e787112',  NULL, 2026, 19, 0, 0, 0, 0, 0, 0, 0, '2026-05-04 00:00:00.000000', '2026-05-04 13:11:10.792870')\",
+"
+2026/05/04 13:11:33,stdout,{
+
+2026/05/04 13:11:33,stdout,4 May 13:11:33 - [info] [debug:SqlErr] 
+
+2026/05/04 13:09:40,stdout, machine:c05dcd762e4b4b5a99224c48445d7683 lot:b6c2fa0c1f204c84ae834a981e787112
+
+2026/05/04 13:09:40,stdout,4 May 13:09:40 - [warn] [function:ms_RecalcTotLots] LotMachineRecalDone
+
+2026/05/04 11:05:38,stdout, machine:c05dcd762e4b4b5a99224c48445d7683 lot:b6c2fa0c1f204c84ae834a981e787112
+
+2026/05/04 11:05:38,stdout,4 May 11:05:38 - [warn] [function:ms_RecalcTotLots] LotMachineRecalDone
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] Started flows
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] Starting flows
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [warn] Using unencrypted credentials
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] Flows file     : /data/projects/gi4_db_tasks/flows.json
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] Active project : gi4_db_tasks
+
+2026/05/04 10:53:15,stdout,4 May 10:53:15 - [info] Server now running at http://127.0.0.1:1880/
+
+2026/05/04 10:53:15,stdout,4 May 10:53:15 - [info] Projects directory: /data/projects
+
+2026/05/04 10:53:15,stdout,4 May 10:53:15 - [info] User directory : /data
+
+2026/05/04 10:53:15,stdout,4 May 10:53:15 - [info] Context store  : 'default' [module=memory]
+
+2026/05/04 10:53:15,stdout,4 May 10:53:15 - [info] Settings file  : /data/settings.js
+
+2026/05/04 10:53:15,stdout,4 May 10:53:15 - [info] Dashboard version 3.6.5 started at /ui
+
+2026/05/04 10:53:08,stdout,4 May 10:53:08 - [info] Loading palette nodes
+
+2026/05/04 10:53:07,stdout,4 May 10:53:07 - [info] Linux 5.10.55+ x64 LE
+
+2026/05/04 10:53:07,stdout,4 May 10:53:07 - [info] Node.js  version: v20.19.4
+
+2026/05/04 10:53:07,stdout,4 May 10:53:07 - [info] Node-RED version: v4.1.0
+
+2026/05/04 10:53:07,stdout,
+
+2026/05/04 10:53:07,stdout,===================
+
+2026/05/04 10:53:07,stdout,Welcome to Node-RED
+
+2026/05/04 10:53:07,stdout,
+
+2026/05/04 10:53:07,stdout,4 May 10:53:07 - [info] 
+
+2026/05/04 10:53:07,stdout,[uuid] ACTIVATED
+
+2026/05/04 10:53:07,stdout,[path] ACTIVATED
+
+2026/05/04 10:53:07,stdout,[fs] ACTIVATED
+
+2026/05/04 10:53:07,stdout,[OPCUA] OPCUA nodes will be DISABLED (PLC_TYPE != OPC-UA)
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: RECIPE_CONF_TYPE = NODERED
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: FLY_RUN_STATUS = ICO_FUNZ_IPM_0_1_11_21
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: LOT_TERMINATE_TYPE = PLC
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: PLC_TYPE = S7
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: PROD_RESUME_TYPE = NO
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_INDEX_MADATORY = false
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_ERR = 0
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: LOT_CONF_TYPE = GI4
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_MANDATORY = false
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: PROD_STATUS_TYPE = NODERED
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: USE_GI4_DB = true
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: TRACKING_TYPE = PROD_GOOD_BAD
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_OK = 0
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: FLY_PROD_GOOD_BAD = YES_GOOD_BAD_01
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: AUTO_LOTTO = 0
+
+2026/05/04 10:53:07,stdout,[appParams] Overridden from ENV: waitSecOnRecipeChange = 3
+
+2026/05/04 10:53:07,stdout,[appParams] CREATED with configuration nessuno and path /data/projects/
+
+2026/05/04 10:53:07,stdout,"Creation TAppParams(nessuno, /data/projects/)
+"
+2026/05/04 10:53:07,stdout,TAppParams ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TAppParams.js
+
+2026/05/04 10:53:07,stdout,TValueSendWait ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueSendWait.js
+
+2026/05/04 10:53:07,stdout,TValueOpcDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueOpcDisp.js
+
+2026/05/04 10:53:07,stdout,TStsDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TStsDisp.js
+
+2026/05/04 10:53:07,stdout,TSetValueOnTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TSetValueOnTag.js
+
+2026/05/04 10:53:07,stdout,TQuery ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQuery.js
+
+2026/05/04 10:53:07,stdout,TQueries ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQueries.js
+
+2026/05/04 10:53:07,stdout,TFormatSQL ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TFormatSQL.js
+
+2026/05/04 10:53:07,stdout,TDebugGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TDebugGem.js
+
+2026/05/04 10:53:07,stdout,TConvKeysightE4980 ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvKeysightE4980.js
+
+2026/05/04 10:53:07,stdout,TConvert ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvert.js
+
+2026/05/04 10:53:07,stdout,TConsoleGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConsoleGem.js
+
+2026/05/04 10:53:07,stdout,TBaseMacchinaStatiValueTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiValueTag.js
+
+2026/05/04 10:53:07,stdout,TBaseMacchinaStatiDB ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiDB.js
+
+2026/05/04 10:53:07,stdout,TBaseMacchinaStati ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStati.js
+
+2026/05/04 10:53:07,stdout,TBaseConv ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseConv.js
+
+2026/05/04 10:53:07,stdout,TArrayCircolare ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TArrayCircolare.js
+
+2026/05/04 10:53:06,stdout,Avviando Node-RED con entrypoint originale...
+
+2026/05/04 10:53:06,stdout,Configurazione SSH completata!
+
+2026/05/04 10:53:06,stdout,Connection timed out during banner exchange
+
+2026/05/04 10:53:01,stdout,Test connessione GitHub...
+
+2026/05/04 10:53:01,stdout,✓ Chiave pubblica trovata e permessi impostati
+
+2026/05/04 10:53:01,stdout,✓ Chiave privata trovata e permessi impostati
+
+2026/05/04 10:53:01,stdout,Inizializzazione configurazione SSH...
+
+2026/05/04 10:53:01,stdout,Eseguendo inizializzazione SSH...
+
+2026/05/04 10:53:01,stdout,=== Custom entrypoint avviato ===
+
+2026/05/04 10:52:00,stdout,4 May 10:52:00 - [info] Stopped flows
+
+2026/05/04 10:52:00,stdout,4 May 10:52:00 - [info] Stopping flows
+
+2026/05/04 10:43:38,stdout,4 May 10:43:38 - [info] Started flows
+
+2026/05/04 10:43:38,stdout,4 May 10:43:38 - [info] Starting flows
+
+2026/05/04 10:43:38,stdout,4 May 10:43:38 - [warn] Using unencrypted credentials
+
+2026/05/04 10:43:38,stdout,4 May 10:43:38 - [info] Flows file     : /data/projects/gi4_db_tasks/flows.json
+
+2026/05/04 10:43:38,stdout,4 May 10:43:38 - [info] Active project : gi4_db_tasks
+
+2026/05/04 10:43:38,stdout,4 May 10:43:38 - [info] Server now running at http://127.0.0.1:1880/
+
+2026/05/04 10:43:38,stdout,4 May 10:43:38 - [info] Projects directory: /data/projects
+
+2026/05/04 10:43:38,stdout,4 May 10:43:38 - [info] User directory : /data
+
+2026/05/04 10:43:38,stdout,4 May 10:43:38 - [info] Context store  : 'default' [module=memory]
+
+2026/05/04 10:43:38,stdout,4 May 10:43:38 - [info] Settings file  : /data/settings.js
+
+2026/05/04 10:43:37,stdout,4 May 10:43:37 - [info] Dashboard version 3.6.5 started at /ui
+
+2026/05/04 10:43:30,stdout,4 May 10:43:30 - [info] Loading palette nodes
+
+2026/05/04 10:43:30,stdout,4 May 10:43:30 - [info] Linux 5.10.55+ x64 LE
+
+2026/05/04 10:43:30,stdout,4 May 10:43:30 - [info] Node.js  version: v20.19.4
+
+2026/05/04 10:43:30,stdout,4 May 10:43:30 - [info] Node-RED version: v4.1.0
+
+2026/05/04 10:43:30,stdout,
+
+2026/05/04 10:43:30,stdout,===================
+
+2026/05/04 10:43:30,stdout,Welcome to Node-RED
+
+2026/05/04 10:43:30,stdout,
+
+2026/05/04 10:43:30,stdout,4 May 10:43:30 - [info] 
+
+2026/05/04 10:43:29,stdout,[uuid] ACTIVATED
+
+2026/05/04 10:43:29,stdout,[path] ACTIVATED
+
+2026/05/04 10:43:29,stdout,[fs] ACTIVATED
+
+2026/05/04 10:43:29,stdout,[OPCUA] OPCUA nodes will be DISABLED (PLC_TYPE != OPC-UA)
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: RECIPE_CONF_TYPE = NODERED
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: FLY_RUN_STATUS = ICO_FUNZ_IPM_0_1_11_21
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: LOT_TERMINATE_TYPE = PLC
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: PLC_TYPE = S7
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: PROD_RESUME_TYPE = NO
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_INDEX_MADATORY = false
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_ERR = 0
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: LOT_CONF_TYPE = GI4
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_MANDATORY = false
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: PROD_STATUS_TYPE = NODERED
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: USE_GI4_DB = true
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: TRACKING_TYPE = PROD_GOOD_BAD
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_OK = 0
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: FLY_PROD_GOOD_BAD = YES_GOOD_BAD_01
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: AUTO_LOTTO = 0
+
+2026/05/04 10:43:29,stdout,[appParams] Overridden from ENV: waitSecOnRecipeChange = 3
+
+2026/05/04 10:43:29,stdout,[appParams] CREATED with configuration nessuno and path /data/projects/
+
+2026/05/04 10:43:29,stdout,"Creation TAppParams(nessuno, /data/projects/)
+"
+2026/05/04 10:43:29,stdout,TAppParams ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TAppParams.js
+
+2026/05/04 10:43:29,stdout,TValueSendWait ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueSendWait.js
+
+2026/05/04 10:43:29,stdout,TValueOpcDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueOpcDisp.js
+
+2026/05/04 10:43:29,stdout,TStsDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TStsDisp.js
+
+2026/05/04 10:43:29,stdout,TSetValueOnTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TSetValueOnTag.js
+
+2026/05/04 10:43:29,stdout,TQuery ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQuery.js
+
+2026/05/04 10:43:29,stdout,TQueries ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQueries.js
+
+2026/05/04 10:43:29,stdout,TFormatSQL ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TFormatSQL.js
+
+2026/05/04 10:43:29,stdout,TDebugGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TDebugGem.js
+
+2026/05/04 10:43:29,stdout,TConvKeysightE4980 ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvKeysightE4980.js
+
+2026/05/04 10:43:29,stdout,TConvert ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvert.js
+
+2026/05/04 10:43:29,stdout,TConsoleGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConsoleGem.js
+
+2026/05/04 10:43:29,stdout,TBaseMacchinaStatiValueTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiValueTag.js
+
+2026/05/04 10:43:29,stdout,TBaseMacchinaStatiDB ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiDB.js
+
+2026/05/04 10:43:29,stdout,TBaseMacchinaStati ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStati.js
+
+2026/05/04 10:43:29,stdout,TBaseConv ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseConv.js
+
+2026/05/04 10:43:29,stdout,TArrayCircolare ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TArrayCircolare.js
+
+2026/05/04 10:43:28,stdout,Avviando Node-RED con entrypoint originale...
+
+2026/05/04 10:43:28,stdout,Configurazione SSH completata!
+
+2026/05/04 10:43:28,stdout,"Hi lucagem! You've successfully authenticated, but GitHub does not provide shell access.
+"
+2026/05/04 10:43:27,stdout,Test connessione GitHub...
+
+2026/05/04 10:43:27,stdout,✓ Chiave pubblica trovata e permessi impostati
+
+2026/05/04 10:43:27,stdout,✓ Chiave privata trovata e permessi impostati
+
+2026/05/04 10:43:27,stdout,Inizializzazione configurazione SSH...
+
+2026/05/04 10:43:27,stdout,Eseguendo inizializzazione SSH...
+
+2026/05/04 10:43:27,stdout,=== Custom entrypoint avviato ===
+
