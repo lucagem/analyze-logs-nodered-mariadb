@@ -28,6 +28,17 @@ class MarkdownReporter {
           '> The effective range is narrower than requested because at least one source has no events outside it. See the per-source table below.');
     }
     buf.writeln('- **Lines parsed:** ${result.totalLinesParsed}');
+    final folders = _uniqueFolders(result);
+    if (folders.isNotEmpty) {
+      buf.writeln(folders.length == 1
+          ? '- **Source folder:** `${folders.first}`'
+          : '- **Source folders:**');
+      if (folders.length > 1) {
+        for (final f in folders) {
+          buf.writeln('  - `$f`');
+        }
+      }
+    }
     buf.writeln();
 
     _writeSourceStats(buf, result, tsFmt);
@@ -49,6 +60,19 @@ class MarkdownReporter {
     _writeTopSlowQueries(buf, result, tsFmt);
 
     return buf.toString();
+  }
+
+  /// Returns the unique parent directories of every loaded source path,
+  /// preserving the native separator (`\` on Windows, `/` elsewhere).
+  List<String> _uniqueFolders(AnalysisResult result) {
+    final set = <String>{};
+    for (final s in result.sources) {
+      var idx = s.path.lastIndexOf(r'\');
+      final fwd = s.path.lastIndexOf('/');
+      if (fwd > idx) idx = fwd;
+      if (idx > 0) set.add(s.path.substring(0, idx));
+    }
+    return set.toList()..sort();
   }
 
   bool _rangeWasClipped(AnalysisResult result) {

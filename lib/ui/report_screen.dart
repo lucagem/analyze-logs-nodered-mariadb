@@ -213,6 +213,7 @@ class _ReportScreenState extends State<ReportScreen> {
               Text('Requested range: $reqFrom → $reqTo'),
             Text('Effective range: $effFrom → $effTo'),
             Text('Lines parsed: ${r.totalLinesParsed}'),
+            ..._folderLines(r),
             if (clipped) ...[
               const SizedBox(height: 8),
               Container(
@@ -258,6 +259,33 @@ class _ReportScreenState extends State<ReportScreen> {
         ),
       ),
     );
+  }
+
+  List<Widget> _folderLines(AnalysisResult r) {
+    final folders = <String>{};
+    for (final s in r.sources) {
+      var idx = s.path.lastIndexOf(r'\');
+      final fwd = s.path.lastIndexOf('/');
+      if (fwd > idx) idx = fwd;
+      if (idx > 0) folders.add(s.path.substring(0, idx));
+    }
+    if (folders.isEmpty) return const [];
+    final sorted = folders.toList()..sort();
+    if (sorted.length == 1) {
+      return [
+        SelectableText('Source folder: ${sorted.first}',
+            style: const TextStyle(fontFamily: 'monospace', fontSize: 12)),
+      ];
+    }
+    return [
+      const Text('Source folders:'),
+      for (final f in sorted)
+        Padding(
+          padding: const EdgeInsets.only(left: 12),
+          child: SelectableText('• $f',
+              style: const TextStyle(fontFamily: 'monospace', fontSize: 12)),
+        ),
+    ];
   }
 
   bool _rangeWasClipped(AnalysisResult r) {

@@ -1,7 +1,5 @@
 import 'dart:io';
 
-import 'package:csv/csv.dart';
-
 import '../models/log_event.dart';
 import '../models/log_source.dart';
 
@@ -10,19 +8,27 @@ import '../models/log_source.dart';
 /// Layout:
 ///   line 1: free-form container name (e.g. `gi4_mariadb`) — skipped
 ///   line 2: header `date,stream,content`
-///   following: rows where `content` may span multiple lines (CSV-quoted).
+///   following: rows of `<yyyy/MM/dd HH:mm:ss>,(stdout|stderr),<content>`
 ///
-/// Date column is `yyyy/MM/dd HH:mm:ss`.
+/// We do NOT use a generic CSV parser here. The container exports
+/// frequently contain unbalanced double-quotes inside the `content` field
+/// (TLS certificates, JSON snippets, MSSQL connection strings with embedded
+/// commas) which confuse standard CSV quoting and cause whole blocks to be
+/// merged into a single field — losing genuine events such as `[error]`
+/// lines or MSSQL disconnect notices.
+///
+/// Instead we anchor on the line prefix `YYYY/MM/DD HH:MM:SS,(stdout|stderr),`
+/// to detect a new record. Lines that don't match that prefix are treated
+/// as continuations of the previous record's `content`.
 class ContainerCsvParser {
   ContainerCsvParser({required this.kind});
 
   final LogSourceKind kind;
 
-  static const _converter = CsvToListConverter(
-    fieldDelimiter: ',',
-    eol: '\n',
-    shouldParseNumbers: false,
-  );
+  /// Matches a record header at the start of a line:
+  /// `2026/05/04 10:43:27,stdout,…`
+  static final _recordStart =
+      RegExp(r'^(\d{4})/(\d{2})/(\d{2})\s(\d{2}):(\d{2}):(\d{2}),(stdout|stderr),(.*)$');
 
   Future<ParsedContainerLog> parseFile(File file) async {
     final raw = await file.readAsString();
@@ -30,70 +36,96 @@ class ContainerCsvParser {
   }
 
   ParsedContainerLog parseString(String raw, {required String sourceName}) {
-    final normalized = raw.replaceAll('\r\n', '\n');
-    final rows = _converter.convert(normalized);
+    final lines = raw.replaceAll('\r\n', '\n').split('\n');
+
     final events = <LogEvent>[];
     final warnings = <String>[];
     final skippedSamples = <String>[];
     var skipped = 0;
+    var sawHeader = false;
 
-    var headerIndex = -1;
-    for (var i = 0; i < rows.length && i < 5; i++) {
-      final row = rows[i].map((e) => e.toString().trim()).toList();
-      if (row.length >= 3 &&
-          row[0].toLowerCase() == 'date' &&
-          row[1].toLowerCase() == 'stream' &&
-          row[2].toLowerCase() == 'content') {
-        headerIndex = i;
-        break;
-      }
-    }
-    if (headerIndex == -1) {
-      warnings.add('CSV header not found in $sourceName; assuming row 0 is data.');
-      headerIndex = -1;
-    }
+    DateTime? curTs;
+    String? curStream;
+    final curContent = StringBuffer();
 
-    void recordSkip(String reason, List<dynamic> row) {
-      skipped++;
-      if (skippedSamples.length < 3) {
-        final flat = row
-            .map((c) => c.toString().replaceAll('\n', ' ').replaceAll('\r', ''))
-            .join(' | ');
-        final clipped = flat.length > 200 ? '${flat.substring(0, 200)}…' : flat;
-        skippedSamples.add('$reason — $clipped');
-      }
-    }
-
-    for (var i = headerIndex + 1; i < rows.length; i++) {
-      final row = rows[i];
-      if (row.length < 3) {
-        if (row.every((c) => c.toString().trim().isEmpty)) continue;
-        recordSkip('row has fewer than 3 columns', row);
-        continue;
-      }
-      final dateStr = row[0].toString().trim();
-      final stream = row[1].toString().trim();
-      final content = row[2].toString();
-
-      if (dateStr.isEmpty && stream.isEmpty && content.trim().isEmpty) continue;
-
-      final ts = _tryParseDate(dateStr);
-      if (ts == null) {
-        recordSkip('unparseable date "$dateStr"', row);
-        continue;
-      }
-
+    void flush() {
+      if (curTs == null) return;
       events.add(LogEvent(
-        timestamp: ts,
+        timestamp: curTs!,
         sourceKind: kind,
         sourceName: sourceName,
-        content: content,
-        stream: stream.isEmpty ? null : stream,
+        content: curContent.toString(),
+        stream: curStream,
       ));
+      curTs = null;
+      curStream = null;
+      curContent.clear();
     }
 
+    void recordSkip(String reason, String line) {
+      skipped++;
+      if (skippedSamples.length < 3) {
+        final clean = line.length > 200 ? '${line.substring(0, 200)}…' : line;
+        skippedSamples.add('$reason — $clean');
+      }
+    }
+
+    for (var i = 0; i < lines.length; i++) {
+      final line = lines[i];
+      final trimmed = line.trimRight();
+      if (trimmed.isEmpty) continue;
+
+      // Skip the optional first-line container name and the CSV header.
+      if (i < 4) {
+        final lower = trimmed.toLowerCase();
+        if (lower == 'date,stream,content') {
+          sawHeader = true;
+          continue;
+        }
+        if (i == 0 && !_recordStart.hasMatch(trimmed)) {
+          // Free-form container name on the first line — skip silently.
+          continue;
+        }
+      }
+
+      final m = _recordStart.firstMatch(trimmed);
+      if (m != null) {
+        // New record — flush the previous one.
+        flush();
+        final y = int.parse(m.group(1)!);
+        final mo = int.parse(m.group(2)!);
+        final d = int.parse(m.group(3)!);
+        final h = int.parse(m.group(4)!);
+        final mi = int.parse(m.group(5)!);
+        final s = int.parse(m.group(6)!);
+        curTs = DateTime(y, mo, d, h, mi, s);
+        curStream = m.group(7);
+        curContent.clear();
+        curContent.write(m.group(8) ?? '');
+        continue;
+      }
+
+      // Not a record header — treat as continuation of the current content
+      // (typical for multi-line certificates, JSON, etc.).
+      if (curTs != null) {
+        if (curContent.isNotEmpty) curContent.write('\n');
+        curContent.write(trimmed);
+        continue;
+      }
+
+      // No active record yet and the line doesn't start with a timestamp:
+      // this is genuinely malformed (or noise before the first record).
+      recordSkip('line has no leading timestamp prefix', trimmed);
+    }
+
+    flush();
+
+    if (!sawHeader) {
+      warnings.add('CSV header not found in $sourceName; assumed records were '
+          'parsed by line prefix.');
+    }
     if (skipped > 0) {
-      warnings.add('$sourceName: skipped $skipped malformed rows.');
+      warnings.add('$sourceName: skipped $skipped malformed lines.');
     }
 
     events.sort((a, b) => a.timestamp.compareTo(b.timestamp));
@@ -103,22 +135,6 @@ class ContainerCsvParser {
       skippedRows: skipped,
       skippedSamples: skippedSamples,
     );
-  }
-
-  static DateTime? _tryParseDate(String value) {
-    // Format: 2026/05/05 06:44:49
-    if (value.length < 19) return null;
-    try {
-      final y = int.parse(value.substring(0, 4));
-      final mo = int.parse(value.substring(5, 7));
-      final d = int.parse(value.substring(8, 10));
-      final h = int.parse(value.substring(11, 13));
-      final mi = int.parse(value.substring(14, 16));
-      final s = int.parse(value.substring(17, 19));
-      return DateTime(y, mo, d, h, mi, s);
-    } catch (_) {
-      return null;
-    }
   }
 
   static String _baseName(String path) {
