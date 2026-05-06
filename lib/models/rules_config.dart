@@ -217,14 +217,20 @@ class AxLogRules {
 }
 
 class ReportRules {
-  ReportRules({required this.timelineLimit, required this.excerptMaxChars});
+  ReportRules({
+    required this.timelineLimit,
+    required this.bySourceLimit,
+    required this.excerptMaxChars,
+  });
 
   final int timelineLimit;
+  final int bySourceLimit;
   final int excerptMaxChars;
 
   factory ReportRules.fromJson(Map<String, dynamic> json) {
     return ReportRules(
-      timelineLimit: (json['timelineLimit'] as int?) ?? 200,
+      timelineLimit: (json['timelineLimit'] as int?) ?? 5000,
+      bySourceLimit: (json['bySourceLimit'] as int?) ?? 1000,
       excerptMaxChars: (json['excerptMaxChars'] as int?) ?? 240,
     );
   }

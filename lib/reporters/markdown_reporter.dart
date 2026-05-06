@@ -204,19 +204,20 @@ class MarkdownReporter {
     buf.writeln('## By source');
     buf.writeln();
     final keys = groups.keys.toList()..sort();
+    final limit = rules.report.bySourceLimit;
     for (final k in keys) {
       final events = groups[k]!;
       buf.writeln('### $k (${events.length})');
       buf.writeln();
       buf.writeln('| Time | Severity | Category | Excerpt |');
       buf.writeln('|---|---|---|---|');
-      for (final s in events.take(50)) {
+      for (final s in events.take(limit)) {
         buf.writeln(
             '| ${fmt.format(s.timestamp)} | ${s.severity.label} | ${_escape(s.category)} | ${_escape(_clipExcerpt(s.excerpt))} |');
       }
-      if (events.length > 50) {
+      if (events.length > limit) {
         buf.writeln();
-        buf.writeln('_…${events.length - 50} more events suppressed._');
+        buf.writeln('_…${events.length - limit} more events suppressed._');
       }
       buf.writeln();
     }

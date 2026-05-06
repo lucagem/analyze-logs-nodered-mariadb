@@ -480,14 +480,14 @@ class _ReportScreenState extends State<ReportScreen> {
         ),
       );
     }
-    final shown = r.suspicious.take(200).toList();
+    final shown = r.suspicious;
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Timeline (${shown.length} of ${r.suspicious.length})',
+            Text('Timeline (${shown.length} events)',
                 style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 6),
             Wrap(

@@ -66,7 +66,8 @@
     "defaultIncludedStates": [1, 2]
   },
   "report": {
-    "timelineLimit": 200,
+    "timelineLimit": 5000,
+    "bySourceLimit": 1000,
     "excerptMaxChars": 240
   }
 }
