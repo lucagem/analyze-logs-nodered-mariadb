@@ -1,3 +1,4 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
 import '../services/settings_service.dart';
@@ -13,6 +14,7 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   final _apiKeyController = TextEditingController();
+  final _outputDirController = TextEditingController();
   String _model = SettingsService.defaultModel;
   bool _includeAi = false;
   bool _loading = true;
@@ -29,9 +31,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final key = await widget.settings.getApiKey();
     final model = await widget.settings.getModel();
     final include = await widget.settings.getIncludeAi();
+    final outputDir = await widget.settings.getOutputDir();
     if (!mounted) return;
     setState(() {
       _apiKeyController.text = key ?? '';
+      _outputDirController.text = outputDir ?? '';
       _model = model;
       _includeAi = include;
       _loading = false;
@@ -43,6 +47,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     await widget.settings.setApiKey(_apiKeyController.text.trim());
     await widget.settings.setModel(_model);
     await widget.settings.setIncludeAi(_includeAi);
+    await widget.settings.setOutputDir(_outputDirController.text.trim());
     if (!mounted) return;
     setState(() => _saving = false);
     if (mounted) {
@@ -52,9 +57,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
     }
   }
 
+  Future<void> _browseOutputDir() async {
+    final picked = await FilePicker.platform.getDirectoryPath(
+      dialogTitle: 'Choose folder for saved reports',
+      initialDirectory:
+          _outputDirController.text.isEmpty ? null : _outputDirController.text,
+    );
+    if (picked == null) return;
+    setState(() => _outputDirController.text = picked);
+  }
+
   @override
   void dispose() {
     _apiKeyController.dispose();
+    _outputDirController.dispose();
     super.dispose();
   }
 
@@ -114,6 +130,39 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
               value: _includeAi,
               onChanged: (v) => setState(() => _includeAi = v),
+            ),
+            const SizedBox(height: 24),
+            Text('Saved reports', style: Theme.of(context).textTheme.titleLarge),
+            const SizedBox(height: 8),
+            const Text(
+              'Folder where the "Save to disk" action writes report-*.md files. '
+              'Leave empty to use the default <Documents>/log-analysis.',
+            ),
+            const SizedBox(height: 16),
+            TextField(
+              controller: _outputDirController,
+              readOnly: true,
+              decoration: InputDecoration(
+                labelText: 'Output folder',
+                hintText: '<Documents>/log-analysis',
+                border: const OutlineInputBorder(),
+                suffixIcon: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (_outputDirController.text.isNotEmpty)
+                      IconButton(
+                        tooltip: 'Reset to default',
+                        icon: const Icon(Icons.clear),
+                        onPressed: () => setState(() => _outputDirController.clear()),
+                      ),
+                    IconButton(
+                      tooltip: 'Browse…',
+                      icon: const Icon(Icons.folder_open),
+                      onPressed: _browseOutputDir,
+                    ),
+                  ],
+                ),
+              ),
             ),
             const SizedBox(height: 24),
             Row(

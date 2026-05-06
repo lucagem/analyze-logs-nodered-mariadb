@@ -4,24 +4,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:markdown_widget/markdown_widget.dart';
-import 'package:path_provider/path_provider.dart';
 
 import '../models/analysis_result.dart';
 import '../models/log_event.dart';
 import '../models/log_source.dart';
 import '../models/severity.dart';
 import '../models/suspicious_event.dart';
+import '../services/file_opener.dart';
+import '../services/settings_service.dart';
 
 class ReportScreen extends StatefulWidget {
   const ReportScreen({
     super.key,
     required this.result,
     required this.markdown,
+    required this.settings,
     this.aiInsights,
   });
 
   final AnalysisResult result;
   final String markdown;
+  final SettingsService settings;
   final String? aiInsights;
 
   @override
@@ -75,8 +78,7 @@ class _ReportScreenState extends State<ReportScreen> {
   Future<void> _saveToDisk() async {
     setState(() => _saving = true);
     try {
-      final dir = await getApplicationDocumentsDirectory();
-      final outDir = Directory('${dir.path}/log-analysis');
+      final outDir = await widget.settings.resolveOutputDir();
       await outDir.create(recursive: true);
       final ts = DateFormat('yyyyMMdd-HHmmss').format(DateTime.now());
       final file = File('${outDir.path}/report-$ts.md');
@@ -93,6 +95,20 @@ class _ReportScreenState extends State<ReportScreen> {
       );
     } finally {
       if (mounted) setState(() => _saving = false);
+    }
+  }
+
+  Future<void> _openFolder() async {
+    final saved = _savedPath;
+    if (saved == null) return;
+    final dir = File(saved).parent.path;
+    try {
+      await FileOpener().openDirectory(dir);
+    } catch (e) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Could not open folder: $e')),
+      );
     }
   }
 
@@ -135,8 +151,20 @@ class _ReportScreenState extends State<ReportScreen> {
             Container(
               width: double.infinity,
               color: Colors.green.withValues(alpha: 0.1),
-              padding: const EdgeInsets.all(8),
-              child: Text('Saved: $_savedPath', style: const TextStyle(fontSize: 12)),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Text('Saved: $_savedPath',
+                        style: const TextStyle(fontSize: 12)),
+                  ),
+                  TextButton.icon(
+                    onPressed: _openFolder,
+                    icon: const Icon(Icons.folder_open, size: 18),
+                    label: const Text('Open folder'),
+                  ),
+                ],
+              ),
             ),
           Expanded(
             child: ListView(

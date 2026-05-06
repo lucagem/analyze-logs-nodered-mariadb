@@ -12,6 +12,7 @@ class SettingsService {
   static const _kApiKey = 'anthropic_api_key';
   static const _kModel = 'anthropic_model';
   static const _kIncludeAi = 'include_ai_insights';
+  static const _kOutputDir = 'output_dir';
 
   static const defaultModel = 'claude-sonnet-4-6';
   static const supportedModels = <String>[
@@ -90,5 +91,31 @@ class SettingsService {
     final m = await _read();
     m[_kIncludeAi] = value;
     await _write();
+  }
+
+  /// User-chosen directory for saved reports. `null` means the default
+  /// `<Documents>/log-analysis`.
+  Future<String?> getOutputDir() async {
+    final m = await _read();
+    final v = m[_kOutputDir];
+    return v is String && v.isNotEmpty ? v : null;
+  }
+
+  Future<void> setOutputDir(String? value) async {
+    final m = await _read();
+    if (value == null || value.isEmpty) {
+      m.remove(_kOutputDir);
+    } else {
+      m[_kOutputDir] = value;
+    }
+    await _write();
+  }
+
+  /// Resolves the effective output directory (custom if set, else default).
+  Future<Directory> resolveOutputDir() async {
+    final custom = await getOutputDir();
+    if (custom != null) return Directory(custom);
+    final docs = await getApplicationDocumentsDirectory();
+    return Directory('${docs.path}/log-analysis');
   }
 }

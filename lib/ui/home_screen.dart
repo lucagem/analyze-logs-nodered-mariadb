@@ -210,6 +210,7 @@ class _HomeScreenState extends State<HomeScreen> {
           result: result,
           markdown: finalMd,
           aiInsights: aiInsights,
+          settings: widget.settings,
         ),
       ));
     } catch (e, st) {
@@ -247,113 +248,149 @@ class _HomeScreenState extends State<HomeScreen> {
       body: _rules == null
           ? const Center(child: CircularProgressIndicator())
           : SingleChildScrollView(
-              padding: const EdgeInsets.all(24),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _sectionTitle('1 · MariaDB container CSV (1 file)'),
-                  _filePickerRow(
-                    label: 'Choose MariaDB CSV…',
-                    source: _mariadbCsv,
-                    onPick: _pickMariadbCsv,
-                    onClear: () => setState(() => _mariadbCsv = null),
-                  ),
-                  const SizedBox(height: 24),
-                  _sectionTitle('2 · Node-RED container CSVs (1+ files)'),
-                  ..._noderedCsvs.asMap().entries.map(
-                        (e) => _selectedFileRow(
-                          source: e.value,
-                          onClear: () =>
-                              setState(() => _noderedCsvs.removeAt(e.key)),
-                        ),
-                      ),
-                  const SizedBox(height: 8),
-                  OutlinedButton.icon(
-                    onPressed: _addNoderedCsv,
-                    icon: const Icon(Icons.add),
-                    label: const Text('Add Node-RED CSV'),
-                  ),
-                  const SizedBox(height: 24),
-                  _sectionTitle('3 · MariaDB slow query log (optional)'),
-                  _filePickerRow(
-                    label: 'Choose slow query log…',
-                    source: _slowQueryLog,
-                    onPick: _pickSlowQueryLog,
-                    onClear: () => setState(() => _slowQueryLog = null),
-                  ),
-                  const SizedBox(height: 24),
-                  _sectionTitle('4 · AX_LOG CSVs (optional, 1+ files)'),
-                  ..._axLogs.asMap().entries.map(
-                        (e) => _selectedFileRow(
-                          source: e.value,
-                          onClear: () =>
-                              setState(() => _axLogs.removeAt(e.key)),
-                        ),
-                      ),
-                  const SizedBox(height: 8),
-                  OutlinedButton.icon(
-                    onPressed: _addAxLog,
-                    icon: const Icon(Icons.add),
-                    label: const Text('Add AX log CSV'),
-                  ),
-                  if (_axLogs.isNotEmpty) ...[
-                    const SizedBox(height: 12),
-                    const Text(
-                      'Include AX_LOG STATE values:',
-                      style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
-                    ),
-                    const SizedBox(height: 6),
-                    Wrap(
-                      spacing: 8,
-                      runSpacing: 4,
-                      children: [
-                        for (final s in AxState.all)
-                          FilterChip(
-                            label: Text('${s.value} · ${s.label}'),
-                            selected: _axIncludedStates.contains(s.value),
-                            onSelected: (sel) => setState(() {
-                              if (sel) {
-                                _axIncludedStates.add(s.value);
-                              } else {
-                                _axIncludedStates.remove(s.value);
-                              }
-                            }),
-                          ),
-                      ],
-                    ),
-                  ],
-                  const SizedBox(height: 24),
-                  _sectionTitle('5 · Time range (optional)'),
-                  Row(
+                  _sectionCard(
+                    accent: const Color(0xFF1565C0), // blue — MariaDB
+                    icon: Icons.storage,
+                    title: '1 · MariaDB container CSV',
+                    subtitle: '1 file',
                     children: [
-                      Expanded(
-                        child: _dateField(
-                          label: 'From',
-                          value: _from,
-                          fmt: fmt,
-                          onPick: _pickFrom,
-                          onClear: () => setState(() => _from = null),
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: _dateField(
-                          label: 'To',
-                          value: _to,
-                          fmt: fmt,
-                          onPick: _pickTo,
-                          onClear: () => setState(() => _to = null),
-                        ),
+                      _filePickerRow(
+                        label: 'Choose MariaDB CSV…',
+                        source: _mariadbCsv,
+                        onPick: _pickMariadbCsv,
+                        onClear: () => setState(() => _mariadbCsv = null),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 8),
-                  const Text(
-                    'Range is intersected with the CSV span; the slow log is filtered to '
-                    'the same effective window so events stay correlated.',
-                    style: TextStyle(fontSize: 12, color: Colors.black54),
+                  const SizedBox(height: 12),
+                  _sectionCard(
+                    accent: const Color(0xFFB71C1C), // red — Node-RED
+                    icon: Icons.lan_outlined,
+                    title: '2 · Node-RED container CSVs',
+                    subtitle: '1 or more files (one per port)',
+                    children: [
+                      ..._noderedCsvs.asMap().entries.map(
+                            (e) => _selectedFileRow(
+                              source: e.value,
+                              onClear: () =>
+                                  setState(() => _noderedCsvs.removeAt(e.key)),
+                            ),
+                          ),
+                      const SizedBox(height: 4),
+                      OutlinedButton.icon(
+                        onPressed: _addNoderedCsv,
+                        icon: const Icon(Icons.add),
+                        label: const Text('Add Node-RED CSV'),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 32),
+                  const SizedBox(height: 12),
+                  _sectionCard(
+                    accent: const Color(0xFF6A1B9A), // purple — slow log
+                    icon: Icons.speed,
+                    title: '3 · MariaDB slow query log',
+                    subtitle: 'optional',
+                    children: [
+                      _filePickerRow(
+                        label: 'Choose slow query log…',
+                        source: _slowQueryLog,
+                        onPick: _pickSlowQueryLog,
+                        onClear: () => setState(() => _slowQueryLog = null),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  _sectionCard(
+                    accent: const Color(0xFF00695C), // teal — AX log
+                    icon: Icons.event_note,
+                    title: '4 · AX_LOG CSVs',
+                    subtitle: 'optional, 1 or more files',
+                    children: [
+                      ..._axLogs.asMap().entries.map(
+                            (e) => _selectedFileRow(
+                              source: e.value,
+                              onClear: () =>
+                                  setState(() => _axLogs.removeAt(e.key)),
+                            ),
+                          ),
+                      const SizedBox(height: 4),
+                      OutlinedButton.icon(
+                        onPressed: _addAxLog,
+                        icon: const Icon(Icons.add),
+                        label: const Text('Add AX log CSV'),
+                      ),
+                      if (_axLogs.isNotEmpty) ...[
+                        const SizedBox(height: 12),
+                        const Text(
+                          'Include AX_LOG STATE values:',
+                          style: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w600),
+                        ),
+                        const SizedBox(height: 6),
+                        Wrap(
+                          spacing: 8,
+                          runSpacing: 4,
+                          children: [
+                            for (final s in AxState.all)
+                              FilterChip(
+                                label: Text('${s.value} · ${s.label}'),
+                                selected: _axIncludedStates.contains(s.value),
+                                onSelected: (sel) => setState(() {
+                                  if (sel) {
+                                    _axIncludedStates.add(s.value);
+                                  } else {
+                                    _axIncludedStates.remove(s.value);
+                                  }
+                                }),
+                              ),
+                          ],
+                        ),
+                      ],
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+                  _sectionCard(
+                    accent: const Color(0xFF455A64), // blue-grey — time range
+                    icon: Icons.schedule,
+                    title: '5 · Time range',
+                    subtitle: 'optional',
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: _dateField(
+                              label: 'From',
+                              value: _from,
+                              fmt: fmt,
+                              onPick: _pickFrom,
+                              onClear: () => setState(() => _from = null),
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: _dateField(
+                              label: 'To',
+                              value: _to,
+                              fmt: fmt,
+                              onPick: _pickTo,
+                              onClear: () => setState(() => _to = null),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 6),
+                      const Text(
+                        'Range is intersected with the CSV span; the slow log is filtered '
+                        'to the same effective window so events stay correlated.',
+                        style: TextStyle(fontSize: 12, color: Colors.black54),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 24),
                   Row(
                     children: [
                       FilledButton.icon(
@@ -380,10 +417,48 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget _sectionTitle(String text) => Padding(
-        padding: const EdgeInsets.only(bottom: 8),
-        child: Text(text, style: Theme.of(context).textTheme.titleMedium),
-      );
+  Widget _sectionCard({
+    required Color accent,
+    required IconData icon,
+    required String title,
+    required String subtitle,
+    required List<Widget> children,
+  }) {
+    return Card(
+      elevation: 0,
+      margin: EdgeInsets.zero,
+      shape: RoundedRectangleBorder(
+        side: BorderSide(color: accent.withValues(alpha: 0.4), width: 1),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      color: accent.withValues(alpha: 0.05),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(icon, color: accent, size: 20),
+                const SizedBox(width: 8),
+                Text(title,
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleMedium
+                        ?.copyWith(color: accent, fontWeight: FontWeight.w600)),
+                const SizedBox(width: 8),
+                Text('· $subtitle',
+                    style:
+                        const TextStyle(color: Colors.black54, fontSize: 13)),
+              ],
+            ),
+            const SizedBox(height: 10),
+            ...children,
+          ],
+        ),
+      ),
+    );
+  }
 
   Widget _filePickerRow({
     required String label,
