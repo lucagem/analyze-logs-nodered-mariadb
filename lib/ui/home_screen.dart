@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -6,10 +8,12 @@ import '../analyzers/analyzer.dart';
 import '../models/analysis_result.dart';
 import '../models/log_source.dart';
 import '../models/rules_config.dart';
+import '../models/saved_config.dart';
 import '../reporters/markdown_reporter.dart';
 import '../services/anthropic_client.dart';
 import '../services/rules_loader.dart';
 import '../services/settings_service.dart';
+import 'recent_configs_dialog.dart';
 import 'report_screen.dart';
 import 'settings_screen.dart';
 
@@ -153,6 +157,103 @@ class _HomeScreenState extends State<HomeScreen> {
     return DateTime(date.year, date.month, date.day, time.hour, time.minute);
   }
 
+  Future<void> _openRecentConfigs() async {
+    final picked = await showDialog<SavedConfig>(
+      context: context,
+      builder: (_) => RecentConfigsDialog(settings: widget.settings),
+    );
+    if (picked != null) _restoreConfig(picked);
+  }
+
+  void _restoreConfig(SavedConfig c) {
+    LogSource? mariadb;
+    LogSource? slow;
+    final nodered = <LogSource>[];
+    final ax = <LogSource>[];
+    final missing = <String>[];
+
+    for (final s in c.sources) {
+      final src = s.toLogSource();
+      if (!File(s.path).existsSync()) missing.add(s.displayName);
+      switch (s.kind) {
+        case LogSourceKind.mariadbContainer:
+          mariadb = src;
+          break;
+        case LogSourceKind.noderedContainer:
+          nodered.add(src);
+          break;
+        case LogSourceKind.mariadbSlowQuery:
+          slow = src;
+          break;
+        case LogSourceKind.axLog:
+          ax.add(src);
+          break;
+      }
+    }
+
+    setState(() {
+      _mariadbCsv = mariadb;
+      _noderedCsvs
+        ..clear()
+        ..addAll(nodered);
+      _slowQueryLog = slow;
+      _axLogs
+        ..clear()
+        ..addAll(ax);
+      _axIncludedStates = {...c.axIncludedStates};
+      _from = c.from;
+      _to = c.to;
+    });
+
+    if (missing.isNotEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+              '${missing.length} file(s) missing on disk: ${missing.join(', ')}'),
+        ),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Configuration restored.')),
+      );
+    }
+  }
+
+  Future<void> _persistCurrentConfig() async {
+    final sources = <SavedSource>[
+      if (_mariadbCsv != null)
+        SavedSource(
+          kind: _mariadbCsv!.kind,
+          path: _mariadbCsv!.path,
+          displayName: _mariadbCsv!.displayName,
+        ),
+      ..._noderedCsvs.map((s) => SavedSource(
+            kind: s.kind,
+            path: s.path,
+            displayName: s.displayName,
+          )),
+      if (_slowQueryLog != null)
+        SavedSource(
+          kind: _slowQueryLog!.kind,
+          path: _slowQueryLog!.path,
+          displayName: _slowQueryLog!.displayName,
+        ),
+      ..._axLogs.map((s) => SavedSource(
+            kind: s.kind,
+            path: s.path,
+            displayName: s.displayName,
+          )),
+    ];
+    if (sources.isEmpty) return;
+    await widget.settings.addRecentConfig(SavedConfig(
+      savedAt: DateTime.now(),
+      sources: sources,
+      axIncludedStates: {..._axIncludedStates},
+      from: _from,
+      to: _to,
+    ));
+  }
+
   Future<void> _runAnalysis() async {
     final rules = _rules;
     if (rules == null) return;
@@ -168,6 +269,11 @@ class _HomeScreenState extends State<HomeScreen> {
         ?_slowQueryLog,
         ..._axLogs,
       ];
+
+      // Save the current setup at the head of the recent-configs list
+      // (deduped by fingerprint) before running so it survives even if
+      // the analysis itself fails later.
+      await _persistCurrentConfig();
 
       final analyzer = Analyzer(rules);
       final result = await analyzer.run(AnalysisInput(
@@ -236,6 +342,11 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Log Analyzer'),
         actions: [
+          IconButton(
+            tooltip: 'Recent configurations',
+            icon: const Icon(Icons.history),
+            onPressed: _openRecentConfigs,
+          ),
           IconButton(
             tooltip: 'Settings',
             icon: const Icon(Icons.settings),

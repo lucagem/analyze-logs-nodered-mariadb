@@ -3,6 +3,8 @@ import 'dart:io';
 
 import 'package:path_provider/path_provider.dart';
 
+import '../models/saved_config.dart';
+
 /// Persistent settings stored as JSON in `<applicationSupportDir>/settings.json`.
 ///
 /// The file is plaintext on disk. The Anthropic API key is therefore protected
@@ -13,6 +15,8 @@ class SettingsService {
   static const _kModel = 'anthropic_model';
   static const _kIncludeAi = 'include_ai_insights';
   static const _kOutputDir = 'output_dir';
+  static const _kRecentConfigs = 'recent_configs';
+  static const maxRecentConfigs = 10;
 
   static const defaultModel = 'claude-sonnet-4-6';
   static const supportedModels = <String>[
@@ -117,5 +121,54 @@ class SettingsService {
     if (custom != null) return Directory(custom);
     final docs = await getApplicationDocumentsDirectory();
     return Directory('${docs.path}/log-analysis');
+  }
+
+  /// Returns the persisted list of recent configurations, most recent first.
+  Future<List<SavedConfig>> getRecentConfigs() async {
+    final m = await _read();
+    final raw = m[_kRecentConfigs];
+    if (raw is! List) return <SavedConfig>[];
+    final out = <SavedConfig>[];
+    for (final entry in raw) {
+      if (entry is Map<String, dynamic>) {
+        try {
+          out.add(SavedConfig.fromJson(entry));
+        } catch (_) {
+          // Skip malformed legacy entries.
+        }
+      }
+    }
+    return out;
+  }
+
+  /// Saves a new configuration at the head of the recent list. Existing
+  /// entries with the same fingerprint (sources + range + AX states) are
+  /// removed so the same setup never appears twice. The list is capped at
+  /// [maxRecentConfigs].
+  Future<void> addRecentConfig(SavedConfig config) async {
+    final list = await getRecentConfigs();
+    list.removeWhere((c) => c.fingerprint == config.fingerprint);
+    list.insert(0, config);
+    if (list.length > maxRecentConfigs) {
+      list.removeRange(maxRecentConfigs, list.length);
+    }
+    final m = await _read();
+    m[_kRecentConfigs] = list.map((c) => c.toJson()).toList();
+    await _write();
+  }
+
+  Future<void> removeRecentConfigAt(int index) async {
+    final list = await getRecentConfigs();
+    if (index < 0 || index >= list.length) return;
+    list.removeAt(index);
+    final m = await _read();
+    m[_kRecentConfigs] = list.map((c) => c.toJson()).toList();
+    await _write();
+  }
+
+  Future<void> clearRecentConfigs() async {
+    final m = await _read();
+    m.remove(_kRecentConfigs);
+    await _write();
   }
 }
