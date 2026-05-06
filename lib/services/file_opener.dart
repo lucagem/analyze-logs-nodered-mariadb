@@ -8,9 +8,11 @@ import 'dart:io';
 class FileOpener {
   Future<void> openDirectory(String path) async {
     if (Platform.isWindows) {
-      // Use the Windows shell so paths with spaces resolve correctly. We
-      // don't await exit because explorer detaches itself.
-      await Process.start('explorer', [path]);
+      // Windows Explorer silently falls back to "Documents" when a path
+      // contains forward-slash separators in the middle, so normalize to
+      // backslashes first.
+      final normalized = path.replaceAll('/', r'\');
+      await Process.start('explorer', [normalized]);
       return;
     }
     if (Platform.isMacOS) {
