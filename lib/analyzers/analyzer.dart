@@ -22,28 +22,52 @@ class Analyzer {
     final axLogEvents = <AxLogEvent>[];
     final restartList = <RestartEvent>[];
     final warnings = <String>[];
+    final sourceStatsBuilders = <_StatsBuilder>[];
     var totalLines = 0;
 
     for (final source in input.sources) {
       final file = File(source.path);
       if (!await file.exists()) {
         warnings.add('File not found: ${source.path}');
+        sourceStatsBuilders.add(_StatsBuilder(
+          kind: source.kind,
+          displayName: source.displayName,
+          eventTimestamps: const [],
+          skippedRows: 0,
+          skippedSamples: ['file not found at ${source.path}'],
+        ));
         continue;
       }
       switch (source.kind) {
         case LogSourceKind.mariadbContainer:
-          final parser = ContainerCsvParser(kind: LogSourceKind.mariadbContainer);
+          final parser =
+              ContainerCsvParser(kind: LogSourceKind.mariadbContainer);
           final parsed = await parser.parseFile(file);
           containerEvents.addAll(parsed.events);
           warnings.addAll(parsed.warnings);
           totalLines += parsed.events.length;
+          sourceStatsBuilders.add(_StatsBuilder(
+            kind: source.kind,
+            displayName: source.displayName,
+            eventTimestamps: parsed.events.map((e) => e.timestamp).toList(),
+            skippedRows: parsed.skippedRows,
+            skippedSamples: parsed.skippedSamples,
+          ));
           break;
         case LogSourceKind.noderedContainer:
-          final parser = ContainerCsvParser(kind: LogSourceKind.noderedContainer);
+          final parser =
+              ContainerCsvParser(kind: LogSourceKind.noderedContainer);
           final parsed = await parser.parseFile(file);
           containerEvents.addAll(parsed.events);
           warnings.addAll(parsed.warnings);
           totalLines += parsed.events.length;
+          sourceStatsBuilders.add(_StatsBuilder(
+            kind: source.kind,
+            displayName: source.displayName,
+            eventTimestamps: parsed.events.map((e) => e.timestamp).toList(),
+            skippedRows: parsed.skippedRows,
+            skippedSamples: parsed.skippedSamples,
+          ));
           break;
         case LogSourceKind.mariadbSlowQuery:
           final parser = SlowQueryParser();
@@ -59,6 +83,13 @@ class Analyzer {
               kind: 'mariadbd banner',
             ));
           }
+          sourceStatsBuilders.add(_StatsBuilder(
+            kind: source.kind,
+            displayName: source.displayName,
+            eventTimestamps: parsed.events.map((e) => e.timestamp).toList(),
+            skippedRows: 0,
+            skippedSamples: const [],
+          ));
           break;
         case LogSourceKind.axLog:
           final parser = AxLogParser();
@@ -66,6 +97,13 @@ class Analyzer {
           axLogEvents.addAll(parsed.events);
           warnings.addAll(parsed.warnings);
           totalLines += parsed.events.length;
+          sourceStatsBuilders.add(_StatsBuilder(
+            kind: source.kind,
+            displayName: source.displayName,
+            eventTimestamps: parsed.events.map((e) => e.timestamp).toList(),
+            skippedRows: parsed.skippedRows,
+            skippedSamples: parsed.skippedSamples,
+          ));
           break;
       }
     }
@@ -210,8 +248,12 @@ class Analyzer {
           ..sort((a, b) => a.timestamp.compareTo(b.timestamp));
     suspicious.sort((a, b) => a.timestamp.compareTo(b.timestamp));
 
+    final sourceStats = sourceStatsBuilders.map((b) => b.build(inRange)).toList();
+
     return AnalysisResult(
       generatedAt: DateTime.now(),
+      requestedFrom: input.from,
+      requestedTo: input.to,
       effectiveFrom: effFrom,
       effectiveTo: effTo,
       suspicious: suspicious,
@@ -219,7 +261,45 @@ class Analyzer {
       restarts: filteredRestarts,
       totalLinesParsed: totalLines,
       sources: input.sources,
+      sourceStats: sourceStats,
       warnings: warnings,
+    );
+  }
+}
+
+class _StatsBuilder {
+  _StatsBuilder({
+    required this.kind,
+    required this.displayName,
+    required this.eventTimestamps,
+    required this.skippedRows,
+    required this.skippedSamples,
+  });
+
+  final LogSourceKind kind;
+  final String displayName;
+  final List<DateTime> eventTimestamps;
+  final int skippedRows;
+  final List<String> skippedSamples;
+
+  SourceStats build(bool Function(DateTime) inRange) {
+    DateTime? min;
+    DateTime? max;
+    var inRangeCount = 0;
+    for (final t in eventTimestamps) {
+      min = min == null || t.isBefore(min) ? t : min;
+      max = max == null || t.isAfter(max) ? t : max;
+      if (inRange(t)) inRangeCount++;
+    }
+    return SourceStats(
+      kind: kind,
+      displayName: displayName,
+      totalEvents: eventTimestamps.length,
+      minTimestamp: min,
+      maxTimestamp: max,
+      eventsInRange: inRangeCount,
+      skippedRows: skippedRows,
+      skippedSamples: skippedSamples,
     );
   }
 }

@@ -34,6 +34,7 @@ class ContainerCsvParser {
     final rows = _converter.convert(normalized);
     final events = <LogEvent>[];
     final warnings = <String>[];
+    final skippedSamples = <String>[];
     var skipped = 0;
 
     var headerIndex = -1;
@@ -52,11 +53,22 @@ class ContainerCsvParser {
       headerIndex = -1;
     }
 
+    void recordSkip(String reason, List<dynamic> row) {
+      skipped++;
+      if (skippedSamples.length < 3) {
+        final flat = row
+            .map((c) => c.toString().replaceAll('\n', ' ').replaceAll('\r', ''))
+            .join(' | ');
+        final clipped = flat.length > 200 ? '${flat.substring(0, 200)}…' : flat;
+        skippedSamples.add('$reason — $clipped');
+      }
+    }
+
     for (var i = headerIndex + 1; i < rows.length; i++) {
       final row = rows[i];
       if (row.length < 3) {
         if (row.every((c) => c.toString().trim().isEmpty)) continue;
-        skipped++;
+        recordSkip('row has fewer than 3 columns', row);
         continue;
       }
       final dateStr = row[0].toString().trim();
@@ -67,7 +79,7 @@ class ContainerCsvParser {
 
       final ts = _tryParseDate(dateStr);
       if (ts == null) {
-        skipped++;
+        recordSkip('unparseable date "$dateStr"', row);
         continue;
       }
 
@@ -85,7 +97,12 @@ class ContainerCsvParser {
     }
 
     events.sort((a, b) => a.timestamp.compareTo(b.timestamp));
-    return ParsedContainerLog(events: events, warnings: warnings);
+    return ParsedContainerLog(
+      events: events,
+      warnings: warnings,
+      skippedRows: skipped,
+      skippedSamples: skippedSamples,
+    );
   }
 
   static DateTime? _tryParseDate(String value) {
@@ -112,8 +129,15 @@ class ContainerCsvParser {
 }
 
 class ParsedContainerLog {
-  ParsedContainerLog({required this.events, required this.warnings});
+  ParsedContainerLog({
+    required this.events,
+    required this.warnings,
+    required this.skippedRows,
+    required this.skippedSamples,
+  });
 
   final List<LogEvent> events;
   final List<String> warnings;
+  final int skippedRows;
+  final List<String> skippedSamples;
 }

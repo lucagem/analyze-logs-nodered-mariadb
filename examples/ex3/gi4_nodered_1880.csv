@@ -1,0 +1,1752 @@
+gi4_nodered_1880
+date,stream,content
+2026/05/06 13:09:51,stdout,6 May 13:09:51 - [error] [mysql:Is Alive & Reconnect] Error: Lock wait timeout exceeded; try restarting transaction
+
+2026/05/06 13:09:44,stdout,6 May 13:09:44 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/06 13:09:34,stdout,6 May 13:09:34 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/06 13:09:21,stdout,6 May 13:09:21 - [error] [mysql:Is Alive & Reconnect] Error: Lock wait timeout exceeded; try restarting transaction
+
+2026/05/06 13:09:18,stdout,6 May 13:09:18 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/06 13:09:09,stdout,6 May 13:09:09 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/06 13:09:00,stdout,6 May 13:09:00 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/06 13:08:52,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/06 13:08:52,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/06 13:08:51,stdout,6 May 13:08:51 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/05 19:13:49,stdout,5 May 19:13:49 - [error] [mysql:Is Alive & Reconnect] Error: Lock wait timeout exceeded; try restarting transaction
+
+2026/05/05 19:13:48,stdout,5 May 19:13:48 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/05 19:13:39,stdout,5 May 19:13:39 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/05 19:13:30,stdout,5 May 19:13:30 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/05 19:13:19,stdout,5 May 19:13:19 - [error] [mysql:Is Alive & Reconnect] Error: Lock wait timeout exceeded; try restarting transaction
+
+2026/05/05 19:13:16,stdout,5 May 19:13:16 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/05 19:13:07,stdout,5 May 19:13:07 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/05 19:12:58,stdout,5 May 19:12:58 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/05 19:12:50,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 19:12:50,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 19:12:49,stdout,5 May 19:12:49 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/05 16:01:25,stdout,5 May 16:01:25 - [info] Started modified nodes
+
+2026/05/05 16:01:25,stdout,5 May 16:01:25 - [info] Starting modified nodes
+
+2026/05/05 16:01:25,stdout,5 May 16:01:25 - [info] Updated flows
+
+2026/05/05 16:01:25,stdout,5 May 16:01:25 - [info] Stopped modified nodes
+
+2026/05/05 16:01:25,stdout,5 May 16:01:25 - [info] Stopping modified nodes
+
+2026/05/05 14:55:04,stdout,5 May 14:55:04 - [warn] [function:infoOPC.OpcCntRead -> msg.readPLCtags_loopN+1] infoIOT.plcFirtsRead=true infoOPC.OpcCntToPlc=0 infoOPC.OpcCntRead=1
+
+2026/05/05 14:55:04,stdout,5 May 14:55:04 - [warn] [function:msSUBSCRIBE] infoOPC.OpcCntRead=1 infoOPC.OpcUaConn=true
+
+2026/05/05 14:54:52,stdout, ...                                                
+
+2026/05/05 14:54:52,stdout, ...                                                -----END CERTIFICATE-----
+
+2026/05/05 14:54:52,stdout, ...                                                Hk5HKfm5U378QvafGAaYissr/dpQkF3rhkle
+
+2026/05/05 14:54:52,stdout, ...                                                h2S3hGOviYdxd9No4yBVPXkKPwmXqq21kqT+jpSo0/6F6S10RN3GK3W6vB+HHrP/
+
+2026/05/05 14:54:52,stdout, ...                                                v21fbMX2UqQqoZHi7fPmMf0WY4zQkrMHUEblEClj27S3VC6SwHUStC+8/wGI/Ad3
+
+2026/05/05 14:54:52,stdout, ...                                                XbagpUz0ecp6nFj8b/GXqeUHHcZ72KV+62Qg62dzIzMMkvRrgpATTE0XxsA2BUCU
+
+2026/05/05 14:54:52,stdout, ...                                                CA/ODD4fOMpWRctaf0QFGvPXmReGuJrgY9E02MdLgfKyD3pFYazb/i6o+GTeSQDI
+
+2026/05/05 14:54:52,stdout, ...                                                DQEBCwUAA4IBAQBqidl/Iu+Cx7B3r8gvZNSWlXzRoUbVxOXFiN3GxhCh2HZ4BYfR
+
+2026/05/05 14:54:52,stdout, ...                                                gBSEq/8WeQTl1ghzQfYi8ER1dvSMtDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3
+
+2026/05/05 14:54:52,stdout, ...                                                AAGjUzBRMB0GA1UdDgQWBBSEq/8WeQTl1ghzQfYi8ER1dvSMtDAfBgNVHSMEGDAW
+
+2026/05/05 14:54:52,stdout, ...                                                48cD29JGr2ACBerxbU8HcWF+SiwFLgjEQWY0YyfOuUhQidmvFbreiBzoEXenAgMB
+
+2026/05/05 14:54:52,stdout, ...                                                8j8wjRxfc/l3JWAWCjqrDAL9tHbyRNFNawInIKcUQDtmmo4/x+B2C2VBCF1+a0nW
+
+2026/05/05 14:54:52,stdout, ...                                                Lvz7dh74kL+3SNBbzjLWsLT+RYj2Klk+Xd2SVvOqxh/z5WfH6fAWEJF6eH9/UPSS
+
+2026/05/05 14:54:52,stdout, ...                                                9xWaGGWuKPqVfvqDfUB+pLZqzPzELf9WlMmZw2d+eDkxdKlafYS3dAenmtEWXekz
+
+2026/05/05 14:54:52,stdout, ...                                                0Sk+Nw3YDvI7K9UCvfKwqHAgCFXwh36u9dgLK5N47yGM8aL/mTRKp54FQW2lDDM6
+
+2026/05/05 14:54:52,stdout, ...                                                MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDm/Q2jOJvvKi5uyV0sQINML11o
+
+2026/05/05 14:54:52,stdout, ...                                                czERMA8GA1UECgwIU3RlcmZpdmUxFjAUBgNVBAMMDU5vZGVPUENVQUBnaTQwggEi
+
+2026/05/05 14:54:52,stdout, ...                                                DzIwNjUxMDIxMTY0MzI5WjBKMQswCQYDVQQGEwJGUjEQMA4GA1UEBwwHT3JsZWFu
+
+2026/05/05 14:54:52,stdout, ...                                                ZXJmaXZlMRYwFAYDVQQDDA1Ob2RlT1BDVUFAZ2k0MCAXDTI1MTAzMTE2NDMyOVoY
+
+2026/05/05 14:54:52,stdout, ...                                                BQAwSjELMAkGA1UEBhMCRlIxEDAOBgNVBAcMB09ybGVhbnMxETAPBgNVBAoMCFN0
+
+2026/05/05 14:54:52,stdout, ...                                                MIIDdzCCAl+gAwIBAgIUGKdRpWnaE23XovQNkqw+INvEiH0wDQYJKoZIhvcNAQEL
+
+2026/05/05 14:54:52,stdout,12:54:52.042Z :opcua_client_impl             :1097  -----BEGIN CERTIFICATE-----
+
+2026/05/05 14:54:52,stdout,"12:54:52.041Z :opcua_client_impl             :1096  Certificate has no extensions.subjectAltName.uniformResourceIdentifier, 
+"
+2026/05/05 14:54:52,stdout, ...                                                
+
+2026/05/05 14:54:52,stdout, ...                                                certificateFile = /usr/src/node-red/.config/node-opcua-default-nodejs/PKI/own/certs/client_certificate.pem
+
+2026/05/05 14:54:52,stdout, ...                                                applicationUri  = urn:6a7b79ac3b7b:NodeOPCUA-Client
+
+2026/05/05 14:54:52,stdout, ...                                                Please regenerate a specific certificate with a uniformResourceIdentifier that matches your client applicationUri
+
+2026/05/05 14:54:52,stdout,12:54:52.007Z :verify                        :60    [NODE-OPCUA-W14] The certificate subjectAltName uniformResourceIdentifier is missing.
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] [sqlitedb:78001568d132b72b] opened :memory: ok
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] Started flows
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] [mqtt-gem-broker:ce61d586fcfcb0b8] MQTT-GEM: Using MQTT v4 (default) (effective: 4)
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Connecting without authentication
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Dynamic password loaded (from OPCUA_PASSWORD)
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Dynamic user: {OPCUA_USER} (from OPCUA_USER)
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Using dynamic credentials from environment variables
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] InfluxDb dynamic override Token changed (hidden for security)
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] InfluxDb dynamic override URL changed from [http://fake:8086] to [http://gi4_influxdb:8086]
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] InfluxDb dynamic override version changed from [2.0] to [2.0]
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] Starting flows
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] Updated flows
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] Stopped flows
+
+2026/05/05 14:54:49,stdout,5 May 14:54:49 - [info] Stopping flows
+
+2026/05/05 11:28:37,stdout,5 May 11:28:37 - [warn] [function:msGI4RecipeLot] JOB_CODE imprevisto=[72] old=[0]
+
+2026/05/05 11:18:42,stdout,5 May 11:18:42 - [warn] [function:msGI4RecipeLot] JOB_CODE imprevisto=[72] old=[0]
+
+2026/05/05 11:16:38,stdout,5 May 11:16:38 - [warn] [function:msGI4RecipeLot] JOB_CODE imprevisto=[72] old=[0]
+
+2026/05/05 10:52:37,stdout,5 May 10:52:37 - [warn] [function:readChangesDb] dbErrorEnd
+
+2026/05/05 10:52:06,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT t.ARR_INDEX, t.VALUE_TAG, t.VALUE_TEXT, t.CHECK_LIST FROM TAG t  WHERE t.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683' AND t.DISABLED = 0;\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: connect ECONNREFUSED 172.19.0.8:3306\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:52:06,stderr,"TBaseMacchinaStatiDB: QueryError0: {\"uuid\":null,\"query\":\"SELECT t.ARR_INDEX, t.VALUE_TAG, t.VALUE_TEXT, t.CHECK_LIST FROM TAG t  WHERE t.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683' AND t.DISABLED = 0;\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: connect ECONNREFUSED 172.19.0.8:3306\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:52:06,stdout,5 May 10:52:06 - [error] [function:execUpdateTag] QueriesError
+
+2026/05/05 10:52:06,stdout,Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:52:06,stdout,5 May 10:52:06 - [error] [function:readChangesDb] state=QueryError oldState=QueryExecW
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [MySQLdatabase:GI4] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [MySQLdatabase:GI4] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.8:3306
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:57,stdout,5 May 10:51:57 - [error] [mysql:Is Alive & Reconnect] Error: Connection lost: The server closed the connection.
+
+2026/05/05 10:51:49,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT m.ACTIVE_RUN_STATUS, m.ACTIVE_STATUS_PROD, m.ACTIVE_ALARM_STATUS FROM MACHINE m WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:51:49,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:51:49,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT m.ACTIVE_RUN_STATUS, m.ACTIVE_STATUS_PROD, m.ACTIVE_ALARM_STATUS FROM MACHINE m WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:51:49,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:51:48,stdout,5 May 10:51:48 - [warn] [function:readChangesDb] dbErrorEnd
+
+2026/05/05 10:51:34,stdout,5 May 10:51:34 - [error] [function:execUpdateTag] QueriesTimeout
+
+2026/05/05 10:51:34,stdout,#Imeout in QueriesExec; secPassed=10.012; timeout=10
+
+2026/05/05 10:51:34,stdout,5 May 10:51:34 - [error] [function:execUpdateTag] state=QueriesExec oldState=QueriesExec
+
+2026/05/05 10:51:24,stdout,5 May 10:51:24 - [error] [function:execUpdateTag] QueriesTimeout
+
+2026/05/05 10:51:24,stdout,#Imeout in QueriesExec; secPassed=100.019; timeout=100
+
+2026/05/05 10:51:24,stdout,5 May 10:51:24 - [error] [function:execUpdateTag] state=QueriesExec oldState=QueriesExec
+
+2026/05/05 10:51:17,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT t.ARR_INDEX, t.VALUE_TAG, t.VALUE_TEXT, t.CHECK_LIST FROM TAG t  WHERE t.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683' AND t.DISABLED = 0;\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:51:17,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT t.ARR_INDEX, t.VALUE_TAG, t.VALUE_TEXT, t.CHECK_LIST FROM TAG t  WHERE t.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683' AND t.DISABLED = 0;\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:51:07,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT m.ACTIVE_RUN_STATUS, m.ACTIVE_STATUS_PROD, m.ACTIVE_ALARM_STATUS FROM MACHINE m WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:51:07,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:51:07,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT m.ACTIVE_RUN_STATUS, m.ACTIVE_STATUS_PROD, m.ACTIVE_ALARM_STATUS FROM MACHINE m WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:51:07,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:51:07,stdout,5 May 10:51:07 - [warn] [function:readChangesDb] dbErrorEnd
+
+2026/05/05 10:50:35,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT t.ARR_INDEX, t.VALUE_TAG, t.VALUE_TEXT, t.CHECK_LIST FROM TAG t  WHERE t.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683' AND t.DISABLED = 0;\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:50:35,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT t.ARR_INDEX, t.VALUE_TAG, t.VALUE_TEXT, t.CHECK_LIST FROM TAG t  WHERE t.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683' AND t.DISABLED = 0;\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:50:26,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT m.ACTIVE_RUN_STATUS, m.ACTIVE_STATUS_PROD, m.ACTIVE_ALARM_STATUS FROM MACHINE m WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:50:26,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:50:26,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT m.ACTIVE_RUN_STATUS, m.ACTIVE_STATUS_PROD, m.ACTIVE_ALARM_STATUS FROM MACHINE m WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:50:26,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:50:25,stdout,5 May 10:50:25 - [warn] [function:readChangesDb] dbErrorEnd
+
+2026/05/05 10:49:54,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT MAX(`ID`) AS NEW_UPD  FROM TAG_LOG WHERE MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:49:54,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"SELECT MAX(`ID`) AS NEW_UPD  FROM TAG_LOG WHERE MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:47:44,stdout,5 May 10:47:44 - [error] [mysql:Is Alive & Reconnect] Error: Lock wait timeout exceeded; try restarting transaction
+
+2026/05/05 10:47:14,stdout,5 May 10:47:14 - [error] [mysql:Is Alive & Reconnect] Error: Lock wait timeout exceeded; try restarting transaction
+
+2026/05/05 10:46:44,stdout,5 May 10:46:44 - [error] [mysql:Is Alive & Reconnect] Error: Lock wait timeout exceeded; try restarting transaction
+
+2026/05/05 10:45:44,stdout,5 May 10:45:44 - [error] [mysql:Is Alive & Reconnect] Error: Lock wait timeout exceeded; try restarting transaction
+
+2026/05/05 10:45:42,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:45:42,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_STATUS_PROD = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:45:42,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:45:42,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_STATUS_PROD = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:45:34,stdout,5 May 10:45:34 - [error] [function:execUpdateTag] QueriesTimeout
+
+2026/05/05 10:45:34,stdout,#Imeout in QueriesExec; secPassed=100.016; timeout=100
+
+2026/05/05 10:45:34,stdout,5 May 10:45:34 - [error] [function:execUpdateTag] state=QueriesExec oldState=QueriesExec
+
+2026/05/05 10:45:00,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:45:00,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:44:19,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:44:19,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_STATUS_PROD = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:44:19,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:44:19,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_STATUS_PROD = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:43:54,stdout,5 May 10:43:54 - [error] [function:execUpdateTag] QueriesTimeout
+
+2026/05/05 10:43:54,stdout,#Imeout in QueriesExec; secPassed=100.007; timeout=100
+
+2026/05/05 10:43:54,stdout,5 May 10:43:54 - [error] [function:execUpdateTag] state=QueriesExec oldState=QueriesExec
+
+2026/05/05 10:43:37,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:43:37,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:42:56,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:42:56,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_STATUS_PROD = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:42:56,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:42:56,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_STATUS_PROD = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:42:04,stdout,5 May 10:42:04 - [error] [mysql:Is Alive & Reconnect] Error: Query execution was interrupted
+
+2026/05/05 10:41:54,stdout,5 May 10:41:54 - [error] [function:execUpdateTag] QueriesTimeout
+
+2026/05/05 10:41:54,stdout,#Imeout in QueriesExec; secPassed=100.009; timeout=100
+
+2026/05/05 10:41:54,stdout,5 May 10:41:54 - [error] [function:execUpdateTag] state=QueriesExec oldState=QueriesExec
+
+2026/05/05 10:41:47,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:41:47,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:41:06,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:41:06,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_STATUS_PROD = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:41:06,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:41:06,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_STATUS_PROD = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:40:24,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 10:40:24,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/05 07:50:19,stdout,5 May 07:50:19 - [warn] [function:msGI4RecipeLot] JOB_CODE imprevisto=[72] old=[0]
+
+2026/05/05 06:45:10,stdout,5 May 06:45:10 - [warn] [function:infoOPC.OpcCntRead -> msg.readPLCtags_loopN+1] infoIOT.plcFirtsRead=true infoOPC.OpcCntToPlc=0 infoOPC.OpcCntRead=1
+
+2026/05/05 06:45:10,stdout,5 May 06:45:10 - [warn] [function:msSUBSCRIBE] infoOPC.OpcCntRead=1 infoOPC.OpcUaConn=true
+
+2026/05/05 06:45:00,stdout, ...                                                  please fix your application code
+
+2026/05/05 06:45:00,stdout,04:45:00.809Z :client_session_impl           :1585  [NODE-OPCUA-W22] Warning : your opcua client is sending multiple requests simultaneously to the server CreateMonitoredItemsRequest 
+
+2026/05/05 06:45:00,stdout,04:45:00.808Z :client_session_impl           :1580  [NODE-OPCUA-W21] Pending transactions:  CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest
+
+2026/05/05 06:44:55,stdout, ...                                                
+
+2026/05/05 06:44:55,stdout, ...                                                -----END CERTIFICATE-----
+
+2026/05/05 06:44:55,stdout, ...                                                Hk5HKfm5U378QvafGAaYissr/dpQkF3rhkle
+
+2026/05/05 06:44:55,stdout, ...                                                h2S3hGOviYdxd9No4yBVPXkKPwmXqq21kqT+jpSo0/6F6S10RN3GK3W6vB+HHrP/
+
+2026/05/05 06:44:55,stdout, ...                                                v21fbMX2UqQqoZHi7fPmMf0WY4zQkrMHUEblEClj27S3VC6SwHUStC+8/wGI/Ad3
+
+2026/05/05 06:44:55,stdout, ...                                                XbagpUz0ecp6nFj8b/GXqeUHHcZ72KV+62Qg62dzIzMMkvRrgpATTE0XxsA2BUCU
+
+2026/05/05 06:44:55,stdout, ...                                                CA/ODD4fOMpWRctaf0QFGvPXmReGuJrgY9E02MdLgfKyD3pFYazb/i6o+GTeSQDI
+
+2026/05/05 06:44:55,stdout, ...                                                DQEBCwUAA4IBAQBqidl/Iu+Cx7B3r8gvZNSWlXzRoUbVxOXFiN3GxhCh2HZ4BYfR
+
+2026/05/05 06:44:55,stdout, ...                                                gBSEq/8WeQTl1ghzQfYi8ER1dvSMtDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3
+
+2026/05/05 06:44:55,stdout, ...                                                AAGjUzBRMB0GA1UdDgQWBBSEq/8WeQTl1ghzQfYi8ER1dvSMtDAfBgNVHSMEGDAW
+
+2026/05/05 06:44:55,stdout, ...                                                48cD29JGr2ACBerxbU8HcWF+SiwFLgjEQWY0YyfOuUhQidmvFbreiBzoEXenAgMB
+
+2026/05/05 06:44:55,stdout, ...                                                8j8wjRxfc/l3JWAWCjqrDAL9tHbyRNFNawInIKcUQDtmmo4/x+B2C2VBCF1+a0nW
+
+2026/05/05 06:44:55,stdout, ...                                                Lvz7dh74kL+3SNBbzjLWsLT+RYj2Klk+Xd2SVvOqxh/z5WfH6fAWEJF6eH9/UPSS
+
+2026/05/05 06:44:55,stdout, ...                                                9xWaGGWuKPqVfvqDfUB+pLZqzPzELf9WlMmZw2d+eDkxdKlafYS3dAenmtEWXekz
+
+2026/05/05 06:44:55,stdout, ...                                                0Sk+Nw3YDvI7K9UCvfKwqHAgCFXwh36u9dgLK5N47yGM8aL/mTRKp54FQW2lDDM6
+
+2026/05/05 06:44:55,stdout, ...                                                MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDm/Q2jOJvvKi5uyV0sQINML11o
+
+2026/05/05 06:44:55,stdout, ...                                                czERMA8GA1UECgwIU3RlcmZpdmUxFjAUBgNVBAMMDU5vZGVPUENVQUBnaTQwggEi
+
+2026/05/05 06:44:55,stdout, ...                                                DzIwNjUxMDIxMTY0MzI5WjBKMQswCQYDVQQGEwJGUjEQMA4GA1UEBwwHT3JsZWFu
+
+2026/05/05 06:44:55,stdout, ...                                                ZXJmaXZlMRYwFAYDVQQDDA1Ob2RlT1BDVUFAZ2k0MCAXDTI1MTAzMTE2NDMyOVoY
+
+2026/05/05 06:44:55,stdout, ...                                                BQAwSjELMAkGA1UEBhMCRlIxEDAOBgNVBAcMB09ybGVhbnMxETAPBgNVBAoMCFN0
+
+2026/05/05 06:44:55,stdout, ...                                                MIIDdzCCAl+gAwIBAgIUGKdRpWnaE23XovQNkqw+INvEiH0wDQYJKoZIhvcNAQEL
+
+2026/05/05 06:44:55,stdout,04:44:55.874Z :opcua_client_impl             :1097  -----BEGIN CERTIFICATE-----
+
+2026/05/05 06:44:55,stdout,"04:44:55.872Z :opcua_client_impl             :1096  Certificate has no extensions.subjectAltName.uniformResourceIdentifier, 
+"
+2026/05/05 06:44:55,stdout, ...                                                
+
+2026/05/05 06:44:55,stdout, ...                                                certificateFile = /usr/src/node-red/.config/node-opcua-default-nodejs/PKI/own/certs/client_certificate.pem
+
+2026/05/05 06:44:55,stdout, ...                                                applicationUri  = urn:6a7b79ac3b7b:NodeOPCUA-Client
+
+2026/05/05 06:44:55,stdout, ...                                                Please regenerate a specific certificate with a uniformResourceIdentifier that matches your client applicationUri
+
+2026/05/05 06:44:55,stdout,04:44:55.770Z :verify                        :60    [NODE-OPCUA-W14] The certificate subjectAltName uniformResourceIdentifier is missing.
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] [sqlitedb:78001568d132b72b] opened :memory: ok
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Started flows
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] [mqtt-gem-broker:ce61d586fcfcb0b8] MQTT-GEM: Using MQTT v4 (default) (effective: 4)
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Connecting without authentication
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Dynamic password loaded (from OPCUA_PASSWORD)
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Dynamic user: {OPCUA_USER} (from OPCUA_USER)
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Using dynamic credentials from environment variables
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] InfluxDb dynamic override Token changed (hidden for security)
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] InfluxDb dynamic override URL changed from [http://fake:8086] to [http://gi4_influxdb:8086]
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] InfluxDb dynamic override version changed from [2.0] to [2.0]
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Starting flows
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [warn] Using unencrypted credentials
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Flows file     : /data/projects/gi4-collector/flows.json
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Active project : gi4-collector
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Server now running at http://127.0.0.1:1880/
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Projects directory: /data/projects
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] User directory : /data
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Context store  : 'default' [module=memory]
+
+2026/05/05 06:44:53,stdout,5 May 06:44:53 - [info] Settings file  : /data/settings.js
+
+2026/05/05 06:44:52,stdout,5 May 06:44:52 - [info] Dashboard version 3.6.5 started at /ui
+
+2026/05/05 06:44:44,stdout,5 May 06:44:44 - [info] Loading palette nodes
+
+2026/05/05 06:44:43,stdout,5 May 06:44:43 - [info] Linux 5.10.55+ x64 LE
+
+2026/05/05 06:44:43,stdout,5 May 06:44:43 - [info] Node.js  version: v20.19.4
+
+2026/05/05 06:44:43,stdout,5 May 06:44:43 - [info] Node-RED version: v4.1.0
+
+2026/05/05 06:44:43,stdout,
+
+2026/05/05 06:44:43,stdout,===================
+
+2026/05/05 06:44:43,stdout,Welcome to Node-RED
+
+2026/05/05 06:44:43,stdout,
+
+2026/05/05 06:44:43,stdout,5 May 06:44:43 - [info] 
+
+2026/05/05 06:44:43,stdout,[uuid] ACTIVATED
+
+2026/05/05 06:44:43,stdout,[path] ACTIVATED
+
+2026/05/05 06:44:43,stdout,[fs] ACTIVATED
+
+2026/05/05 06:44:43,stdout,[OPCUA] OPCUA nodes will be ENABLED (PLC_TYPE = OPC-UA)
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: RECIPE_CONF_TYPE = NODERED
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: FLY_RUN_STATUS = ICO_FUNZ_IPM_0_1_11_21
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: LOT_TERMINATE_TYPE = PLC
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: PLC_TYPE = OPC-UA
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: TRACKING_TAG_LOT_CODE = GI4_PROD_SNAP_Recipe_Info_Lotto
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: PROD_RESUME_TYPE = ON_NODERED_PLC
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_INDEX_MADATORY = false
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_ERR = 34
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: LOT_CONF_TYPE = PLC
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_MANDATORY = false
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: PROD_STATUS_TYPE = NODERED
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: USE_GI4_DB = true
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: TRACKING_TYPE = PROD_SNAP
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: STR_FIRST_VALUE_ON_DB = MES_SET_LOT_NEXT_NAME;MES_SET_RECIPE_NAME
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_OK = 33
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: FLY_PROD_GOOD_BAD = NO
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: STR_TAG_TO_SAVE_RECIPE_ON_JOB71 = f190a4c4537840aea6df363fd513026a
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: AUTO_LOTTO = 0
+
+2026/05/05 06:44:43,stdout,[appParams] Overridden from ENV: waitSecOnRecipeChange = 3
+
+2026/05/05 06:44:43,stdout,[appParams] CREATED with configuration nessuno and path /data/projects/
+
+2026/05/05 06:44:43,stdout,"Creation TAppParams(nessuno, /data/projects/)
+"
+2026/05/05 06:44:43,stdout,TAppParams ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TAppParams.js
+
+2026/05/05 06:44:43,stdout,TValueSendWait ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueSendWait.js
+
+2026/05/05 06:44:43,stdout,TValueOpcDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueOpcDisp.js
+
+2026/05/05 06:44:43,stdout,TStsDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TStsDisp.js
+
+2026/05/05 06:44:43,stdout,TSetValueOnTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TSetValueOnTag.js
+
+2026/05/05 06:44:43,stdout,TQuery ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQuery.js
+
+2026/05/05 06:44:43,stdout,TQueries ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQueries.js
+
+2026/05/05 06:44:43,stdout,TFormatSQL ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TFormatSQL.js
+
+2026/05/05 06:44:43,stdout,TDebugGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TDebugGem.js
+
+2026/05/05 06:44:43,stdout,TConvKeysightE4980 ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvKeysightE4980.js
+
+2026/05/05 06:44:43,stdout,TConvert ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvert.js
+
+2026/05/05 06:44:43,stdout,TConsoleGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConsoleGem.js
+
+2026/05/05 06:44:43,stdout,TBaseMacchinaStatiValueTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiValueTag.js
+
+2026/05/05 06:44:43,stdout,TBaseMacchinaStatiDB ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiDB.js
+
+2026/05/05 06:44:43,stdout,TBaseMacchinaStati ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStati.js
+
+2026/05/05 06:44:43,stdout,TBaseConv ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseConv.js
+
+2026/05/05 06:44:43,stdout,TArrayCircolare ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TArrayCircolare.js
+
+2026/05/05 06:44:40,stdout,Avviando Node-RED con entrypoint originale...
+
+2026/05/05 06:44:40,stdout,Configurazione SSH completata!
+
+2026/05/05 06:44:40,stdout,"Hi lucagem! You've successfully authenticated, but GitHub does not provide shell access.
+"
+2026/05/05 06:44:39,stdout,Test connessione GitHub...
+
+2026/05/05 06:44:39,stdout,✓ Chiave pubblica trovata e permessi impostati
+
+2026/05/05 06:44:39,stdout,✓ Chiave privata trovata e permessi impostati
+
+2026/05/05 06:44:39,stdout,Inizializzazione configurazione SSH...
+
+2026/05/05 06:44:39,stdout,Eseguendo inizializzazione SSH...
+
+2026/05/05 06:44:39,stdout,=== Custom entrypoint avviato ===
+
+2026/05/05 06:43:26,stdout,5 May 06:43:26 - [info] Stopped flows
+
+2026/05/05 06:43:26,stdout,5 May 06:43:26 - [info] Stopping flows
+
+2026/05/04 18:25:16,stdout,4 May 18:25:16 - [warn] [function:msGI4RecipeLot] JOB_CODE imprevisto=[73] old=[0]
+
+2026/05/04 17:35:07,stdout,4 May 17:35:07 - [warn] [function:msGI4RecipeLot] JOB_CODE imprevisto=[72] old=[0]
+
+2026/05/04 17:06:13,stdout,4 May 17:06:13 - [warn] [function:msGI4RecipeLot] JOB_CODE imprevisto=[72] old=[0]
+
+2026/05/04 14:46:45,stdout,4 May 14:46:45 - [warn] [function:readChangesDb] dbErrorEnd
+
+2026/05/04 14:46:04,stdout,4 May 14:46:04 - [error] [mysql:Is Alive & Reconnect] Error: connect ECONNREFUSED 172.19.0.9:3306
+
+2026/05/04 14:46:03,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT MAX(`ID`) AS NEW_UPD  FROM TAG_LOG WHERE MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: connect ECONNREFUSED 172.19.0.9:3306\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 14:46:03,stderr,"TBaseMacchinaStatiDB: QueryError0: {\"uuid\":null,\"query\":\"SELECT MAX(`ID`) AS NEW_UPD  FROM TAG_LOG WHERE MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: connect ECONNREFUSED 172.19.0.9:3306\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 14:46:03,stdout,Error: connect ECONNREFUSED 172.19.0.9:3306
+
+2026/05/04 14:46:03,stdout,4 May 14:46:03 - [error] [function:readChangesDb] state=QueryError oldState=QueryExecW
+
+2026/05/04 14:19:46,stdout,4 May 14:19:46 - [warn] [function:infoOPC.OpcCntRead -> msg.readPLCtags_loopN+1] infoIOT.plcFirtsRead=true infoOPC.OpcCntToPlc=0 infoOPC.OpcCntRead=1
+
+2026/05/04 14:19:46,stdout,4 May 14:19:46 - [warn] [function:msSUBSCRIBE] infoOPC.OpcCntRead=1 infoOPC.OpcUaConn=true
+
+2026/05/04 14:19:45,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT ID FROM USER_ WHERE ID = '3b5208ffaa1140b680bc43cf7d41c6c3';\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Database not connected\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 14:19:45,stderr,"TBaseMacchinaStatiDB: QueryError0: {\"uuid\":null,\"query\":\"SELECT ID FROM USER_ WHERE ID = '3b5208ffaa1140b680bc43cf7d41c6c3';\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Database not connected\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 14:19:44,stdout,Database not connected
+
+2026/05/04 14:19:44,stdout,4 May 14:19:44 - [error] [function:msUserDB] state=QueryError oldState=QueryExecW
+
+2026/05/04 14:19:42,stdout,4 May 14:19:42 - [error] [mysql:Is Alive & Reconnect] Database not connected
+
+2026/05/04 14:19:37,stdout, ...                                                  please fix your application code
+
+2026/05/04 14:19:37,stdout,12:19:37.183Z :client_session_impl           :1585  [NODE-OPCUA-W22] Warning : your opcua client is sending multiple requests simultaneously to the server CreateMonitoredItemsRequest 
+
+2026/05/04 14:19:37,stdout,12:19:37.182Z :client_session_impl           :1580  [NODE-OPCUA-W21] Pending transactions:  CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest
+
+2026/05/04 14:19:32,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":\"fc0ef60c8da844d5a531b293ac0b857b\",\"query\":\"SELECT ID, NAME_LINE, DISABLED, ROW_INDEX FROM LINE WHERE ID = 'fc0ef60c8da844d5a531b293ac0b857b'\",\"type\":\"CheckLineInit Select\",\"state\":\"Err\",\"qryResult\":\"Database not connected\",\"idx\":0,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 14:19:32,stderr,"TBaseMacchinaStatiDB: QueryError0: {\"uuid\":\"fc0ef60c8da844d5a531b293ac0b857b\",\"query\":\"SELECT ID, NAME_LINE, DISABLED, ROW_INDEX FROM LINE WHERE ID = 'fc0ef60c8da844d5a531b293ac0b857b'\",\"type\":\"CheckLineInit Select\",\"state\":\"Err\",\"qryResult\":\"Database not connected\",\"idx\":0,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 14:19:32,stdout,4 May 14:19:32 - [error] [mysql:Is Alive & Reconnect] Database not connected
+
+2026/05/04 14:19:32,stdout,Database not connected
+
+2026/05/04 14:19:32,stdout,4 May 14:19:32 - [error] [function:initDb] state=QueryError oldState=QueryExecW
+
+2026/05/04 14:19:32,stdout, ...                                                
+
+2026/05/04 14:19:32,stdout, ...                                                -----END CERTIFICATE-----
+
+2026/05/04 14:19:32,stdout, ...                                                Hk5HKfm5U378QvafGAaYissr/dpQkF3rhkle
+
+2026/05/04 14:19:32,stdout, ...                                                h2S3hGOviYdxd9No4yBVPXkKPwmXqq21kqT+jpSo0/6F6S10RN3GK3W6vB+HHrP/
+
+2026/05/04 14:19:32,stdout, ...                                                v21fbMX2UqQqoZHi7fPmMf0WY4zQkrMHUEblEClj27S3VC6SwHUStC+8/wGI/Ad3
+
+2026/05/04 14:19:32,stdout, ...                                                XbagpUz0ecp6nFj8b/GXqeUHHcZ72KV+62Qg62dzIzMMkvRrgpATTE0XxsA2BUCU
+
+2026/05/04 14:19:32,stdout, ...                                                CA/ODD4fOMpWRctaf0QFGvPXmReGuJrgY9E02MdLgfKyD3pFYazb/i6o+GTeSQDI
+
+2026/05/04 14:19:32,stdout, ...                                                DQEBCwUAA4IBAQBqidl/Iu+Cx7B3r8gvZNSWlXzRoUbVxOXFiN3GxhCh2HZ4BYfR
+
+2026/05/04 14:19:32,stdout, ...                                                gBSEq/8WeQTl1ghzQfYi8ER1dvSMtDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3
+
+2026/05/04 14:19:32,stdout, ...                                                AAGjUzBRMB0GA1UdDgQWBBSEq/8WeQTl1ghzQfYi8ER1dvSMtDAfBgNVHSMEGDAW
+
+2026/05/04 14:19:32,stdout, ...                                                48cD29JGr2ACBerxbU8HcWF+SiwFLgjEQWY0YyfOuUhQidmvFbreiBzoEXenAgMB
+
+2026/05/04 14:19:32,stdout, ...                                                8j8wjRxfc/l3JWAWCjqrDAL9tHbyRNFNawInIKcUQDtmmo4/x+B2C2VBCF1+a0nW
+
+2026/05/04 14:19:32,stdout, ...                                                Lvz7dh74kL+3SNBbzjLWsLT+RYj2Klk+Xd2SVvOqxh/z5WfH6fAWEJF6eH9/UPSS
+
+2026/05/04 14:19:32,stdout, ...                                                9xWaGGWuKPqVfvqDfUB+pLZqzPzELf9WlMmZw2d+eDkxdKlafYS3dAenmtEWXekz
+
+2026/05/04 14:19:32,stdout, ...                                                0Sk+Nw3YDvI7K9UCvfKwqHAgCFXwh36u9dgLK5N47yGM8aL/mTRKp54FQW2lDDM6
+
+2026/05/04 14:19:32,stdout, ...                                                MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDm/Q2jOJvvKi5uyV0sQINML11o
+
+2026/05/04 14:19:32,stdout, ...                                                czERMA8GA1UECgwIU3RlcmZpdmUxFjAUBgNVBAMMDU5vZGVPUENVQUBnaTQwggEi
+
+2026/05/04 14:19:32,stdout, ...                                                DzIwNjUxMDIxMTY0MzI5WjBKMQswCQYDVQQGEwJGUjEQMA4GA1UEBwwHT3JsZWFu
+
+2026/05/04 14:19:32,stdout, ...                                                ZXJmaXZlMRYwFAYDVQQDDA1Ob2RlT1BDVUFAZ2k0MCAXDTI1MTAzMTE2NDMyOVoY
+
+2026/05/04 14:19:32,stdout, ...                                                BQAwSjELMAkGA1UEBhMCRlIxEDAOBgNVBAcMB09ybGVhbnMxETAPBgNVBAoMCFN0
+
+2026/05/04 14:19:32,stdout, ...                                                MIIDdzCCAl+gAwIBAgIUGKdRpWnaE23XovQNkqw+INvEiH0wDQYJKoZIhvcNAQEL
+
+2026/05/04 14:19:32,stdout,12:19:32.223Z :opcua_client_impl             :1097  -----BEGIN CERTIFICATE-----
+
+2026/05/04 14:19:32,stdout,"12:19:32.218Z :opcua_client_impl             :1096  Certificate has no extensions.subjectAltName.uniformResourceIdentifier, 
+"
+2026/05/04 14:19:32,stdout, ...                                                
+
+2026/05/04 14:19:32,stdout, ...                                                certificateFile = /usr/src/node-red/.config/node-opcua-default-nodejs/PKI/own/certs/client_certificate.pem
+
+2026/05/04 14:19:32,stdout, ...                                                applicationUri  = urn:6a7b79ac3b7b:NodeOPCUA-Client
+
+2026/05/04 14:19:32,stdout, ...                                                Please regenerate a specific certificate with a uniformResourceIdentifier that matches your client applicationUri
+
+2026/05/04 14:19:32,stdout,12:19:32.126Z :verify                        :60    [NODE-OPCUA-W14] The certificate subjectAltName uniformResourceIdentifier is missing.
+
+2026/05/04 14:19:31,stdout,4 May 14:19:31 - [error] [mysql:Is Alive & Reconnect] Database not connected
+
+2026/05/04 14:19:30,stdout,4 May 14:19:30 - [error] [MySQLdatabase:GI4] Error: connect ECONNREFUSED 172.19.0.9:3306
+
+2026/05/04 14:19:30,stdout,4 May 14:19:30 - [info] [sqlitedb:78001568d132b72b] opened :memory: ok
+
+2026/05/04 14:19:30,stdout,4 May 14:19:30 - [info] Started flows
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] [mqtt-gem-broker:ce61d586fcfcb0b8] MQTT-GEM: Using MQTT v4 (default) (effective: 4)
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Connecting without authentication
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Dynamic password loaded (from OPCUA_PASSWORD)
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Dynamic user: {OPCUA_USER} (from OPCUA_USER)
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Using dynamic credentials from environment variables
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] InfluxDb dynamic override Token changed (hidden for security)
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] InfluxDb dynamic override URL changed from [http://fake:8086] to [http://gi4_influxdb:8086]
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] InfluxDb dynamic override version changed from [2.0] to [2.0]
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] Starting flows
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [warn] Using unencrypted credentials
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] Flows file     : /data/projects/gi4-collector/flows.json
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] Active project : gi4-collector
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] Server now running at http://127.0.0.1:1880/
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] Projects directory: /data/projects
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] User directory : /data
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] Context store  : 'default' [module=memory]
+
+2026/05/04 14:19:29,stdout,4 May 14:19:29 - [info] Settings file  : /data/settings.js
+
+2026/05/04 14:19:28,stdout,4 May 14:19:28 - [info] Dashboard version 3.6.5 started at /ui
+
+2026/05/04 14:19:19,stdout,4 May 14:19:19 - [info] Loading palette nodes
+
+2026/05/04 14:19:19,stdout,4 May 14:19:19 - [info] Linux 5.10.55+ x64 LE
+
+2026/05/04 14:19:19,stdout,4 May 14:19:19 - [info] Node.js  version: v20.19.4
+
+2026/05/04 14:19:19,stdout,4 May 14:19:19 - [info] Node-RED version: v4.1.0
+
+2026/05/04 14:19:19,stdout,
+
+2026/05/04 14:19:19,stdout,===================
+
+2026/05/04 14:19:19,stdout,Welcome to Node-RED
+
+2026/05/04 14:19:19,stdout,
+
+2026/05/04 14:19:19,stdout,4 May 14:19:19 - [info] 
+
+2026/05/04 14:19:18,stdout,[uuid] ACTIVATED
+
+2026/05/04 14:19:18,stdout,[path] ACTIVATED
+
+2026/05/04 14:19:18,stdout,[fs] ACTIVATED
+
+2026/05/04 14:19:18,stdout,[OPCUA] OPCUA nodes will be ENABLED (PLC_TYPE = OPC-UA)
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: RECIPE_CONF_TYPE = NODERED
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: FLY_RUN_STATUS = ICO_FUNZ_IPM_0_1_11_21
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: LOT_TERMINATE_TYPE = PLC
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: PLC_TYPE = OPC-UA
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: TRACKING_TAG_LOT_CODE = GI4_PROD_SNAP_Recipe_Info_Lotto
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: PROD_RESUME_TYPE = ON_NODERED_PLC
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_INDEX_MADATORY = false
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_ERR = 34
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: LOT_CONF_TYPE = PLC
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_MANDATORY = false
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: PROD_STATUS_TYPE = NODERED
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: USE_GI4_DB = true
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: TRACKING_TYPE = PROD_SNAP
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: STR_FIRST_VALUE_ON_DB = MES_SET_LOT_NEXT_NAME;MES_SET_RECIPE_NAME
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_OK = 33
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: FLY_PROD_GOOD_BAD = NO
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: STR_TAG_TO_SAVE_RECIPE_ON_JOB71 = f190a4c4537840aea6df363fd513026a
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: AUTO_LOTTO = 0
+
+2026/05/04 14:19:18,stdout,[appParams] Overridden from ENV: waitSecOnRecipeChange = 3
+
+2026/05/04 14:19:18,stdout,[appParams] CREATED with configuration nessuno and path /data/projects/
+
+2026/05/04 14:19:18,stdout,"Creation TAppParams(nessuno, /data/projects/)
+"
+2026/05/04 14:19:18,stdout,TAppParams ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TAppParams.js
+
+2026/05/04 14:19:18,stdout,TValueSendWait ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueSendWait.js
+
+2026/05/04 14:19:18,stdout,TValueOpcDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueOpcDisp.js
+
+2026/05/04 14:19:18,stdout,TStsDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TStsDisp.js
+
+2026/05/04 14:19:18,stdout,TSetValueOnTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TSetValueOnTag.js
+
+2026/05/04 14:19:18,stdout,TQuery ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQuery.js
+
+2026/05/04 14:19:18,stdout,TQueries ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQueries.js
+
+2026/05/04 14:19:18,stdout,TFormatSQL ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TFormatSQL.js
+
+2026/05/04 14:19:18,stdout,TDebugGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TDebugGem.js
+
+2026/05/04 14:19:18,stdout,TConvKeysightE4980 ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvKeysightE4980.js
+
+2026/05/04 14:19:18,stdout,TConvert ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvert.js
+
+2026/05/04 14:19:18,stdout,TConsoleGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConsoleGem.js
+
+2026/05/04 14:19:18,stdout,TBaseMacchinaStatiValueTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiValueTag.js
+
+2026/05/04 14:19:18,stdout,TBaseMacchinaStatiDB ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiDB.js
+
+2026/05/04 14:19:18,stdout,TBaseMacchinaStati ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStati.js
+
+2026/05/04 14:19:18,stdout,TBaseConv ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseConv.js
+
+2026/05/04 14:19:18,stdout,TArrayCircolare ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TArrayCircolare.js
+
+2026/05/04 14:18:31,stdout,Avviando Node-RED con entrypoint originale...
+
+2026/05/04 14:18:31,stdout,Configurazione SSH completata!
+
+2026/05/04 14:18:31,stdout,"Hi lucagem! You've successfully authenticated, but GitHub does not provide shell access.
+"
+2026/05/04 14:18:29,stdout,Test connessione GitHub...
+
+2026/05/04 14:18:29,stdout,✓ Chiave pubblica trovata e permessi impostati
+
+2026/05/04 14:18:29,stdout,✓ Chiave privata trovata e permessi impostati
+
+2026/05/04 14:18:29,stdout,Inizializzazione configurazione SSH...
+
+2026/05/04 14:18:29,stdout,Eseguendo inizializzazione SSH...
+
+2026/05/04 14:18:29,stdout,=== Custom entrypoint avviato ===
+
+2026/05/04 14:17:08,stdout,4 May 14:17:08 - [info] Stopped flows
+
+2026/05/04 14:17:08,stdout,4 May 14:17:08 - [info] Stopping flows
+
+2026/05/04 13:50:24,stdout,"{\"timeoutSec\":10,\"timeoutAutoSec\":0,\"exitErrorAutoAfterSec\":31,\"state\":\"NextLotStartWaitTagAligned\",\"actStarted\":1777895424720,\"caseNextW\":\"NextLotStartWaitTagCheck\",\"lastError\":null,\"lastErrorShown\":null,\"msgSts\":{\"newFill\":null,\"newShape\":null,\"newText\":null,\"oldFill\":null,\"oldShape\":null,\"oldText\":null},\"oldState\":\"NextLotStartWaitTagAligned\",\"cOldStates\":{\"maxSize\":20,\"_items\":[\"NextLotStartAfterInit\",\"NextLotStartWaitJobCode31onDb\",\"NextLotStartSendJobCode32\",\"SetValueOnTag\",\"SetValueOnTagOpc\",\"SetValueOnTagWriteOnDb\",\"QueryExec\",\"QueryExecW\",\"SetValueOnTagAfterWriteOnDb\",\"SetValueOnTagDone\",\"MachineNextLotLoadUploading\",\"QueryExec\",\"QueryExecW\",\"MachineNextLotLoadUploadingDone\",\"NextLotStartWaitMesSetAligned\",\"NextLotStartWaitTagAligned\",\"QueryExec\",\"QueryExecW\",\"NextLotStartWaitTagCheck\",\"NextLotStartWaitTagAligned\"],\"lastDateTime\":1777895424720,\"countAdded\":392},\"msgOldState\":null,\"loopInState\":1,\"secPassed\":0,\"isConditionOk\":true,\"stateAftertimeoutAutoSec\":\"Init\",\"stateAfterErrorTimeout\":\"Init\",\"firstState\":\"Init\",\"retryWaitSec\":30,\"frame\":10,\"queriesW\":null,\"queryW\":{\"uuid\":null,\"query\":\"SELECT COUNT(lrr.ID) AS valueRet FROM LOT_RECIPE_ROW lrr INNER JOIN TAG t ON lrr.TAG_ID = t.ID WHERE lrr.LOT_ID = '39915f8a00ff428aad193121f7840999' AND t.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683' AND fx_IntToInt(t.DISABLED) = 0 AND t.CONTEXT IN (1, 3) AND t.CHECK_LIST = 0 AND t.LAST_UPD >= (NOW() - INTERVAL 60 SECOND)\",\"type\":null,\"state\":\"Done\",\"qryResult\":[{\"valueRet\":10}],\"idx\":null,\"retryCount\":0,\"retryMax\":0},\"stateAfterDbError\":\"Idle\",\"defaultbNotOverwriteStateAfterDbError\":true,\"axLogMessage\":\"Errore in attesa JOB_CODE 32 - macchina:c05dcd762e4b4b5a99224c48445d7683 lotto:\",\"axLogType\":0,\"axLogRoutine\":\"NextLotStartSendJobCode32\",\"axLogMachineId\":\"c05dcd762e4b4b5a99224c48445d7683\",\"toglimiDidAxLogTest\":false,\"arrTagsToMonitor\":[272],\"timeoutWaitLot\":20,\"jobCodeAct\":31,\"jobCodeOld\":34,\"recipeNameTmp\":\"111.25.070.0C-59948847\",\"recipeNameAct\":\"111.25.070.0C-59948847\",\"recipeNameOld\":\"111.25.070.0C-59948847\",\"dateTimeRecipeChanged\":null,\"lotCodeOld\":\"\",\"lotCodeAct\":\"\",\"productCode\":null,\"lotIfAutoValueOld\":\"\",\"lotIfAutoValueAct\":\"\",\"SqlDate\":\"2026-05-04\",\"usrUuid\":null,\"lotId\":\"39915f8a00ff428aad193121f7840999\",\"lotCodeUploading\":\"59941061\",\"recipeUploadingDescr\":\"111.25.071.0C-59941061\",\"recipeUploadingId\":\"6ec9f647acb648688b1af6c9e53fd759\",\"recipeUploadingVers\":1,\"dateTimeStartWait\":1777895422237,\"dateTimeStartCycle\":null,\"inRicezioneRicettaDaGi4\":true,\"setTagObj\":{\"objTag\":{\"rowIndex\":7,\"tagEnable\":true,\"tagUuid\":\"433d3632811c4a299e4e809e583a7bdb\",\"tagAdr\":\"ns=3;s=GI4_JOB_CODE\",\"tagName\":\"JOB_CODE\",\"tagDescr\":\"Comandi/Risposte MES<->PLC\",\"tagType\":\"NUMBER\",\"opcDataType\":\"Int16\",\"tagLog\":1,\"tagAccMode\":0,\"tagCtx\":0,\"trackingId\":0,\"tagTextList\":\"0=no comm.;1=Op. Rich. Nuovo Lotto;2=Sys. Invio Lotto;3=Op. Conferma Cambio;4=Sys. Invio Ricetta;5=Sys. Fine Lotto;6=Sys. Annulla Coda;7=Sys. InvioRicetta_PresLotti;8=Op. RichNuovoLottoAttesa;10=Sys. Richiesta Respinta;20=Op. Rich. Acquisiz. Ricetta;21=Sys. Ricetta Acquisita;31=PLC richiede nuovo lotto;32=GI4 inizia invio lotto;33=GI4 terminato invio lotto OK;34=Timeouto errore durante invio lotto;35=Invio lotto OK ma TAG di ricetta da verificare;38=GI4 indica Fine Lotto;40=PLC richiede salvataggio ricetta;41=GI4 conferma salvataggio ricetta;63=End comm.;\",\"storeCycleTime\":null,\"storeThrsldUp\":0,\"storeThrsldDn\":0,\"storeThrsldWin\":0,\"storeDbRel\":1,\"storeDbSer\":0,\"grpUuid\":\"cd3dcf2091fd48fb85003a6567d1c5bd\",\"grpName\":\"Default\",\"grpDescr\":\"Default\",\"macUuid\":\"c05dcd762e4b4b5a99224c48445d7683\",\"macName\":\"DAN25001-FLEXLINK\",\"macDescr\":\"DAN25001-FLEXLINK\",\"lineUuid\":\"fc0ef60c8da844d5a531b293ac0b857b\",\"lineName\":\"DAN25001-FLEXLINK\",\"lineDescr\":\"DAN25001-FLEXLINK\",\"idx\":6,\"tagOPC\":{\"dispKey\":\"IOT\",\"uuidGI4\":\"433d3632811c4a299e4e809e583a7bdb\",\"alias\":\"JOB_CODE\",\"opcAdr\":\"ns=3;s=GI4_JOB_CODE\",\"opcGrp\":null,\"opcType\":\"Int16\",\"opcRefresh\":\"STD\",\"actionDispRead\":\"NONE\",\"actionDispWrite\":\"NONE\",\"onStartWin\":\"OPC\",\"dispReadCommand\":null,\"dispWriteCommand\":null,\"dispAfterWriteMode\":null,\"decimals\":0,\"enable\":true,\"idx\":6,\"dispType\":\"Int16\",\"trigger\":null,\"valObj\":{\"dataType\":\"Int16\",\"valOpc\":34,\"valDisp\":34,\"valMem\":34,\"decimals\":0},\"stsObj\":{\"state\":\"Idle\",\"workType\":null,\"lastError\":null,\"dateTimeSent\":null,\"dateTimeDone\":null,\"dateTimeErr\":null,\"lastsDispSendTimeClass\":{\"maxSize\":20,\"_items\":[],\"lastDateTime\":1777894175263,\"countAdded\":0},\"lastsCycleTagTimeClass\":{\"maxSize\":20,\"_items\":[],\"lastDateTime\":1777894175263,\"countAdded\":0}},\"parentTagArrayIdx\":null,\"itemsArray\":null,\"idxTagGi4\":6,\"opcSubscribed\":true},\"tagScale\":1,\"tagOffset\":0},\"objValPlc\":{\"valueName\":\"JOB_CODE\",\"val\":34,\"maxInQueue\":5,\"timeNoWait\":1777895424489,\"countChanges\":40,\"arrSend\":[34],\"arrTimeW\":[],\"arrWait\":[],\"countPushOverLimit\":0,\"secNoWait\":1777895404579},\"objValMes\":{\"valueName\":\"JOB_CODE\",\"val\":34,\"maxInQueue\":5,\"timeNoWait\":1777895423769,\"countChanges\":37,\"arrSend\":[],\"arrTimeW\":[1777895423769],\"arrWait\":[34],\"countPushOverLimit\":0,\"secNoWait\":1777895423769},\"newValue\":32,\"stateAtDone\":\"MachineNextLotLoadUploading\",\"stateAtErr\":\"NextLotStartAbort\",\"addToWhere\":\" AND t.VALUE_TAG = 31\",\"notWaitConfirm\":true,\"startedAt\":1777895421885,\"timeoutSec\":6},\"cntLoopInIdle\":18246,\"stateAfterConditionKO\":\"NextLotStartWaitTagAligned\",\"recipeId\":\"e800978de05d4eaaaf13f863dc54dfaf\"}
+"
+2026/05/04 13:50:24,stdout,4 May 13:50:24 - [error] [function:msGI4RecipeLot] Arrivato JobCode [34] imprevisto durante attesa JobCode 31 o 32 da DB - macchina:c05dcd762e4b4b5a99224c48445d7683 lotto:
+
+2026/05/04 13:49:47,stdout,4 May 13:49:47 - [error] [function:execUpdateTag] QueriesTimeout
+
+2026/05/04 13:49:47,stdout,#Imeout in QueriesExec; secPassed=100.006; timeout=100
+
+2026/05/04 13:49:47,stdout,4 May 13:49:47 - [error] [function:execUpdateTag] state=QueriesExec oldState=QueriesExec
+
+2026/05/04 13:49:30,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:49:30,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:49:00,stderr,"TBaseMacchinaStatiDB: QueriesRetry raggiunto QueriesRetry.retryMax: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"ffcba76304df4cd88394de37ea2254f5\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:ffcba76304df4cd88394de37ea2254f5', 10, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":8,\"retryCount\":0,\"retryMax\":0,\"messageValue\":1,\"messageCod\":\"127\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:49:00,stderr,"TBaseMacchinaStatiDB: QueriesTimeout0: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"ffcba76304df4cd88394de37ea2254f5\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:ffcba76304df4cd88394de37ea2254f5', 10, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":8,\"retryCount\":0,\"retryMax\":0,\"messageValue\":1,\"messageCod\":\"127\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:49:00,stdout,#Imeout in QueriesExec; secPassed=10.07; timeout=10
+
+2026/05/04 13:49:00,stdout,4 May 13:49:00 - [error] [function:msCheckMessages] state=QueriesExec oldState=QueriesExec
+
+2026/05/04 13:48:49,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 1 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:48:49,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 1 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:48:49,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:48:49,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:48:18,stderr,"TBaseMacchinaStatiDB: QueriesRetry raggiunto QueriesRetry.retryMax: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"ffcba76304df4cd88394de37ea2254f5\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:ffcba76304df4cd88394de37ea2254f5', 10, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":8,\"retryCount\":0,\"retryMax\":0,\"messageValue\":1,\"messageCod\":\"127\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:48:18,stderr,"TBaseMacchinaStatiDB: QueriesTimeout0: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"ffcba76304df4cd88394de37ea2254f5\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:ffcba76304df4cd88394de37ea2254f5', 10, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":8,\"retryCount\":0,\"retryMax\":0,\"messageValue\":1,\"messageCod\":\"127\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:48:18,stdout,#Imeout in QueriesExec; secPassed=10.071; timeout=10
+
+2026/05/04 13:48:18,stdout,4 May 13:48:18 - [error] [function:msCheckMessages] state=QueriesExec oldState=QueriesExec
+
+2026/05/04 13:48:04,stdout,4 May 13:48:04 - [error] [mysql:Is Alive & Reconnect] Error: Query execution was interrupted
+
+2026/05/04 13:47:44,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:47:44,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_STATUS_PROD = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:47:44,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:47:44,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_STATUS_PROD = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:47:10,stdout,4 May 13:47:10 - [error] [function:execUpdateTag] QueriesTimeout
+
+2026/05/04 13:47:10,stdout,#Imeout in QueriesExec; secPassed=100.008; timeout=100
+
+2026/05/04 13:47:10,stdout,4 May 13:47:10 - [error] [function:execUpdateTag] state=QueriesExec oldState=QueriesExec
+
+2026/05/04 13:47:03,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:47:03,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:46:21,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:46:21,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_STATUS_PROD = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:46:21,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:46:21,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_STATUS_PROD = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:45:40,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:45:40,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:31:47,stdout,4 May 13:31:47 - [warn] [function:msGI4RecipeLot] JOB_CODE imprevisto=[72] old=[0]
+
+2026/05/04 13:29:50,stdout,4 May 13:29:50 - [warn] [function:infoOPC.OpcCntRead -> msg.readPLCtags_loopN+1] infoIOT.plcFirtsRead=true infoOPC.OpcCntToPlc=0 infoOPC.OpcCntRead=1
+
+2026/05/04 13:29:50,stdout,4 May 13:29:50 - [warn] [function:msSUBSCRIBE] infoOPC.OpcCntRead=1 infoOPC.OpcUaConn=true
+
+2026/05/04 13:29:41,stdout, ...                                                  please fix your application code
+
+2026/05/04 13:29:41,stdout,11:29:41.491Z :client_session_impl           :1585  [NODE-OPCUA-W22] Warning : your opcua client is sending multiple requests simultaneously to the server CreateMonitoredItemsRequest 
+
+2026/05/04 13:29:41,stdout,11:29:41.490Z :client_session_impl           :1580  [NODE-OPCUA-W21] Pending transactions:  CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest
+
+2026/05/04 13:29:36,stdout, ...                                                
+
+2026/05/04 13:29:36,stdout, ...                                                -----END CERTIFICATE-----
+
+2026/05/04 13:29:36,stdout, ...                                                Hk5HKfm5U378QvafGAaYissr/dpQkF3rhkle
+
+2026/05/04 13:29:36,stdout, ...                                                h2S3hGOviYdxd9No4yBVPXkKPwmXqq21kqT+jpSo0/6F6S10RN3GK3W6vB+HHrP/
+
+2026/05/04 13:29:36,stdout, ...                                                v21fbMX2UqQqoZHi7fPmMf0WY4zQkrMHUEblEClj27S3VC6SwHUStC+8/wGI/Ad3
+
+2026/05/04 13:29:36,stdout, ...                                                XbagpUz0ecp6nFj8b/GXqeUHHcZ72KV+62Qg62dzIzMMkvRrgpATTE0XxsA2BUCU
+
+2026/05/04 13:29:36,stdout, ...                                                CA/ODD4fOMpWRctaf0QFGvPXmReGuJrgY9E02MdLgfKyD3pFYazb/i6o+GTeSQDI
+
+2026/05/04 13:29:36,stdout, ...                                                DQEBCwUAA4IBAQBqidl/Iu+Cx7B3r8gvZNSWlXzRoUbVxOXFiN3GxhCh2HZ4BYfR
+
+2026/05/04 13:29:36,stdout, ...                                                gBSEq/8WeQTl1ghzQfYi8ER1dvSMtDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3
+
+2026/05/04 13:29:36,stdout, ...                                                AAGjUzBRMB0GA1UdDgQWBBSEq/8WeQTl1ghzQfYi8ER1dvSMtDAfBgNVHSMEGDAW
+
+2026/05/04 13:29:36,stdout, ...                                                48cD29JGr2ACBerxbU8HcWF+SiwFLgjEQWY0YyfOuUhQidmvFbreiBzoEXenAgMB
+
+2026/05/04 13:29:36,stdout, ...                                                8j8wjRxfc/l3JWAWCjqrDAL9tHbyRNFNawInIKcUQDtmmo4/x+B2C2VBCF1+a0nW
+
+2026/05/04 13:29:36,stdout, ...                                                Lvz7dh74kL+3SNBbzjLWsLT+RYj2Klk+Xd2SVvOqxh/z5WfH6fAWEJF6eH9/UPSS
+
+2026/05/04 13:29:36,stdout, ...                                                9xWaGGWuKPqVfvqDfUB+pLZqzPzELf9WlMmZw2d+eDkxdKlafYS3dAenmtEWXekz
+
+2026/05/04 13:29:36,stdout, ...                                                0Sk+Nw3YDvI7K9UCvfKwqHAgCFXwh36u9dgLK5N47yGM8aL/mTRKp54FQW2lDDM6
+
+2026/05/04 13:29:36,stdout, ...                                                MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDm/Q2jOJvvKi5uyV0sQINML11o
+
+2026/05/04 13:29:36,stdout, ...                                                czERMA8GA1UECgwIU3RlcmZpdmUxFjAUBgNVBAMMDU5vZGVPUENVQUBnaTQwggEi
+
+2026/05/04 13:29:36,stdout, ...                                                DzIwNjUxMDIxMTY0MzI5WjBKMQswCQYDVQQGEwJGUjEQMA4GA1UEBwwHT3JsZWFu
+
+2026/05/04 13:29:36,stdout, ...                                                ZXJmaXZlMRYwFAYDVQQDDA1Ob2RlT1BDVUFAZ2k0MCAXDTI1MTAzMTE2NDMyOVoY
+
+2026/05/04 13:29:36,stdout, ...                                                BQAwSjELMAkGA1UEBhMCRlIxEDAOBgNVBAcMB09ybGVhbnMxETAPBgNVBAoMCFN0
+
+2026/05/04 13:29:36,stdout, ...                                                MIIDdzCCAl+gAwIBAgIUGKdRpWnaE23XovQNkqw+INvEiH0wDQYJKoZIhvcNAQEL
+
+2026/05/04 13:29:36,stdout,11:29:36.519Z :opcua_client_impl             :1097  -----BEGIN CERTIFICATE-----
+
+2026/05/04 13:29:36,stdout,"11:29:36.518Z :opcua_client_impl             :1096  Certificate has no extensions.subjectAltName.uniformResourceIdentifier, 
+"
+2026/05/04 13:29:36,stdout, ...                                                
+
+2026/05/04 13:29:36,stdout, ...                                                certificateFile = /usr/src/node-red/.config/node-opcua-default-nodejs/PKI/own/certs/client_certificate.pem
+
+2026/05/04 13:29:36,stdout, ...                                                applicationUri  = urn:6a7b79ac3b7b:NodeOPCUA-Client
+
+2026/05/04 13:29:36,stdout, ...                                                Please regenerate a specific certificate with a uniformResourceIdentifier that matches your client applicationUri
+
+2026/05/04 13:29:36,stdout,11:29:36.418Z :verify                        :60    [NODE-OPCUA-W14] The certificate subjectAltName uniformResourceIdentifier is missing.
+
+2026/05/04 13:29:34,stdout,4 May 13:29:34 - [info] [sqlitedb:78001568d132b72b] opened :memory: ok
+
+2026/05/04 13:29:34,stdout,4 May 13:29:34 - [info] Started flows
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] [mqtt-gem-broker:ce61d586fcfcb0b8] MQTT-GEM: Using MQTT v4 (default) (effective: 4)
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Connecting without authentication
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Dynamic password loaded (from OPCUA_PASSWORD)
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Dynamic user: {OPCUA_USER} (from OPCUA_USER)
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Using dynamic credentials from environment variables
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] InfluxDb dynamic override Token changed (hidden for security)
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] InfluxDb dynamic override URL changed from [http://fake:8086] to [http://gi4_influxdb:8086]
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] InfluxDb dynamic override version changed from [2.0] to [2.0]
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Starting flows
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [warn] Using unencrypted credentials
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Flows file     : /data/projects/gi4-collector/flows.json
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Active project : gi4-collector
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Server now running at http://127.0.0.1:1880/
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Projects directory: /data/projects
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] User directory : /data
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Context store  : 'default' [module=memory]
+
+2026/05/04 13:29:33,stdout,4 May 13:29:33 - [info] Settings file  : /data/settings.js
+
+2026/05/04 13:29:32,stdout,4 May 13:29:32 - [info] Dashboard version 3.6.5 started at /ui
+
+2026/05/04 13:29:24,stdout,4 May 13:29:24 - [info] Loading palette nodes
+
+2026/05/04 13:29:24,stdout,4 May 13:29:24 - [info] Linux 5.10.55+ x64 LE
+
+2026/05/04 13:29:24,stdout,4 May 13:29:24 - [info] Node.js  version: v20.19.4
+
+2026/05/04 13:29:24,stdout,4 May 13:29:24 - [info] Node-RED version: v4.1.0
+
+2026/05/04 13:29:24,stdout,
+
+2026/05/04 13:29:24,stdout,===================
+
+2026/05/04 13:29:24,stdout,Welcome to Node-RED
+
+2026/05/04 13:29:24,stdout,
+
+2026/05/04 13:29:24,stdout,4 May 13:29:24 - [info] 
+
+2026/05/04 13:29:24,stdout,[uuid] ACTIVATED
+
+2026/05/04 13:29:24,stdout,[path] ACTIVATED
+
+2026/05/04 13:29:24,stdout,[fs] ACTIVATED
+
+2026/05/04 13:29:24,stdout,[OPCUA] OPCUA nodes will be ENABLED (PLC_TYPE = OPC-UA)
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: RECIPE_CONF_TYPE = NODERED
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: FLY_RUN_STATUS = ICO_FUNZ_IPM_0_1_11_21
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: LOT_TERMINATE_TYPE = PLC
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: PLC_TYPE = OPC-UA
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: TRACKING_TAG_LOT_CODE = GI4_PROD_SNAP_Recipe_Info_Lotto
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: PROD_RESUME_TYPE = ON_NODERED_PLC
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_INDEX_MADATORY = false
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_ERR = 34
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: LOT_CONF_TYPE = PLC
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_MANDATORY = false
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: PROD_STATUS_TYPE = NODERED
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: USE_GI4_DB = true
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: TRACKING_TYPE = PROD_SNAP
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: STR_FIRST_VALUE_ON_DB = MES_SET_LOT_NEXT_NAME;MES_SET_RECIPE_NAME
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_OK = 33
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: FLY_PROD_GOOD_BAD = NO
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: STR_TAG_TO_SAVE_RECIPE_ON_JOB71 = f190a4c4537840aea6df363fd513026a
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: AUTO_LOTTO = 0
+
+2026/05/04 13:29:24,stdout,[appParams] Overridden from ENV: waitSecOnRecipeChange = 3
+
+2026/05/04 13:29:24,stdout,[appParams] CREATED with configuration nessuno and path /data/projects/
+
+2026/05/04 13:29:24,stdout,"Creation TAppParams(nessuno, /data/projects/)
+"
+2026/05/04 13:29:24,stdout,TAppParams ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TAppParams.js
+
+2026/05/04 13:29:24,stdout,TValueSendWait ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueSendWait.js
+
+2026/05/04 13:29:24,stdout,TValueOpcDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueOpcDisp.js
+
+2026/05/04 13:29:24,stdout,TStsDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TStsDisp.js
+
+2026/05/04 13:29:24,stdout,TSetValueOnTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TSetValueOnTag.js
+
+2026/05/04 13:29:24,stdout,TQuery ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQuery.js
+
+2026/05/04 13:29:24,stdout,TQueries ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQueries.js
+
+2026/05/04 13:29:24,stdout,TFormatSQL ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TFormatSQL.js
+
+2026/05/04 13:29:24,stdout,TDebugGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TDebugGem.js
+
+2026/05/04 13:29:24,stdout,TConvKeysightE4980 ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvKeysightE4980.js
+
+2026/05/04 13:29:24,stdout,TConvert ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvert.js
+
+2026/05/04 13:29:24,stdout,TConsoleGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConsoleGem.js
+
+2026/05/04 13:29:24,stdout,TBaseMacchinaStatiValueTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiValueTag.js
+
+2026/05/04 13:29:24,stdout,TBaseMacchinaStatiDB ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiDB.js
+
+2026/05/04 13:29:24,stdout,TBaseMacchinaStati ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStati.js
+
+2026/05/04 13:29:24,stdout,TBaseConv ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseConv.js
+
+2026/05/04 13:29:24,stdout,TArrayCircolare ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TArrayCircolare.js
+
+2026/05/04 13:29:23,stdout,Avviando Node-RED con entrypoint originale...
+
+2026/05/04 13:29:23,stdout,Configurazione SSH completata!
+
+2026/05/04 13:29:23,stdout,Connection timed out during banner exchange
+
+2026/05/04 13:29:18,stdout,Test connessione GitHub...
+
+2026/05/04 13:29:18,stdout,✓ Chiave pubblica trovata e permessi impostati
+
+2026/05/04 13:29:18,stdout,✓ Chiave privata trovata e permessi impostati
+
+2026/05/04 13:29:18,stdout,Inizializzazione configurazione SSH...
+
+2026/05/04 13:29:18,stdout,Eseguendo inizializzazione SSH...
+
+2026/05/04 13:29:18,stdout,=== Custom entrypoint avviato ===
+
+2026/05/04 13:28:10,stderr,"TBaseMacchinaStatiDB: QueriesRetry raggiunto QueriesRetry.retryMax: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"7d527da56bdb476eb145dc7e168bb059\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:7d527da56bdb476eb145dc7e168bb059', 40, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":17,\"retryCount\":0,\"retryMax\":0,\"messageValue\":0,\"messageCod\":\"272\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:28:10,stderr,"TBaseMacchinaStatiDB: QueriesTimeout0: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"7d527da56bdb476eb145dc7e168bb059\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:7d527da56bdb476eb145dc7e168bb059', 40, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":17,\"retryCount\":0,\"retryMax\":0,\"messageValue\":0,\"messageCod\":\"272\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:28:10,stdout,#Imeout in QueriesExec; secPassed=10.069; timeout=10
+
+2026/05/04 13:28:10,stdout,4 May 13:28:10 - [error] [function:msCheckMessages] state=QueriesExec oldState=QueriesExec
+
+2026/05/04 13:28:08,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:28:08,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:27:45,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:27:45,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:27:28,stderr,"TBaseMacchinaStatiDB: QueriesRetry raggiunto QueriesRetry.retryMax: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"7d527da56bdb476eb145dc7e168bb059\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:7d527da56bdb476eb145dc7e168bb059', 40, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":17,\"retryCount\":0,\"retryMax\":0,\"messageValue\":0,\"messageCod\":\"272\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:27:28,stderr,"TBaseMacchinaStatiDB: QueriesTimeout0: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"7d527da56bdb476eb145dc7e168bb059\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:7d527da56bdb476eb145dc7e168bb059', 40, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":17,\"retryCount\":0,\"retryMax\":0,\"messageValue\":0,\"messageCod\":\"272\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:27:28,stdout,#Imeout in QueriesExec; secPassed=10.047; timeout=10
+
+2026/05/04 13:27:28,stdout,4 May 13:27:28 - [error] [function:msCheckMessages] state=QueriesExec oldState=QueriesExec
+
+2026/05/04 13:27:28,stdout,4 May 13:27:28 - [error] [function:execUpdateTag] QueriesTimeout
+
+2026/05/04 13:27:28,stdout,#Imeout in QueriesExec; secPassed=100.004; timeout=100
+
+2026/05/04 13:27:28,stdout,4 May 13:27:28 - [error] [function:execUpdateTag] state=QueriesExec oldState=QueriesExec
+
+2026/05/04 13:27:26,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:27:26,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:27:04,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: Query execution was interrupted\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:27:04,stderr,"TBaseMacchinaStatiDB: QueryError0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: Query execution was interrupted\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:26:46,stderr,"TBaseMacchinaStatiDB: QueriesRetry raggiunto QueriesRetry.retryMax: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"7d527da56bdb476eb145dc7e168bb059\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:7d527da56bdb476eb145dc7e168bb059', 40, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":17,\"retryCount\":0,\"retryMax\":0,\"messageValue\":0,\"messageCod\":\"272\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:26:46,stderr,"TBaseMacchinaStatiDB: QueriesTimeout0: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"7d527da56bdb476eb145dc7e168bb059\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:7d527da56bdb476eb145dc7e168bb059', 40, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":17,\"retryCount\":0,\"retryMax\":0,\"messageValue\":0,\"messageCod\":\"272\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:26:46,stdout,#Imeout in QueriesExec; secPassed=10.045; timeout=10
+
+2026/05/04 13:26:46,stdout,4 May 13:26:46 - [error] [function:msCheckMessages] state=QueriesExec oldState=QueriesExec
+
+2026/05/04 13:26:44,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:26:44,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:26:22,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:26:22,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:26:04,stderr,"TBaseMacchinaStatiDB: QueriesRetry raggiunto QueriesRetry.retryMax: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"7d527da56bdb476eb145dc7e168bb059\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:7d527da56bdb476eb145dc7e168bb059', 40, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":17,\"retryCount\":0,\"retryMax\":0,\"messageValue\":0,\"messageCod\":\"272\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:26:04,stderr,"TBaseMacchinaStatiDB: QueriesTimeout0: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"7d527da56bdb476eb145dc7e168bb059\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:7d527da56bdb476eb145dc7e168bb059', 40, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":17,\"retryCount\":0,\"retryMax\":0,\"messageValue\":0,\"messageCod\":\"272\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:26:03,stdout,#Imeout in QueriesExec; secPassed=10.04; timeout=10
+
+2026/05/04 13:26:03,stdout,4 May 13:26:03 - [error] [function:msCheckMessages] state=QueriesExec oldState=QueriesExec
+
+2026/05/04 13:26:03,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:26:03,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:25:48,stdout,4 May 13:25:48 - [error] [function:execUpdateTag] QueriesTimeout
+
+2026/05/04 13:25:48,stdout,#Imeout in QueriesExec; secPassed=100.012; timeout=100
+
+2026/05/04 13:25:48,stdout,4 May 13:25:48 - [error] [function:execUpdateTag] state=QueriesExec oldState=QueriesExec
+
+2026/05/04 13:25:41,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:25:41,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:25:22,stderr,"TBaseMacchinaStatiDB: QueriesRetry raggiunto QueriesRetry.retryMax: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"7d527da56bdb476eb145dc7e168bb059\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:7d527da56bdb476eb145dc7e168bb059', 40, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":17,\"retryCount\":0,\"retryMax\":0,\"messageValue\":0,\"messageCod\":\"272\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:25:22,stderr,"TBaseMacchinaStatiDB: QueriesTimeout0: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"7d527da56bdb476eb145dc7e168bb059\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:7d527da56bdb476eb145dc7e168bb059', 40, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":17,\"retryCount\":0,\"retryMax\":0,\"messageValue\":0,\"messageCod\":\"272\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:25:21,stdout,#Imeout in QueriesExec; secPassed=10.043; timeout=10
+
+2026/05/04 13:25:21,stdout,4 May 13:25:21 - [error] [function:msCheckMessages] state=QueriesExec oldState=QueriesExec
+
+2026/05/04 13:25:21,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:25:21,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:24:59,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:24:59,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:24:39,stderr,"TBaseMacchinaStatiDB: QueriesRetry raggiunto QueriesRetry.retryMax: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"7d527da56bdb476eb145dc7e168bb059\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:7d527da56bdb476eb145dc7e168bb059', 40, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":17,\"retryCount\":0,\"retryMax\":0,\"messageValue\":0,\"messageCod\":\"272\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:24:39,stderr,"TBaseMacchinaStatiDB: QueriesTimeout0: {\"frame\":12,\"timeoutSec\":10,\"retryMax\":0,\"retryCount\":0,\"arrQuery\":[{\"uuid\":\"7d527da56bdb476eb145dc7e168bb059\",\"query\":\"SELECT fe_MessageEventCreate('c05dcd762e4b4b5a99224c48445d7683', 'ID:7d527da56bdb476eb145dc7e168bb059', 40, 20, NULL, NULL, NULL, NULL, NULL) AS message_id;\",\"type\":null,\"state\":\"Timeout\",\"qryResult\":null,\"idx\":17,\"retryCount\":0,\"retryMax\":0,\"messageValue\":0,\"messageCod\":\"272\"}],\"state\":\"Timeout\",\"countDone\":0,\"idxStart\":0,\"frameState\":\"Timeout\",\"lastError\":null}
+"
+2026/05/04 13:24:39,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:24:39,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE m SET m.ACTIVE_ALARM_STATUS = 0 WHERE m.ID = 'c05dcd762e4b4b5a99224c48445d7683'\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:24:39,stdout,#Imeout in QueriesExec; secPassed=10.054; timeout=10
+
+2026/05/04 13:24:39,stdout,4 May 13:24:39 - [error] [function:msCheckMessages] state=QueriesExec oldState=QueriesExec
+
+2026/05/04 13:24:18,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 13:24:18,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"CALL sp_LotEndOnPlc('c05dcd762e4b4b5a99224c48445d7683',NULL)\",\"type\":null,\"state\":\"Busy\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/04 11:02:31,stderr,"SetValueOnTagWaitTagPlc AcceptAlsoValues=0,35 accepted value=0: {\"timeoutSec\":10,\"timeoutAutoSec\":0,\"exitErrorAutoAfterSec\":31,\"state\":\"SetValueOnTagWaitTagPlc\",\"actStarted\":1777885351597,\"caseNextW\":\"SetValueOnTagAfterWriteOnDb\",\"lastError\":null,\"lastErrorShown\":null,\"msgSts\":{\"newFill\":null,\"newShape\":null,\"newText\":null,\"oldFill\":null,\"oldShape\":null,\"oldText\":null},\"oldState\":\"SetValueOnTagWaitTagPlc\",\"cOldStates\":{\"maxSize\":20,\"_items\":[\"SetValueOnTagWriteOnDb\",\"QueryExec\",\"QueryExecW\",\"SetValueOnTagAfterWriteOnDb\",\"SetValueOnTagWaitTagPlc\",\"SetValueOnTagDone\",\"NextLotStartWaitJob0\",\"NextLotStartAbort\",\"axLogMessageInit\",\"axLogMessage\",\"QueryExec\",\"QueryExecW\",\"NextLotStartAbortAfterAxLog\",\"SetValueOnTag\",\"SetValueOnTagOpc\",\"SetValueOnTagWriteOnDb\",\"QueryExec\",\"QueryExecW\",\"SetValueOnTagAfterWriteOnDb\",\"SetValueOnTagWaitTagPlc\"],\"lastDateTime\":1777885351597,\"countAdded\":66},\"msgOldState\":null,\"loopInState\":1,\"secPassed\":0,\"isConditionOk\":true,\"stateAftertimeoutAutoSec\":\"Init\",\"stateAfterErrorTimeout\":\"Init\",\"firstState\":\"Init\",\"retryWaitSec\":30,\"frame\":10,\"queriesW\":null,\"queryW\":{\"uuid\":null,\"query\":\"UPDATE TAG t SET t.VALUE_TAG = 34 WHERE t.ID = '433d3632811c4a299e4e809e583a7bdb'  AND t.VALUE_TAG IN (31, 32, 33)\",\"type\":null,\"state\":\"Done\",\"qryResult\":{\"fieldCount\":0,\"affectedRows\":0,\"insertId\":0,\"info\":\"Rows matched: 0  Changed: 0  Warnings: 0\",\"serverStatus\":2,\"warningStatus\":0,\"changedRows\":0},\"idx\":null,\"retryCount\":0,\"retryMax\":0},\"stateAfterDbError\":\"Init\",\"defaultbNotOverwriteStateAfterDbError\":true,\"axLogMessage\":\"Errore sulla ricetta attesa dal cambio Lotto diversa Job_Code=0; ricetta attesa:[111.25.066.0C-59945879] ricetta attuale:[111.25.028.0C-59962252]\",\"axLogType\":2,\"axLogRoutine\":\"NextLotStartWaitJob0\",\"axLogMachineId\":\"c05dcd762e4b4b5a99224c48445d7683\",\"toglimiDidAxLogTest\":false,\"arrTagsToMonitor\":[272],\"timeoutWaitLot\":20,\"jobCodeAct\":31,\"jobCodeOld\":0,\"recipeNameTmp\":\"111.25.028.0C-59962252\",\"recipeNameAct\":\"111.25.028.0C-59962252\",\"recipeNameOld\":\"111.25.028.0C-59962252\",\"dateTimeRecipeChanged\":null,\"lotCodeOld\":\"\",\"lotCodeAct\":\"\",\"productCode\":null,\"lotIfAutoValueOld\":\"\",\"lotIfAutoValueAct\":\"\",\"SqlDate\":\"2026-05-04\",\"usrUuid\":null,\"lotId\":\"b6c2fa0c1f204c84ae834a981e787112\",\"lotCodeUploading\":\"59945879\",\"recipeUploadingDescr\":\"111.25.066.0C-59945879\",\"recipeUploadingId\":\"861fe7f4d2354129bc3cb2f300fa7ad4\",\"recipeUploadingVers\":1,\"dateTimeStartWait\":1777885345255,\"dateTimeStartCycle\":null,\"inRicezioneRicettaDaGi4\":false,\"setTagObj\":{\"objTag\":{\"rowIndex\":7,\"tagEnable\":true,\"tagUuid\":\"433d3632811c4a299e4e809e583a7bdb\",\"tagAdr\":\"ns=3;s=GI4_JOB_CODE\",\"tagName\":\"JOB_CODE\",\"tagDescr\":\"Comandi/Risposte MES<->PLC\",\"tagType\":\"NUMBER\",\"opcDataType\":\"Int16\",\"tagLog\":1,\"tagAccMode\":0,\"tagCtx\":0,\"trackingId\":0,\"tagTextList\":\"0=no comm.;1=Op. Rich. Nuovo Lotto;2=Sys. Invio Lotto;3=Op. Conferma Cambio;4=Sys. Invio Ricetta;5=Sys. Fine Lotto;6=Sys. Annulla Coda;7=Sys. InvioRicetta_PresLotti;8=Op. RichNuovoLottoAttesa;10=Sys. Richiesta Respinta;20=Op. Rich. Acquisiz. Ricetta;21=Sys. Ricetta Acquisita;31=PLC richiede nuovo lotto;32=GI4 inizia invio lotto;33=GI4 terminato invio lotto OK;34=Timeouto errore durante invio lotto;35=Invio lotto OK ma TAG di ricetta da verificare;38=GI4 indica Fine Lotto;40=PLC richiede salvataggio ricetta;41=GI4 conferma salvataggio ricetta;63=End comm.;\",\"storeCycleTime\":null,\"storeThrsldUp\":0,\"storeThrsldDn\":0,\"storeThrsldWin\":0,\"storeDbRel\":1,\"storeDbSer\":0,\"grpUuid\":\"cd3dcf2091fd48fb85003a6567d1c5bd\",\"grpName\":\"Default\",\"grpDescr\":\"Default\",\"macUuid\":\"c05dcd762e4b4b5a99224c48445d7683\",\"macName\":\"DAN25001-FLEXLINK\",\"macDescr\":\"DAN25001-FLEXLINK\",\"lineUuid\":\"fc0ef60c8da844d5a531b293ac0b857b\",\"lineName\":\"DAN25001-FLEXLINK\",\"lineDescr\":\"DAN25001-FLEXLINK\",\"idx\":6,\"tagOPC\":{\"dispKey\":\"IOT\",\"uuidGI4\":\"433d3632811c4a299e4e809e583a7bdb\",\"alias\":\"JOB_CODE\",\"opcAdr\":\"ns=3;s=GI4_JOB_CODE\",\"opcGrp\":null,\"opcType\":\"Int16\",\"opcRefresh\":\"STD\",\"actionDispRead\":\"NONE\",\"actionDispWrite\":\"NONE\",\"onStartWin\":\"OPC\",\"dispReadCommand\":null,\"dispWriteCommand\":null,\"dispAfterWriteMode\":null,\"decimals\":0,\"enable\":true,\"idx\":6,\"dispType\":\"Int16\",\"trigger\":null,\"valObj\":{\"dataType\":\"Int16\",\"valOpc\":0,\"valDisp\":34,\"valMem\":34,\"decimals\":0},\"stsObj\":{\"state\":\"Idle\",\"workType\":null,\"lastError\":null,\"dateTimeSent\":null,\"dateTimeDone\":null,\"dateTimeErr\":null,\"lastsDispSendTimeClass\":{\"maxSize\":20,\"_items\":[],\"lastDateTime\":1777884798277,\"countAdded\":0},\"lastsCycleTagTimeClass\":{\"maxSize\":20,\"_items\":[],\"lastDateTime\":1777884798277,\"countAdded\":0}},\"parentTagArrayIdx\":null,\"itemsArray\":null,\"idxTagGi4\":6,\"opcSubscribed\":true},\"tagScale\":1,\"tagOffset\":0},\"objValPlc\":{\"valueName\":\"JOB_CODE\",\"val\":0,\"maxInQueue\":5,\"timeNoWait\":1777885351032,\"countChanges\":5,\"arrSend\":[],\"arrTimeW\":[],\"arrWait\":[],\"countPushOverLimit\":0,\"secNoWait\":1777885350449},\"objValMes\":{\"valueName\":\"JOB_CODE\",\"val\":0,\"maxInQueue\":5,\"timeNoWait\":1777885351032,\"countChanges\":5,\"arrSend\":[],\"arrTimeW\":[],\"arrWait\":[],\"countPushOverLimit\":0,\"secNoWait\":1777885346840},\"newValue\":34,\"stateAtDone\":\"Clear\",\"AcceptAlsoValues\":[0,35],\"stateAtErr\":\"Clear\",\"addToWhere\":\" AND t.VALUE_TAG IN (31, 32, 33)\",\"notWaitConfirm\":false,\"startedAt\":1777885351297,\"timeoutSec\":6},\"cntLoopInIdle\":10510,\"stateAfterConditionKO\":\"SetValueOnTagWaitTagPlc\"}
+"
+2026/05/04 11:02:30,stdout,4 May 11:02:30 - [error] [function:msGI4RecipeLot] Errore sulla ricetta attesa dal cambio Lotto che non e' la stessa al Job_Code=0; attuale:[111.25.028.0C-59962252]; attesa:[111.25.066.0C-59945879]
+
+2026/05/04 10:53:34,stdout,4 May 10:53:34 - [warn] [function:infoOPC.OpcCntRead -> msg.readPLCtags_loopN+1] infoIOT.plcFirtsRead=true infoOPC.OpcCntToPlc=0 infoOPC.OpcCntRead=1
+
+2026/05/04 10:53:34,stdout,4 May 10:53:34 - [warn] [function:msSUBSCRIBE] infoOPC.OpcCntRead=1 infoOPC.OpcUaConn=true
+
+2026/05/04 10:53:24,stdout, ...                                                  please fix your application code
+
+2026/05/04 10:53:24,stdout,08:53:24.510Z :client_session_impl           :1585  [NODE-OPCUA-W22] Warning : your opcua client is sending multiple requests simultaneously to the server CreateMonitoredItemsRequest 
+
+2026/05/04 10:53:24,stdout,08:53:24.508Z :client_session_impl           :1580  [NODE-OPCUA-W21] Pending transactions:  CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest
+
+2026/05/04 10:53:19,stdout, ...                                                
+
+2026/05/04 10:53:19,stdout, ...                                                -----END CERTIFICATE-----
+
+2026/05/04 10:53:19,stdout, ...                                                Hk5HKfm5U378QvafGAaYissr/dpQkF3rhkle
+
+2026/05/04 10:53:19,stdout, ...                                                h2S3hGOviYdxd9No4yBVPXkKPwmXqq21kqT+jpSo0/6F6S10RN3GK3W6vB+HHrP/
+
+2026/05/04 10:53:19,stdout, ...                                                v21fbMX2UqQqoZHi7fPmMf0WY4zQkrMHUEblEClj27S3VC6SwHUStC+8/wGI/Ad3
+
+2026/05/04 10:53:19,stdout, ...                                                XbagpUz0ecp6nFj8b/GXqeUHHcZ72KV+62Qg62dzIzMMkvRrgpATTE0XxsA2BUCU
+
+2026/05/04 10:53:19,stdout, ...                                                CA/ODD4fOMpWRctaf0QFGvPXmReGuJrgY9E02MdLgfKyD3pFYazb/i6o+GTeSQDI
+
+2026/05/04 10:53:19,stdout, ...                                                DQEBCwUAA4IBAQBqidl/Iu+Cx7B3r8gvZNSWlXzRoUbVxOXFiN3GxhCh2HZ4BYfR
+
+2026/05/04 10:53:19,stdout, ...                                                gBSEq/8WeQTl1ghzQfYi8ER1dvSMtDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3
+
+2026/05/04 10:53:19,stdout, ...                                                AAGjUzBRMB0GA1UdDgQWBBSEq/8WeQTl1ghzQfYi8ER1dvSMtDAfBgNVHSMEGDAW
+
+2026/05/04 10:53:19,stdout, ...                                                48cD29JGr2ACBerxbU8HcWF+SiwFLgjEQWY0YyfOuUhQidmvFbreiBzoEXenAgMB
+
+2026/05/04 10:53:19,stdout, ...                                                8j8wjRxfc/l3JWAWCjqrDAL9tHbyRNFNawInIKcUQDtmmo4/x+B2C2VBCF1+a0nW
+
+2026/05/04 10:53:19,stdout, ...                                                Lvz7dh74kL+3SNBbzjLWsLT+RYj2Klk+Xd2SVvOqxh/z5WfH6fAWEJF6eH9/UPSS
+
+2026/05/04 10:53:19,stdout, ...                                                9xWaGGWuKPqVfvqDfUB+pLZqzPzELf9WlMmZw2d+eDkxdKlafYS3dAenmtEWXekz
+
+2026/05/04 10:53:19,stdout, ...                                                0Sk+Nw3YDvI7K9UCvfKwqHAgCFXwh36u9dgLK5N47yGM8aL/mTRKp54FQW2lDDM6
+
+2026/05/04 10:53:19,stdout, ...                                                MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDm/Q2jOJvvKi5uyV0sQINML11o
+
+2026/05/04 10:53:19,stdout, ...                                                czERMA8GA1UECgwIU3RlcmZpdmUxFjAUBgNVBAMMDU5vZGVPUENVQUBnaTQwggEi
+
+2026/05/04 10:53:19,stdout, ...                                                DzIwNjUxMDIxMTY0MzI5WjBKMQswCQYDVQQGEwJGUjEQMA4GA1UEBwwHT3JsZWFu
+
+2026/05/04 10:53:19,stdout, ...                                                ZXJmaXZlMRYwFAYDVQQDDA1Ob2RlT1BDVUFAZ2k0MCAXDTI1MTAzMTE2NDMyOVoY
+
+2026/05/04 10:53:19,stdout, ...                                                BQAwSjELMAkGA1UEBhMCRlIxEDAOBgNVBAcMB09ybGVhbnMxETAPBgNVBAoMCFN0
+
+2026/05/04 10:53:19,stdout, ...                                                MIIDdzCCAl+gAwIBAgIUGKdRpWnaE23XovQNkqw+INvEiH0wDQYJKoZIhvcNAQEL
+
+2026/05/04 10:53:19,stdout,08:53:19.620Z :opcua_client_impl             :1097  -----BEGIN CERTIFICATE-----
+
+2026/05/04 10:53:19,stdout,"08:53:19.619Z :opcua_client_impl             :1096  Certificate has no extensions.subjectAltName.uniformResourceIdentifier, 
+"
+2026/05/04 10:53:19,stdout, ...                                                
+
+2026/05/04 10:53:19,stdout, ...                                                certificateFile = /usr/src/node-red/.config/node-opcua-default-nodejs/PKI/own/certs/client_certificate.pem
+
+2026/05/04 10:53:19,stdout, ...                                                applicationUri  = urn:6a7b79ac3b7b:NodeOPCUA-Client
+
+2026/05/04 10:53:19,stdout, ...                                                Please regenerate a specific certificate with a uniformResourceIdentifier that matches your client applicationUri
+
+2026/05/04 10:53:19,stdout,08:53:19.478Z :verify                        :60    [NODE-OPCUA-W14] The certificate subjectAltName uniformResourceIdentifier is missing.
+
+2026/05/04 10:53:17,stdout,4 May 10:53:17 - [info] [sqlitedb:78001568d132b72b] opened :memory: ok
+
+2026/05/04 10:53:17,stdout,4 May 10:53:17 - [info] Started flows
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] [mqtt-gem-broker:ce61d586fcfcb0b8] MQTT-GEM: Using MQTT v4 (default) (effective: 4)
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Connecting without authentication
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Dynamic password loaded (from OPCUA_PASSWORD)
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Dynamic user: {OPCUA_USER} (from OPCUA_USER)
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Using dynamic credentials from environment variables
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] InfluxDb dynamic override Token changed (hidden for security)
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] InfluxDb dynamic override URL changed from [http://fake:8086] to [http://gi4_influxdb:8086]
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] InfluxDb dynamic override version changed from [2.0] to [2.0]
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] Starting flows
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [warn] Using unencrypted credentials
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] Flows file     : /data/projects/gi4-collector/flows.json
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] Active project : gi4-collector
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] Server now running at http://127.0.0.1:1880/
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] Projects directory: /data/projects
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] User directory : /data
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] Context store  : 'default' [module=memory]
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] Settings file  : /data/settings.js
+
+2026/05/04 10:53:16,stdout,4 May 10:53:16 - [info] Dashboard version 3.6.5 started at /ui
+
+2026/05/04 10:53:09,stdout,4 May 10:53:09 - [info] Loading palette nodes
+
+2026/05/04 10:53:08,stdout,4 May 10:53:08 - [info] Linux 5.10.55+ x64 LE
+
+2026/05/04 10:53:08,stdout,4 May 10:53:08 - [info] Node.js  version: v20.19.4
+
+2026/05/04 10:53:08,stdout,4 May 10:53:08 - [info] Node-RED version: v4.1.0
+
+2026/05/04 10:53:08,stdout,
+
+2026/05/04 10:53:08,stdout,===================
+
+2026/05/04 10:53:08,stdout,Welcome to Node-RED
+
+2026/05/04 10:53:08,stdout,
+
+2026/05/04 10:53:08,stdout,4 May 10:53:08 - [info] 
+
+2026/05/04 10:53:08,stdout,[uuid] ACTIVATED
+
+2026/05/04 10:53:08,stdout,[path] ACTIVATED
+
+2026/05/04 10:53:08,stdout,[fs] ACTIVATED
+
+2026/05/04 10:53:08,stdout,[OPCUA] OPCUA nodes will be ENABLED (PLC_TYPE = OPC-UA)
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: RECIPE_CONF_TYPE = NODERED
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: FLY_RUN_STATUS = ICO_FUNZ_IPM_0_1_11_21
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: LOT_TERMINATE_TYPE = PLC
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: PLC_TYPE = OPC-UA
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: TRACKING_TAG_LOT_CODE = GI4_PROD_SNAP_Recipe_Info_Lotto
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: PROD_RESUME_TYPE = ON_NODERED_PLC
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_INDEX_MADATORY = false
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_ERR = 34
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: LOT_CONF_TYPE = PLC
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_MANDATORY = false
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: PROD_STATUS_TYPE = NODERED
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: USE_GI4_DB = true
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: TRACKING_TYPE = PROD_SNAP
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: STR_FIRST_VALUE_ON_DB = MES_SET_LOT_NEXT_NAME;MES_SET_RECIPE_NAME
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_OK = 33
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: FLY_PROD_GOOD_BAD = NO
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: STR_TAG_TO_SAVE_RECIPE_ON_JOB71 = f190a4c4537840aea6df363fd513026a
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: AUTO_LOTTO = 0
+
+2026/05/04 10:53:08,stdout,[appParams] Overridden from ENV: waitSecOnRecipeChange = 3
+
+2026/05/04 10:53:08,stdout,[appParams] CREATED with configuration nessuno and path /data/projects/
+
+2026/05/04 10:53:08,stdout,"Creation TAppParams(nessuno, /data/projects/)
+"
+2026/05/04 10:53:08,stdout,TAppParams ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TAppParams.js
+
+2026/05/04 10:53:08,stdout,TValueSendWait ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueSendWait.js
+
+2026/05/04 10:53:08,stdout,TValueOpcDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueOpcDisp.js
+
+2026/05/04 10:53:08,stdout,TStsDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TStsDisp.js
+
+2026/05/04 10:53:08,stdout,TSetValueOnTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TSetValueOnTag.js
+
+2026/05/04 10:53:08,stdout,TQuery ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQuery.js
+
+2026/05/04 10:53:08,stdout,TQueries ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQueries.js
+
+2026/05/04 10:53:08,stdout,TFormatSQL ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TFormatSQL.js
+
+2026/05/04 10:53:08,stdout,TDebugGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TDebugGem.js
+
+2026/05/04 10:53:08,stdout,TConvKeysightE4980 ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvKeysightE4980.js
+
+2026/05/04 10:53:08,stdout,TConvert ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvert.js
+
+2026/05/04 10:53:08,stdout,TConsoleGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConsoleGem.js
+
+2026/05/04 10:53:08,stdout,TBaseMacchinaStatiValueTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiValueTag.js
+
+2026/05/04 10:53:08,stdout,TBaseMacchinaStatiDB ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiDB.js
+
+2026/05/04 10:53:08,stdout,TBaseMacchinaStati ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStati.js
+
+2026/05/04 10:53:08,stdout,TBaseConv ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseConv.js
+
+2026/05/04 10:53:08,stdout,TArrayCircolare ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TArrayCircolare.js
+
+2026/05/04 10:53:07,stdout,Avviando Node-RED con entrypoint originale...
+
+2026/05/04 10:53:07,stdout,Configurazione SSH completata!
+
+2026/05/04 10:53:07,stdout,Connection timed out during banner exchange
+
+2026/05/04 10:53:02,stdout,Test connessione GitHub...
+
+2026/05/04 10:53:02,stdout,✓ Chiave pubblica trovata e permessi impostati
+
+2026/05/04 10:53:02,stdout,✓ Chiave privata trovata e permessi impostati
+
+2026/05/04 10:53:02,stdout,Inizializzazione configurazione SSH...
+
+2026/05/04 10:53:02,stdout,Eseguendo inizializzazione SSH...
+
+2026/05/04 10:53:02,stdout,=== Custom entrypoint avviato ===
+
+2026/05/04 10:51:59,stdout,4 May 10:51:59 - [info] Stopped flows
+
+2026/05/04 10:51:59,stdout,4 May 10:51:59 - [info] Stopping flows
+
+2026/05/04 10:43:57,stdout,4 May 10:43:57 - [warn] [function:infoOPC.OpcCntRead -> msg.readPLCtags_loopN+1] infoIOT.plcFirtsRead=true infoOPC.OpcCntToPlc=0 infoOPC.OpcCntRead=1
+
+2026/05/04 10:43:57,stdout,4 May 10:43:57 - [warn] [function:msSUBSCRIBE] infoOPC.OpcCntRead=1 infoOPC.OpcUaConn=true
+
+2026/05/04 10:43:47,stdout, ...                                                  please fix your application code
+
+2026/05/04 10:43:47,stdout,08:43:47.724Z :client_session_impl           :1585  [NODE-OPCUA-W22] Warning : your opcua client is sending multiple requests simultaneously to the server CreateMonitoredItemsRequest 
+
+2026/05/04 10:43:47,stdout,08:43:47.723Z :client_session_impl           :1580  [NODE-OPCUA-W21] Pending transactions:  CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest CreateMonitoredItemsRequest
+
+2026/05/04 10:43:42,stdout, ...                                                
+
+2026/05/04 10:43:42,stdout, ...                                                -----END CERTIFICATE-----
+
+2026/05/04 10:43:42,stdout, ...                                                Hk5HKfm5U378QvafGAaYissr/dpQkF3rhkle
+
+2026/05/04 10:43:42,stdout, ...                                                h2S3hGOviYdxd9No4yBVPXkKPwmXqq21kqT+jpSo0/6F6S10RN3GK3W6vB+HHrP/
+
+2026/05/04 10:43:42,stdout, ...                                                v21fbMX2UqQqoZHi7fPmMf0WY4zQkrMHUEblEClj27S3VC6SwHUStC+8/wGI/Ad3
+
+2026/05/04 10:43:42,stdout, ...                                                XbagpUz0ecp6nFj8b/GXqeUHHcZ72KV+62Qg62dzIzMMkvRrgpATTE0XxsA2BUCU
+
+2026/05/04 10:43:42,stdout, ...                                                CA/ODD4fOMpWRctaf0QFGvPXmReGuJrgY9E02MdLgfKyD3pFYazb/i6o+GTeSQDI
+
+2026/05/04 10:43:42,stdout, ...                                                DQEBCwUAA4IBAQBqidl/Iu+Cx7B3r8gvZNSWlXzRoUbVxOXFiN3GxhCh2HZ4BYfR
+
+2026/05/04 10:43:42,stdout, ...                                                gBSEq/8WeQTl1ghzQfYi8ER1dvSMtDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3
+
+2026/05/04 10:43:42,stdout, ...                                                AAGjUzBRMB0GA1UdDgQWBBSEq/8WeQTl1ghzQfYi8ER1dvSMtDAfBgNVHSMEGDAW
+
+2026/05/04 10:43:42,stdout, ...                                                48cD29JGr2ACBerxbU8HcWF+SiwFLgjEQWY0YyfOuUhQidmvFbreiBzoEXenAgMB
+
+2026/05/04 10:43:42,stdout, ...                                                8j8wjRxfc/l3JWAWCjqrDAL9tHbyRNFNawInIKcUQDtmmo4/x+B2C2VBCF1+a0nW
+
+2026/05/04 10:43:42,stdout, ...                                                Lvz7dh74kL+3SNBbzjLWsLT+RYj2Klk+Xd2SVvOqxh/z5WfH6fAWEJF6eH9/UPSS
+
+2026/05/04 10:43:42,stdout, ...                                                9xWaGGWuKPqVfvqDfUB+pLZqzPzELf9WlMmZw2d+eDkxdKlafYS3dAenmtEWXekz
+
+2026/05/04 10:43:42,stdout, ...                                                0Sk+Nw3YDvI7K9UCvfKwqHAgCFXwh36u9dgLK5N47yGM8aL/mTRKp54FQW2lDDM6
+
+2026/05/04 10:43:42,stdout, ...                                                MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDm/Q2jOJvvKi5uyV0sQINML11o
+
+2026/05/04 10:43:42,stdout, ...                                                czERMA8GA1UECgwIU3RlcmZpdmUxFjAUBgNVBAMMDU5vZGVPUENVQUBnaTQwggEi
+
+2026/05/04 10:43:42,stdout, ...                                                DzIwNjUxMDIxMTY0MzI5WjBKMQswCQYDVQQGEwJGUjEQMA4GA1UEBwwHT3JsZWFu
+
+2026/05/04 10:43:42,stdout, ...                                                ZXJmaXZlMRYwFAYDVQQDDA1Ob2RlT1BDVUFAZ2k0MCAXDTI1MTAzMTE2NDMyOVoY
+
+2026/05/04 10:43:42,stdout, ...                                                BQAwSjELMAkGA1UEBhMCRlIxEDAOBgNVBAcMB09ybGVhbnMxETAPBgNVBAoMCFN0
+
+2026/05/04 10:43:42,stdout, ...                                                MIIDdzCCAl+gAwIBAgIUGKdRpWnaE23XovQNkqw+INvEiH0wDQYJKoZIhvcNAQEL
+
+2026/05/04 10:43:42,stdout,08:43:42.798Z :opcua_client_impl             :1097  -----BEGIN CERTIFICATE-----
+
+2026/05/04 10:43:42,stdout,"08:43:42.796Z :opcua_client_impl             :1096  Certificate has no extensions.subjectAltName.uniformResourceIdentifier, 
+"
+2026/05/04 10:43:42,stdout, ...                                                
+
+2026/05/04 10:43:42,stdout, ...                                                certificateFile = /usr/src/node-red/.config/node-opcua-default-nodejs/PKI/own/certs/client_certificate.pem
+
+2026/05/04 10:43:42,stdout, ...                                                applicationUri  = urn:6a7b79ac3b7b:NodeOPCUA-Client
+
+2026/05/04 10:43:42,stdout, ...                                                Please regenerate a specific certificate with a uniformResourceIdentifier that matches your client applicationUri
+
+2026/05/04 10:43:42,stdout,08:43:42.675Z :verify                        :60    [NODE-OPCUA-W14] The certificate subjectAltName uniformResourceIdentifier is missing.
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] [sqlitedb:78001568d132b72b] opened :memory: ok
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] Started flows
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] [mqtt-gem-broker:ce61d586fcfcb0b8] MQTT-GEM: Using MQTT v4 (default) (effective: 4)
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Connecting without authentication
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Dynamic password loaded (from OPCUA_PASSWORD)
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Dynamic user: {OPCUA_USER} (from OPCUA_USER)
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] [OPCUA-IIoT-Connector:OPCUA-SRV] Using dynamic credentials from environment variables
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] InfluxDb dynamic override Token changed (hidden for security)
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] InfluxDb dynamic override URL changed from [http://fake:8086] to [http://gi4_influxdb:8086]
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] InfluxDb dynamic override version changed from [2.0] to [2.0]
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] Starting flows
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [warn] Using unencrypted credentials
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] Flows file     : /data/projects/gi4-collector/flows.json
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] Active project : gi4-collector
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] Server now running at http://127.0.0.1:1880/
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] Projects directory: /data/projects
+
+2026/05/04 10:43:40,stdout,4 May 10:43:40 - [info] User directory : /data
+
+2026/05/04 10:43:39,stdout,4 May 10:43:39 - [info] Context store  : 'default' [module=memory]
+
+2026/05/04 10:43:39,stdout,4 May 10:43:39 - [info] Settings file  : /data/settings.js
+
+2026/05/04 10:43:39,stdout,4 May 10:43:39 - [info] Dashboard version 3.6.5 started at /ui
+
+2026/05/04 10:43:32,stdout,4 May 10:43:32 - [info] Loading palette nodes
+
+2026/05/04 10:43:32,stdout,4 May 10:43:32 - [info] Linux 5.10.55+ x64 LE
+
+2026/05/04 10:43:32,stdout,4 May 10:43:32 - [info] Node.js  version: v20.19.4
+
+2026/05/04 10:43:32,stdout,4 May 10:43:32 - [info] Node-RED version: v4.1.0
+
+2026/05/04 10:43:32,stdout,
+
+2026/05/04 10:43:32,stdout,===================
+
+2026/05/04 10:43:32,stdout,Welcome to Node-RED
+
+2026/05/04 10:43:32,stdout,
+
+2026/05/04 10:43:32,stdout,4 May 10:43:32 - [info] 
+
+2026/05/04 10:43:31,stdout,[uuid] ACTIVATED
+
+2026/05/04 10:43:31,stdout,[path] ACTIVATED
+
+2026/05/04 10:43:31,stdout,[fs] ACTIVATED
+
+2026/05/04 10:43:31,stdout,[OPCUA] OPCUA nodes will be ENABLED (PLC_TYPE = OPC-UA)
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: RECIPE_CONF_TYPE = NODERED
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: FLY_RUN_STATUS = ICO_FUNZ_IPM_0_1_11_21
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: LOT_TERMINATE_TYPE = PLC
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: PLC_TYPE = OPC-UA
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: TRACKING_TAG_LOT_CODE = GI4_PROD_SNAP_Recipe_Info_Lotto
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: PROD_RESUME_TYPE = ON_NODERED_PLC
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_INDEX_MADATORY = false
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_ERR = 34
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: LOT_CONF_TYPE = PLC
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_MANDATORY = false
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: PROD_STATUS_TYPE = NODERED
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: USE_GI4_DB = true
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: TRACKING_TYPE = PROD_SNAP
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: STR_FIRST_VALUE_ON_DB = MES_SET_LOT_NEXT_NAME;MES_SET_RECIPE_NAME
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_OK = 33
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: FLY_PROD_GOOD_BAD = NO
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: STR_TAG_TO_SAVE_RECIPE_ON_JOB71 = f190a4c4537840aea6df363fd513026a
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: AUTO_LOTTO = 0
+
+2026/05/04 10:43:31,stdout,[appParams] Overridden from ENV: waitSecOnRecipeChange = 3
+
+2026/05/04 10:43:31,stdout,[appParams] CREATED with configuration nessuno and path /data/projects/
+
+2026/05/04 10:43:31,stdout,"Creation TAppParams(nessuno, /data/projects/)
+"
+2026/05/04 10:43:31,stdout,TAppParams ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TAppParams.js
+
+2026/05/04 10:43:31,stdout,TValueSendWait ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueSendWait.js
+
+2026/05/04 10:43:31,stdout,TValueOpcDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueOpcDisp.js
+
+2026/05/04 10:43:31,stdout,TStsDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TStsDisp.js
+
+2026/05/04 10:43:31,stdout,TSetValueOnTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TSetValueOnTag.js
+
+2026/05/04 10:43:31,stdout,TQuery ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQuery.js
+
+2026/05/04 10:43:31,stdout,TQueries ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQueries.js
+
+2026/05/04 10:43:31,stdout,TFormatSQL ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TFormatSQL.js
+
+2026/05/04 10:43:31,stdout,TDebugGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TDebugGem.js
+
+2026/05/04 10:43:31,stdout,TConvKeysightE4980 ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvKeysightE4980.js
+
+2026/05/04 10:43:31,stdout,TConvert ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvert.js
+
+2026/05/04 10:43:31,stdout,TConsoleGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConsoleGem.js
+
+2026/05/04 10:43:31,stdout,TBaseMacchinaStatiValueTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiValueTag.js
+
+2026/05/04 10:43:31,stdout,TBaseMacchinaStatiDB ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiDB.js
+
+2026/05/04 10:43:31,stdout,TBaseMacchinaStati ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStati.js
+
+2026/05/04 10:43:31,stdout,TBaseConv ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseConv.js
+
+2026/05/04 10:43:31,stdout,TArrayCircolare ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TArrayCircolare.js
+
+2026/05/04 10:43:30,stdout,Avviando Node-RED con entrypoint originale...
+
+2026/05/04 10:43:30,stdout,Configurazione SSH completata!
+
+2026/05/04 10:43:30,stdout,"Hi lucagem! You've successfully authenticated, but GitHub does not provide shell access.
+"
+2026/05/04 10:43:29,stdout,Test connessione GitHub...
+
+2026/05/04 10:43:29,stdout,✓ Chiave pubblica trovata e permessi impostati
+
+2026/05/04 10:43:29,stdout,✓ Chiave privata trovata e permessi impostati
+
+2026/05/04 10:43:29,stdout,Inizializzazione configurazione SSH...
+
+2026/05/04 10:43:29,stdout,Eseguendo inizializzazione SSH...
+
+2026/05/04 10:43:29,stdout,=== Custom entrypoint avviato ===
+

@@ -194,8 +194,11 @@ class _ReportScreenState extends State<ReportScreen> {
   }
 
   Widget _header(AnalysisResult r) {
-    final from = r.effectiveFrom != null ? _tsFmt.format(r.effectiveFrom!) : '−∞';
-    final to = r.effectiveTo != null ? _tsFmt.format(r.effectiveTo!) : '+∞';
+    final effFrom = r.effectiveFrom != null ? _tsFmt.format(r.effectiveFrom!) : '−∞';
+    final effTo = r.effectiveTo != null ? _tsFmt.format(r.effectiveTo!) : '+∞';
+    final reqFrom = r.requestedFrom != null ? _tsFmt.format(r.requestedFrom!) : '−∞';
+    final reqTo = r.requestedTo != null ? _tsFmt.format(r.requestedTo!) : '+∞';
+    final clipped = _rangeWasClipped(r);
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -206,15 +209,28 @@ class _ReportScreenState extends State<ReportScreen> {
                 style: Theme.of(context).textTheme.headlineSmall),
             const SizedBox(height: 8),
             Text('Generated: ${_tsFmt.format(r.generatedAt)}'),
-            Text('Effective range: $from → $to'),
+            if (r.requestedFrom != null || r.requestedTo != null)
+              Text('Requested range: $reqFrom → $reqTo'),
+            Text('Effective range: $effFrom → $effTo'),
             Text('Lines parsed: ${r.totalLinesParsed}'),
-            const SizedBox(height: 8),
-            const Text('Sources:'),
-            for (final s in r.sources)
-              Padding(
-                padding: const EdgeInsets.only(left: 12),
-                child: Text('• ${s.kind.label} — ${s.displayName}'),
+            if (clipped) ...[
+              const SizedBox(height: 8),
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.amber.withValues(alpha: 0.15),
+                  border: Border.all(color: Colors.amber.withValues(alpha: 0.5)),
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: const Text(
+                  'The effective range is narrower than requested because at least one '
+                  'source has no events outside it — see the table below.',
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
               ),
+            ],
+            const SizedBox(height: 12),
+            _sourcesTable(r),
             if (r.warnings.isNotEmpty) ...[
               const SizedBox(height: 8),
               Container(
@@ -234,8 +250,103 @@ class _ReportScreenState extends State<ReportScreen> {
                 ),
               ),
             ],
+            if (r.sourceStats.any((s) => s.skippedSamples.isNotEmpty)) ...[
+              const SizedBox(height: 12),
+              _parserIssues(r),
+            ],
           ],
         ),
+      ),
+    );
+  }
+
+  bool _rangeWasClipped(AnalysisResult r) {
+    if (r.requestedFrom != null &&
+        r.effectiveFrom != null &&
+        r.effectiveFrom!.isAfter(r.requestedFrom!)) {
+      return true;
+    }
+    if (r.requestedTo != null &&
+        r.effectiveTo != null &&
+        r.effectiveTo!.isBefore(r.requestedTo!)) {
+      return true;
+    }
+    return false;
+  }
+
+  Widget _sourcesTable(AnalysisResult r) {
+    if (r.sourceStats.isEmpty) return const SizedBox.shrink();
+    return SizedBox(
+      width: double.infinity,
+      child: DataTable(
+        headingRowHeight: 32,
+        dataRowMinHeight: 28,
+        dataRowMaxHeight: 36,
+        columnSpacing: 14,
+        columns: const [
+          DataColumn(label: Text('File')),
+          DataColumn(label: Text('Type')),
+          DataColumn(label: Text('Total'), numeric: true),
+          DataColumn(label: Text('Min ts')),
+          DataColumn(label: Text('Max ts')),
+          DataColumn(label: Text('In range'), numeric: true),
+          DataColumn(label: Text('Skipped'), numeric: true),
+        ],
+        rows: [
+          for (final s in r.sourceStats)
+            DataRow(cells: [
+              DataCell(Tooltip(message: s.displayName, child: Text(s.displayName))),
+              DataCell(Text(s.kind.label)),
+              DataCell(Text('${s.totalEvents}')),
+              DataCell(Text(s.minTimestamp != null ? _tsFmt.format(s.minTimestamp!) : '—')),
+              DataCell(Text(s.maxTimestamp != null ? _tsFmt.format(s.maxTimestamp!) : '—')),
+              DataCell(Text('${s.eventsInRange}',
+                  style: TextStyle(
+                      color: s.eventsInRange == 0 ? Colors.red.shade700 : null,
+                      fontWeight: s.eventsInRange == 0 ? FontWeight.w600 : null))),
+              DataCell(Text('${s.skippedRows}',
+                  style: TextStyle(
+                      color: s.skippedRows > 0 ? Colors.orange.shade700 : null))),
+            ]),
+        ],
+      ),
+    );
+  }
+
+  Widget _parserIssues(AnalysisResult r) {
+    return Container(
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: Colors.orange.withValues(alpha: 0.06),
+        border: Border.all(color: Colors.orange.withValues(alpha: 0.4)),
+        borderRadius: BorderRadius.circular(4),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text('Parser issues',
+              style: TextStyle(fontWeight: FontWeight.w700)),
+          const SizedBox(height: 4),
+          const Text(
+            'Rows the parser had to discard. Typical causes: unparseable dates '
+            '(continuation rows of multi-line content) or rows truncated '
+            'mid-export.',
+            style: TextStyle(fontSize: 12, color: Colors.black87),
+          ),
+          const SizedBox(height: 8),
+          for (final s in r.sourceStats)
+            if (s.skippedSamples.isNotEmpty) ...[
+              Text('${s.displayName} — ${s.skippedRows} skipped',
+                  style: const TextStyle(fontWeight: FontWeight.w600)),
+              for (final sample in s.skippedSamples)
+                Padding(
+                  padding: const EdgeInsets.only(left: 12, top: 2, bottom: 2),
+                  child: SelectableText('• $sample',
+                      style: const TextStyle(fontSize: 12, fontFamily: 'monospace')),
+                ),
+              const SizedBox(height: 6),
+            ],
+        ],
       ),
     );
   }

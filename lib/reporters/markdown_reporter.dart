@@ -17,22 +17,31 @@ class MarkdownReporter {
     buf.writeln('# Log Analysis Report');
     buf.writeln();
     buf.writeln('- **Generated:** ${tsFmt.format(result.generatedAt)}');
+    if (result.requestedFrom != null || result.requestedTo != null) {
+      buf.writeln(
+          '- **Requested range:** ${_fmtRange(result.requestedFrom, result.requestedTo, tsFmt)}');
+    }
     buf.writeln(
         '- **Effective range:** ${_fmtRange(result.effectiveFrom, result.effectiveTo, tsFmt)}');
-    buf.writeln('- **Lines parsed:** ${result.totalLinesParsed}');
-    buf.writeln('- **Sources:**');
-    for (final s in result.sources) {
-      buf.writeln('  - `${s.kind.label}` — ${s.displayName}');
+    if (_rangeWasClipped(result)) {
+      buf.writeln(
+          '> The effective range is narrower than requested because at least one source has no events outside it. See the per-source table below.');
     }
+    buf.writeln('- **Lines parsed:** ${result.totalLinesParsed}');
+    buf.writeln();
+
+    _writeSourceStats(buf, result, tsFmt);
+
     if (result.warnings.isNotEmpty) {
       buf.writeln();
       buf.writeln('> ⚠ ${result.warnings.length} parser warning(s):');
       for (final w in result.warnings) {
         buf.writeln('> - $w');
       }
+      buf.writeln();
     }
-    buf.writeln();
 
+    _writeParserIssues(buf, result);
     _writeSummary(buf, result);
     _writeRestarts(buf, result, tsFmt);
     _writeTimeline(buf, result, tsFmt);
@@ -40,6 +49,59 @@ class MarkdownReporter {
     _writeTopSlowQueries(buf, result, tsFmt);
 
     return buf.toString();
+  }
+
+  bool _rangeWasClipped(AnalysisResult result) {
+    if (result.requestedFrom != null &&
+        result.effectiveFrom != null &&
+        result.effectiveFrom!.isAfter(result.requestedFrom!)) {
+      return true;
+    }
+    if (result.requestedTo != null &&
+        result.effectiveTo != null &&
+        result.effectiveTo!.isBefore(result.requestedTo!)) {
+      return true;
+    }
+    return false;
+  }
+
+  void _writeSourceStats(StringBuffer buf, AnalysisResult result, DateFormat fmt) {
+    if (result.sourceStats.isEmpty) return;
+    buf.writeln('## Sources');
+    buf.writeln();
+    buf.writeln(
+        '| File | Type | Total events | Min timestamp | Max timestamp | Events in range | Skipped rows |');
+    buf.writeln('|---|---|---:|---|---|---:|---:|');
+    for (final s in result.sourceStats) {
+      buf.writeln('| ${_escape(s.displayName)} | ${s.kind.label} '
+          '| ${s.totalEvents} '
+          '| ${s.minTimestamp != null ? fmt.format(s.minTimestamp!) : '—'} '
+          '| ${s.maxTimestamp != null ? fmt.format(s.maxTimestamp!) : '—'} '
+          '| ${s.eventsInRange} | ${s.skippedRows} |');
+    }
+    buf.writeln();
+  }
+
+  void _writeParserIssues(StringBuffer buf, AnalysisResult result) {
+    final hasSkipped = result.sourceStats.any((s) => s.skippedSamples.isNotEmpty);
+    if (!hasSkipped) return;
+    buf.writeln('## Parser issues');
+    buf.writeln();
+    buf.writeln(
+        'Rows the parser had to discard. Sample lines are shown to help diagnose '
+        'the source — typical causes are unparseable dates (e.g. multi-line '
+        '`content` fields whose continuation rows have no date in column 1) or '
+        'rows truncated mid-export.');
+    buf.writeln();
+    for (final s in result.sourceStats) {
+      if (s.skippedSamples.isEmpty) continue;
+      buf.writeln('### ${_escape(s.displayName)} — ${s.skippedRows} skipped');
+      buf.writeln();
+      for (final sample in s.skippedSamples) {
+        buf.writeln('- $sample');
+      }
+      buf.writeln();
+    }
   }
 
   void _writeSummary(StringBuffer buf, AnalysisResult result) {

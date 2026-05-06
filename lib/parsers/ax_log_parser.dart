@@ -27,10 +27,16 @@ class AxLogParser {
     final rows = _converter.convert(normalized);
     final events = <AxLogEvent>[];
     final warnings = <String>[];
+    final skippedSamples = <String>[];
     var skipped = 0;
 
     if (rows.isEmpty) {
-      return ParsedAxLog(events: events, warnings: warnings);
+      return ParsedAxLog(
+        events: events,
+        warnings: warnings,
+        skippedRows: 0,
+        skippedSamples: skippedSamples,
+      );
     }
 
     final header = rows.first.map((e) => e.toString().trim().toUpperCase()).toList();
@@ -45,28 +51,44 @@ class AxLogParser {
     if (colDate < 0 || colMsg < 0 || colState < 0) {
       warnings.add(
           '$sourceName: missing required columns (DATE_TIME_LOG/MESSAGE/STATE).');
-      return ParsedAxLog(events: events, warnings: warnings);
+      return ParsedAxLog(
+        events: events,
+        warnings: warnings,
+        skippedRows: 0,
+        skippedSamples: skippedSamples,
+      );
+    }
+
+    void recordSkip(String reason, List<dynamic> row) {
+      skipped++;
+      if (skippedSamples.length < 3) {
+        final flat = row
+            .map((c) => c.toString().replaceAll('\n', ' ').replaceAll('\r', ''))
+            .join(' | ');
+        final clipped = flat.length > 200 ? '${flat.substring(0, 200)}…' : flat;
+        skippedSamples.add('$reason — $clipped');
+      }
     }
 
     for (var i = 1; i < rows.length; i++) {
       final row = rows[i];
       if (row.length <= colState) {
         if (row.every((c) => c.toString().trim().isEmpty)) continue;
-        skipped++;
+        recordSkip('row has fewer than ${colState + 1} columns', row);
         continue;
       }
 
       final dateStr = row[colDate].toString().trim();
       final ts = _tryParseDate(dateStr);
       if (ts == null) {
-        skipped++;
+        recordSkip('unparseable date "$dateStr"', row);
         continue;
       }
 
       final stateStr = row[colState].toString().trim();
       final state = int.tryParse(stateStr);
       if (state == null) {
-        skipped++;
+        recordSkip('non-numeric STATE "$stateStr"', row);
         continue;
       }
 
@@ -95,7 +117,12 @@ class AxLogParser {
     }
 
     events.sort((a, b) => a.timestamp.compareTo(b.timestamp));
-    return ParsedAxLog(events: events, warnings: warnings);
+    return ParsedAxLog(
+      events: events,
+      warnings: warnings,
+      skippedRows: skipped,
+      skippedSamples: skippedSamples,
+    );
   }
 
   static DateTime? _tryParseDate(String value) {
@@ -122,8 +149,15 @@ class AxLogParser {
 }
 
 class ParsedAxLog {
-  ParsedAxLog({required this.events, required this.warnings});
+  ParsedAxLog({
+    required this.events,
+    required this.warnings,
+    required this.skippedRows,
+    required this.skippedSamples,
+  });
 
   final List<AxLogEvent> events;
   final List<String> warnings;
+  final int skippedRows;
+  final List<String> skippedSamples;
 }

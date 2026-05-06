@@ -19,6 +19,37 @@ class RestartEvent {
   final String kind;
 }
 
+/// One row per loaded file shown in the report header. Captures both the
+/// raw span of timestamps in the file and how many events survived the
+/// effective-range intersection — so the user can immediately see when a
+/// source ends before the requested window.
+class SourceStats {
+  SourceStats({
+    required this.kind,
+    required this.displayName,
+    required this.totalEvents,
+    required this.minTimestamp,
+    required this.maxTimestamp,
+    required this.eventsInRange,
+    required this.skippedRows,
+    required this.skippedSamples,
+  });
+
+  final LogSourceKind kind;
+  final String displayName;
+  final int totalEvents;
+  final DateTime? minTimestamp;
+  final DateTime? maxTimestamp;
+  final int eventsInRange;
+
+  /// Total number of rows the parser had to discard.
+  final int skippedRows;
+
+  /// Up to a few example malformed rows (raw text) so the user can inspect
+  /// what was thrown away. Each entry is prefixed with the reason.
+  final List<String> skippedSamples;
+}
+
 class AnalysisInput {
   AnalysisInput({
     required this.sources,
@@ -39,6 +70,8 @@ class AnalysisInput {
 class AnalysisResult {
   AnalysisResult({
     required this.generatedAt,
+    required this.requestedFrom,
+    required this.requestedTo,
     required this.effectiveFrom,
     required this.effectiveTo,
     required this.suspicious,
@@ -46,10 +79,13 @@ class AnalysisResult {
     required this.restarts,
     required this.totalLinesParsed,
     required this.sources,
+    required this.sourceStats,
     required this.warnings,
   });
 
   final DateTime generatedAt;
+  final DateTime? requestedFrom;
+  final DateTime? requestedTo;
   final DateTime? effectiveFrom;
   final DateTime? effectiveTo;
   final List<SuspiciousEvent> suspicious;
@@ -57,5 +93,6 @@ class AnalysisResult {
   final List<RestartEvent> restarts;
   final int totalLinesParsed;
   final List<LogSource> sources;
+  final List<SourceStats> sourceStats;
   final List<String> warnings;
 }
