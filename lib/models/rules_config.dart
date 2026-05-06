@@ -157,20 +157,61 @@ class SlowQueryRules {
   }
 }
 
-class AxLogRules {
-  AxLogRules({required this.includeDebug, required this.warnState, required this.errorState});
+/// Static metadata for an AX_LOG STATE value.
+class AxState {
+  const AxState(this.value, this.label, this.severity);
 
-  /// Emit suspicious events for STATE = warning and error. Debug rows are
-  /// counted but not flagged unless `includeDebug` is true.
-  final bool includeDebug;
-  final int warnState;
-  final int errorState;
+  final int value;
+  final String label;
+  final Severity severity;
+
+  /// Built-in catalog covering OK / WARNING / ERROR / DEBUG.
+  static const ok = AxState(0, 'OK', Severity.info);
+  static const warning = AxState(1, 'WARNING', Severity.warn);
+  static const error = AxState(2, 'ERROR', Severity.error);
+  static const debug = AxState(3, 'DEBUG', Severity.info);
+
+  static const all = [ok, warning, error, debug];
+
+  static AxState forValue(int value) {
+    for (final s in all) {
+      if (s.value == value) return s;
+    }
+    return AxState(value, 'STATE=$value', Severity.info);
+  }
+
+  /// Human-readable category that the analyzer uses on emitted
+  /// `SuspiciousEvent`s. Stable (used in the report).
+  String get category {
+    switch (value) {
+      case 0:
+        return 'AX ok';
+      case 1:
+        return 'AX warning';
+      case 2:
+        return 'AX error';
+      case 3:
+        return 'AX debug';
+      default:
+        return 'AX state=$value';
+    }
+  }
+}
+
+class AxLogRules {
+  AxLogRules({
+    required this.defaultIncludedStates,
+  });
+
+  /// States included in an analysis when the UI does not override the
+  /// selection. Defaults to WARNING + ERROR.
+  final Set<int> defaultIncludedStates;
 
   factory AxLogRules.fromJson(Map<String, dynamic> json) {
+    final raw = json['defaultIncludedStates'] as List<dynamic>?;
+    final parsed = raw?.map((e) => e as int).toSet();
     return AxLogRules(
-      includeDebug: (json['includeDebug'] as bool?) ?? false,
-      warnState: (json['warnState'] as int?) ?? 1,
-      errorState: (json['errorState'] as int?) ?? 2,
+      defaultIncludedStates: parsed ?? const {1, 2},
     );
   }
 }

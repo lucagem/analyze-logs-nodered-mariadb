@@ -63,9 +63,7 @@
     "repeatThreshold": 5
   },
   "axLog": {
-    "includeDebug": false,
-    "warnState": 1,
-    "errorState": 2
+    "defaultIncludedStates": [1, 2]
   },
   "report": {
     "timelineLimit": 200,

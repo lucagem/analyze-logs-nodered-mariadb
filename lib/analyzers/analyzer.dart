@@ -4,7 +4,6 @@ import '../models/analysis_result.dart';
 import '../models/log_event.dart';
 import '../models/log_source.dart';
 import '../models/rules_config.dart';
-import '../models/severity.dart';
 import '../models/suspicious_event.dart';
 import '../parsers/ax_log_parser.dart';
 import '../parsers/container_csv_parser.dart';
@@ -142,22 +141,13 @@ class Analyzer {
     final slowAnalyzer = SlowQueryAnalyzer(rules.slowQuery);
     suspicious.addAll(slowAnalyzer.analyze(filteredSlow));
 
-    // AX_LOG suspicious events (severity comes from the STATE column —
-    // no regex matching needed).
+    // AX_LOG suspicious events. Severity / category come from the STATE
+    // column (mapped via AxState), filtered by the user-selected state set.
+    final axStates =
+        input.axIncludedStates ?? rules.axLog.defaultIncludedStates;
     for (final e in filteredAx) {
-      Severity? sev;
-      String? category;
-      if (e.state == rules.axLog.errorState) {
-        sev = Severity.error;
-        category = 'AX error';
-      } else if (e.state == rules.axLog.warnState) {
-        sev = Severity.warn;
-        category = 'AX warning';
-      } else if (rules.axLog.includeDebug && e.state == 3) {
-        sev = Severity.info;
-        category = 'AX debug';
-      }
-      if (sev == null || category == null) continue;
+      if (!axStates.contains(e.state)) continue;
+      final meta = AxState.forValue(e.state);
       final unit = e.unitName.isEmpty ? 'AX' : e.unitName;
       final routine = e.routineName.isEmpty ? '' : ' · ${e.routineName}';
       final msg = e.content.replaceAll(RegExp(r'\s+'), ' ').trim();
@@ -165,8 +155,8 @@ class Analyzer {
         timestamp: e.timestamp,
         sourceKind: LogSourceKind.axLog,
         sourceName: e.sourceName,
-        severity: sev,
-        category: category,
+        severity: meta.severity,
+        category: meta.category,
         ruleId: 'ax_state_${e.state}',
         excerpt: '$unit$routine: $msg',
         metadata: {

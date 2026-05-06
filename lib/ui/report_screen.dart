@@ -8,6 +8,7 @@ import 'package:path_provider/path_provider.dart';
 
 import '../models/analysis_result.dart';
 import '../models/log_event.dart';
+import '../models/log_source.dart';
 import '../models/severity.dart';
 import '../models/suspicious_event.dart';
 
@@ -37,6 +38,39 @@ class _ReportScreenState extends State<ReportScreen> {
   static const _errBg = Color(0xFF9A1B22); // dark red
   static const _warnBg = Color(0xFFB07A00); // amber/dark yellow
   static const _highlightFg = Colors.white;
+
+  /// AX_LOG state-specific palette (cell background).
+  static const _axOkBg = Color(0xFF1E6B37); // dark green
+  static const _axDebugBg = Color(0xFF455A64); // blue-grey
+
+  /// Returns the (background, foreground) pair for a suspicious event.
+  /// AX rows are colored by their STATE value so OK/WARNING/ERROR/DEBUG are
+  /// each visually distinct; non-AX rows fall back to severity-based colors.
+  (Color, Color?) _rowColors(SuspiciousEvent ev) {
+    if (ev.sourceKind == LogSourceKind.axLog) {
+      final state = ev.metadata['state'];
+      switch (state) {
+        case 0:
+          return (_axOkBg, _highlightFg);
+        case 1:
+          return (_warnBg, _highlightFg);
+        case 2:
+          return (_errBg, _highlightFg);
+        case 3:
+          return (_axDebugBg, _highlightFg);
+      }
+    }
+    switch (ev.severity) {
+      case Severity.critical:
+        return (_critBg, _highlightFg);
+      case Severity.error:
+        return (_errBg, _highlightFg);
+      case Severity.warn:
+        return (_warnBg.withValues(alpha: 0.18), null);
+      case Severity.info:
+        return (Colors.transparent, null);
+    }
+  }
 
   Future<void> _saveToDisk() async {
     setState(() => _saving = true);
@@ -288,10 +322,17 @@ class _ReportScreenState extends State<ReportScreen> {
           children: [
             Text('Timeline (${shown.length} of ${r.suspicious.length})',
                 style: Theme.of(context).textTheme.titleLarge),
-            const SizedBox(height: 4),
-            const Text(
-              'CRITICAL and ERROR rows are highlighted in dark red; WARN in amber.',
-              style: TextStyle(fontSize: 12, color: Colors.black54),
+            const SizedBox(height: 6),
+            Wrap(
+              spacing: 8,
+              runSpacing: 4,
+              children: [
+                _legendChip('CRITICAL', _critBg, _highlightFg),
+                _legendChip('ERROR', _errBg, _highlightFg),
+                _legendChip('WARN', _warnBg, _highlightFg),
+                _legendChip('AX OK', _axOkBg, _highlightFg),
+                _legendChip('AX DEBUG', _axDebugBg, _highlightFg),
+              ],
             ),
             const SizedBox(height: 8),
             for (final ev in shown) _timelineRow(ev),
@@ -302,16 +343,7 @@ class _ReportScreenState extends State<ReportScreen> {
   }
 
   Widget _timelineRow(SuspiciousEvent ev) {
-    final bg = switch (ev.severity) {
-      Severity.critical => _critBg,
-      Severity.error => _errBg,
-      Severity.warn => _warnBg.withValues(alpha: 0.18),
-      Severity.info => Colors.transparent,
-    };
-    final fg = switch (ev.severity) {
-      Severity.critical || Severity.error => _highlightFg,
-      _ => null,
-    };
+    final (bg, fg) = _rowColors(ev);
     final excerpt = ev.excerpt.length > 400
         ? '${ev.excerpt.substring(0, 400)}…'
         : ev.excerpt;
@@ -431,6 +463,18 @@ class _ReportScreenState extends State<ReportScreen> {
       ),
       child: Text('${sev.label}: $count',
           style: TextStyle(color: fg, fontWeight: FontWeight.w600)),
+    );
+  }
+
+  Widget _legendChip(String label, Color bg, Color fg) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+      decoration: BoxDecoration(
+        color: bg,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Text(label,
+          style: TextStyle(color: fg, fontSize: 11, fontWeight: FontWeight.w600)),
     );
   }
 

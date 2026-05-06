@@ -32,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
   DateTime? _to;
 
   RulesConfig? _rules;
+  Set<int> _axIncludedStates = const {};
   bool _running = false;
   String? _statusMessage;
 
@@ -44,7 +45,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _loadRules() async {
     final r = await loadDefaultRules();
     if (!mounted) return;
-    setState(() => _rules = r);
+    setState(() {
+      _rules = r;
+      _axIncludedStates = {...r.axLog.defaultIncludedStates};
+    });
   }
 
   bool get _canAnalyze =>
@@ -170,6 +174,7 @@ class _HomeScreenState extends State<HomeScreen> {
         sources: sources,
         from: _from,
         to: _to,
+        axIncludedStates: _axLogs.isEmpty ? null : Set.of(_axIncludedStates),
       ));
 
       setState(() => _statusMessage = 'Building report…');
@@ -291,6 +296,32 @@ class _HomeScreenState extends State<HomeScreen> {
                     icon: const Icon(Icons.add),
                     label: const Text('Add AX log CSV'),
                   ),
+                  if (_axLogs.isNotEmpty) ...[
+                    const SizedBox(height: 12),
+                    const Text(
+                      'Include AX_LOG STATE values:',
+                      style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
+                    ),
+                    const SizedBox(height: 6),
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 4,
+                      children: [
+                        for (final s in AxState.all)
+                          FilterChip(
+                            label: Text('${s.value} · ${s.label}'),
+                            selected: _axIncludedStates.contains(s.value),
+                            onSelected: (sel) => setState(() {
+                              if (sel) {
+                                _axIncludedStates.add(s.value);
+                              } else {
+                                _axIncludedStates.remove(s.value);
+                              }
+                            }),
+                          ),
+                      ],
+                    ),
+                  ],
                   const SizedBox(height: 24),
                   _sectionTitle('5 · Time range (optional)'),
                   Row(

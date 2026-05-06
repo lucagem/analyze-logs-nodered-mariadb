@@ -24,11 +24,16 @@ class AnalysisInput {
     required this.sources,
     this.from,
     this.to,
+    this.axIncludedStates,
   });
 
   final List<LogSource> sources;
   final DateTime? from;
   final DateTime? to;
+
+  /// Override the AX_LOG state selection for this analysis run. When `null`,
+  /// the analyzer falls back to `RulesConfig.axLog.defaultIncludedStates`.
+  final Set<int>? axIncludedStates;
 }
 
 class AnalysisResult {

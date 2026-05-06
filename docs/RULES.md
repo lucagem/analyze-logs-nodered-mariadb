@@ -39,6 +39,29 @@ Each entry of `mariadb.patterns` and `nodered.patterns` is:
   (`mdb_error`, `mdb_warning`) last.
 - Reorder freely. Just remember: more specific → first.
 
+## AX_LOG state selection
+
+`axLog` in `rules.json`:
+
+| Key                      | Meaning                                                                |
+|--------------------------|------------------------------------------------------------------------|
+| `defaultIncludedStates`  | Array of STATE values flagged as suspicious when the UI does not override the choice. Default `[1, 2]` (WARNING + ERROR). |
+
+State values are mapped as follows (hard-coded in `AxState`):
+
+| STATE | Label    | Severity | Category    |
+|-------|----------|----------|-------------|
+| 0     | OK       | INFO     | AX ok       |
+| 1     | WARNING  | WARN     | AX warning  |
+| 2     | ERROR    | ERROR    | AX error    |
+| 3     | DEBUG    | INFO     | AX debug    |
+
+The home screen renders one `FilterChip` per state when at least one
+AX_LOG file is selected; toggling a chip overrides
+`defaultIncludedStates` for that single analysis run. In the report
+viewer each AX state has its own background color (dark red for ERROR,
+amber for WARNING, dark green for OK, blue-grey for DEBUG).
+
 ## Slow-query thresholds
 
 `slowQuery` in `rules.json`:

@@ -51,11 +51,16 @@ The first run lands on the home screen. Pick at least one log file —
    1882, 1883, …); the slot is repeatable.
 3. **MariaDB slow query log** — optional `.log` (or `.txt`) MySQL/MariaDB
    slow-log file.
-4. **Time range** — optional. Both fields take date+time. The effective
+4. **AX_LOG CSVs** — optional, repeatable. Once at least one file is
+   selected, the screen shows four `FilterChip`s for the AX STATE values
+   (`0 · OK`, `1 · WARNING`, `2 · ERROR`, `3 · DEBUG`). Defaults match
+   `axLog.defaultIncludedStates` from `assets/rules.json` (WARN + ERROR).
+   Each state colors its rows distinctly in the report.
+5. **Time range** — optional. Both fields take date+time. The effective
    window is `intersect(CSV-span, [from, to])`; the slow log is then filtered
    to that window. This matters because slow logs typically cover a much
    wider period than container logs and would otherwise dominate the report.
-5. **Analyze** — kicks off parsing → rule matching → Markdown rendering. The
+6. **Analyze** — kicks off parsing → rule matching → Markdown rendering. The
    report opens in an in-app viewer with **Copy** and **Save to disk**
    actions; saved reports land in `<Documents>/log-analysis/report-*.md`.
 
