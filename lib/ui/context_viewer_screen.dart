@@ -67,11 +67,20 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
 
   void _showJson(JsonMatch m, {String? title}) {
     setState(() {
-      _formattedValue = m.parsed;
-      _formattedRaw = m.pretty;
-      _formatterError = null;
-      _formatterTitle = title ?? 'JSON snippet';
-      _formatterUnescaped = m.unescaped;
+      if (m.bestEffort) {
+        _formattedValue = null;
+        _formattedRaw = m.bestEffortText ?? m.raw;
+        _formatterError =
+            'Could not parse as valid JSON — showing un-escaped raw text.';
+        _formatterTitle = title ?? 'Raw text';
+        _formatterUnescaped = true;
+      } else {
+        _formattedValue = m.parsed;
+        _formattedRaw = m.pretty;
+        _formatterError = null;
+        _formatterTitle = title ?? 'JSON snippet';
+        _formatterUnescaped = m.unescaped;
+      }
     });
   }
 
@@ -80,11 +89,20 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
     final m = JsonExtractor.tryParseWhole(text);
     if (m != null) {
       setState(() {
-        _formattedValue = m.parsed;
-        _formattedRaw = m.pretty;
-        _formatterError = null;
-        _formatterTitle = 'Pasted JSON';
-        _formatterUnescaped = m.unescaped;
+        if (m.bestEffort) {
+          _formattedValue = null;
+          _formattedRaw = m.bestEffortText ?? m.raw;
+          _formatterError =
+              'Could not parse as valid JSON — showing un-escaped raw text.';
+          _formatterTitle = 'Pasted (raw)';
+          _formatterUnescaped = true;
+        } else {
+          _formattedValue = m.parsed;
+          _formattedRaw = m.pretty;
+          _formatterError = null;
+          _formatterTitle = 'Pasted JSON';
+          _formatterUnescaped = m.unescaped;
+        }
       });
       return;
     }
@@ -198,7 +216,7 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
   }
 
   Widget _logRow(LogEvent e, {required int relIndex, required bool isFocused}) {
-    final matches = JsonExtractor.findAll(e.content);
+    final matches = JsonExtractor.findAllWithBestEffort(e.content);
     final relLabel = relIndex == 0
         ? '★'
         : (relIndex < 0 ? '$relIndex' : '+$relIndex');
@@ -248,13 +266,7 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
                     runSpacing: 4,
                     children: [
                       for (var idx = 0; idx < matches.length; idx++)
-                        ActionChip(
-                          avatar: const Icon(Icons.data_object, size: 14),
-                          label: Text('JSON ${idx + 1} · ${matches[idx].label}',
-                              style: const TextStyle(fontSize: 11)),
-                          onPressed: () => _showJson(matches[idx],
-                              title: 'JSON ${idx + 1} of ${matches.length}'),
-                        ),
+                        _matchChip(matches, idx),
                     ],
                   ),
                 ],
@@ -263,6 +275,27 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _matchChip(List<JsonMatch> matches, int idx) {
+    final m = matches[idx];
+    if (m.bestEffort) {
+      return ActionChip(
+        avatar: Icon(Icons.warning_amber_rounded,
+            size: 14, color: Colors.orange.shade800),
+        label: Text('Raw · ${m.label}',
+            style: const TextStyle(fontSize: 11)),
+        backgroundColor: Colors.orange.withValues(alpha: 0.08),
+        side: BorderSide(color: Colors.orange.withValues(alpha: 0.4)),
+        onPressed: () => _showJson(m, title: 'Raw block (could not parse)'),
+      );
+    }
+    return ActionChip(
+      avatar: const Icon(Icons.data_object, size: 14),
+      label: Text('JSON ${idx + 1} · ${m.label}',
+          style: const TextStyle(fontSize: 11)),
+      onPressed: () => _showJson(m, title: 'JSON ${idx + 1} of ${matches.length}'),
     );
   }
 
@@ -373,7 +406,7 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
   }
 
   Widget _formattedView() {
-    if (_formattedValue == null) {
+    if (_formattedValue == null && _formattedRaw == null) {
       if (_formatterError != null) {
         return Center(
           child: Padding(
@@ -396,42 +429,79 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
       );
     }
 
-    final span = _highlighter.highlight(_formattedValue);
-    final body = SelectableText.rich(span);
-
-    if (_wordWrap) {
-      return Scrollbar(
-        controller: _vScroll,
-        thumbVisibility: true,
-        child: SingleChildScrollView(
-          controller: _vScroll,
-          padding: const EdgeInsets.fromLTRB(12, 12, 18, 12),
-          child: body,
+    final Widget body;
+    if (_formattedValue != null) {
+      final span = _highlighter.highlight(_formattedValue);
+      body = SelectableText.rich(span);
+    } else {
+      // Best-effort: raw un-escaped text without syntax highlighting.
+      body = SelectableText(
+        _formattedRaw ?? '',
+        style: const TextStyle(
+          fontFamily: 'monospace',
+          fontSize: 13,
+          height: 1.45,
+          color: Color(0xFF24292E),
         ),
       );
     }
 
-    // No-wrap: 2-D scroll. Outer scrollbar controls vertical, inner
-    // horizontal. `IntrinsicWidth` lets the rich text take its natural
-    // width so long lines don't wrap.
-    return Scrollbar(
-      controller: _vScroll,
-      thumbVisibility: true,
-      child: SingleChildScrollView(
-        controller: _vScroll,
-        child: Scrollbar(
-          controller: _hScroll,
-          thumbVisibility: true,
-          notificationPredicate: (n) => n.depth == 1,
-          child: SingleChildScrollView(
-            controller: _hScroll,
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.fromLTRB(12, 12, 18, 18),
-            child: IntrinsicWidth(child: body),
+    final scrollContent = _wordWrap
+        ? Scrollbar(
+            controller: _vScroll,
+            thumbVisibility: true,
+            child: SingleChildScrollView(
+              controller: _vScroll,
+              padding: const EdgeInsets.fromLTRB(12, 12, 18, 12),
+              child: body,
+            ),
+          )
+        : Scrollbar(
+            controller: _vScroll,
+            thumbVisibility: true,
+            child: SingleChildScrollView(
+              controller: _vScroll,
+              child: Scrollbar(
+                controller: _hScroll,
+                thumbVisibility: true,
+                notificationPredicate: (n) => n.depth == 1,
+                child: SingleChildScrollView(
+                  controller: _hScroll,
+                  scrollDirection: Axis.horizontal,
+                  padding: const EdgeInsets.fromLTRB(12, 12, 18, 18),
+                  child: IntrinsicWidth(child: body),
+                ),
+              ),
+            ),
+          );
+
+    if (_formatterError != null) {
+      return Column(
+        children: [
+          Container(
+            width: double.infinity,
+            color: Colors.amber.withValues(alpha: 0.18),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            child: Row(
+              children: [
+                Icon(Icons.warning_amber_rounded,
+                    size: 16, color: Colors.orange.shade900),
+                const SizedBox(width: 6),
+                Expanded(
+                  child: Text(
+                    _formatterError!,
+                    style: const TextStyle(fontSize: 12, color: Colors.black87),
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-      ),
-    );
+          Expanded(child: scrollContent),
+        ],
+      );
+    }
+
+    return scrollContent;
   }
 }
 

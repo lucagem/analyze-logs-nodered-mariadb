@@ -7,6 +7,8 @@ class JsonMatch {
     required this.raw,
     required this.parsed,
     this.unescaped = false,
+    this.bestEffort = false,
+    this.bestEffortText,
   });
 
   /// Start index (inclusive) within the source string.
@@ -19,7 +21,8 @@ class JsonMatch {
   /// `\"` escapes when [unescaped] is true).
   final String raw;
 
-  /// The decoded value (Map, List, primitive…).
+  /// The decoded value (Map, List, primitive…). `null` when the snippet
+  /// could not be parsed and is being surfaced in best-effort mode.
   final dynamic parsed;
 
   /// True when the snippet had to be un-escaped (it was logged as a
@@ -27,11 +30,27 @@ class JsonMatch {
   /// could succeed.
   final bool unescaped;
 
-  /// Pretty-printed (2-space indent) representation of [parsed].
-  String get pretty => const JsonEncoder.withIndent('  ').convert(parsed);
+  /// True for "best-effort" matches: the bracketed region looked like
+  /// JSON but failed to parse. [parsed] is `null` and [bestEffortText]
+  /// holds the un-escaped raw text so the user can at least read it.
+  final bool bestEffort;
+
+  /// Un-escaped raw text used when [bestEffort] is true.
+  final String? bestEffortText;
+
+  /// Pretty-printed (2-space indent) representation of [parsed], or the
+  /// best-effort un-escaped text when the snippet couldn't be parsed.
+  String get pretty {
+    if (parsed != null) return const JsonEncoder.withIndent('  ').convert(parsed);
+    return bestEffortText ?? raw;
+  }
 
   /// Short label for buttons / chips: `{name, age, …}` or `[3 items]`.
   String get label {
+    if (bestEffort) {
+      final n = (bestEffortText ?? raw).length;
+      return '~$n chars';
+    }
     final v = parsed;
     if (v is Map) {
       final keys = v.keys.take(3).join(', ');
@@ -60,6 +79,10 @@ class JsonExtractor {
   /// noise in normal sentences).
   static const _minLength = 4;
 
+  /// Minimum size for a best-effort match — we don't want to surface
+  /// tiny `{...}` regions that just happened to contain malformed text.
+  static const _bestEffortMinLength = 100;
+
   static List<JsonMatch> findAll(String text) {
     // Pass 1 — quote-aware scanner; works for plain JSON.
     final out = _scanWith(text, _findMatchingBracketStandard);
@@ -71,6 +94,79 @@ class JsonExtractor {
       out.addAll(_scanWith(text, _findMatchingBracketBackslashAware));
     }
     return out;
+  }
+
+  /// Like [findAll], plus surfaces large bracketed regions that *look*
+  /// like JSON but failed to parse — useful for the loose pseudo-JSON
+  /// dumps some loggers emit (unclosed string values, arrays serialised
+  /// as quoted strings, etc.). The extra entries carry [bestEffort] =
+  /// true and a [bestEffortText] field holding the un-escaped raw text.
+  static List<JsonMatch> findAllWithBestEffort(String text) {
+    final valid = findAll(text);
+    final exact = valid.map((m) => '${m.start}-${m.end}').toSet();
+    final out = [...valid];
+
+    var i = 0;
+    while (i < text.length) {
+      final c = text.codeUnitAt(i);
+      if (c == 0x7B || c == 0x5B) {
+        final end = _findMatchingBracketBackslashAware(text, i);
+        if (end != -1 && (end - i + 1) >= _bestEffortMinLength) {
+          final key = '$i-${end + 1}';
+          if (!exact.contains(key)) {
+            // Skip if entirely contained in a successfully-parsed entry
+            // (those are usually small valid JSONs nested in big malformed
+            // ones — we still want the big one as best-effort).
+            final containedInValid = valid.any(
+              (m) => m.start <= i && m.end >= end + 1 && (m.end - m.start) > (end - i + 1) ~/ 2,
+            );
+            if (!containedInValid) {
+              final snippet = text.substring(i, end + 1);
+              final un = tryUnescapeOnly(snippet);
+              if (un != null && un.length >= _bestEffortMinLength) {
+                out.add(JsonMatch(
+                  start: i,
+                  end: end + 1,
+                  raw: snippet,
+                  parsed: null,
+                  unescaped: snippet != un,
+                  bestEffort: true,
+                  bestEffortText: un,
+                ));
+                i = end + 1;
+                continue;
+              }
+            }
+          }
+        }
+      }
+      i++;
+    }
+
+    out.sort((a, b) => a.start.compareTo(b.start));
+    return out;
+  }
+
+  /// Best-effort un-escape that doesn't try to parse the result as JSON.
+  /// Wraps [text] in `"…"` and decodes once via `jsonDecode` (handles
+  /// `\"`, `\\`, `\n`, `\uXXXX`); falls back to a literal replacement
+  /// when the wrap-decode trick can't be applied.
+  static String? tryUnescapeOnly(String text) {
+    try {
+      final wrapped = '"$text"';
+      final un = jsonDecode(wrapped);
+      if (un is String) return un;
+    } catch (_) {}
+    if (text.contains(r'\"')) {
+      // Naive fallback: protect existing escaped backslashes, swap the
+      // remaining `\"`, then restore. Imperfect but readable.
+      const sentinel = '';
+      return text
+          .replaceAll(r'\\', sentinel)
+          .replaceAll(r'\"', '"')
+          .replaceAll(sentinel, r'\');
+    }
+    return null;
   }
 
   /// Tries to parse the entire string as JSON. Falls back to:
@@ -119,10 +215,25 @@ class JsonExtractor {
       }
     }
 
-    // 3) Last-ditch: maybe the text starts/ends mid-line; pick the first
-    //    JSON snippet found by findAll.
+    // 3) Maybe the text starts/ends mid-line; pick the first JSON
+    //    snippet found by findAll.
     final all = findAll(trimmed);
     if (all.isNotEmpty) return all.first;
+
+    // 4) Best-effort: at least un-escape the content so the user can
+    //    read it even when it's malformed JSON-ish output.
+    final un = tryUnescapeOnly(trimmed);
+    if (un != null && un != trimmed) {
+      return JsonMatch(
+        start: 0,
+        end: trimmed.length,
+        raw: trimmed,
+        parsed: null,
+        unescaped: true,
+        bestEffort: true,
+        bestEffortText: un,
+      );
+    }
 
     return null;
   }
