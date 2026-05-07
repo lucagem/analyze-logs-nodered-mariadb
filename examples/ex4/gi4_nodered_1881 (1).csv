@@ -1,0 +1,224 @@
+gi4_nodered_1881
+date,stream,content
+2026/05/07 08:49:51,stdout,7 May 08:49:51 - [error] [function:ms_OEEtasks] dbErrorEnd - null
+
+2026/05/07 08:49:49,stdout,7 May 08:49:49 - [error] [function:ms_RecalcTotLots] dbErrorEnd - Error: Query execution was interrupted (max_statement_time exceeded)
+
+2026/05/07 08:49:34,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"WITH qq AS (select DATE_FORMAT('2026-05-07', '%Y-%m-%d') AS DD, fx_DateTimeToStr(fx_DateNormalizeByMachine(DATE_FORMAT('2026-05-07', '%Y-%m-%d'), 'c05dcd762e4b4b5a99224c48445d7683')) AS DD_START) SELECT DD, DD_START, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_DateEndDay('2026-05-07'), 'c05dcd762e4b4b5a99224c48445d7683')) AS DD_END, YEAR( '2026-05-07' ) AS YY, WEEKOFYEAR( '2026-05-07' ) AS WW, MONTH ( '2026-05-07' ) AS MM, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_WeekToDate (YEAR ( '2026-05-07' ), WEEKOFYEAR( '2026-05-07' )), 'c05dcd762e4b4b5a99224c48445d7683')) AS WW_START, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_LastDateTimeInWeek ( '2026-05-07' ), 'c05dcd762e4b4b5a99224c48445d7683')) AS WW_END, fx_DateTimeToStr(fx_DateNormalizeByMachine(DATE_FORMAT('2026-05-07', '%Y-%m-01'), 'c05dcd762e4b4b5a99224c48445d7683')) AS MM_START, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_LastDateTimeInMonth( '2026-05-07' ), 'c05dcd762e4b4b5a99224c48445d7683')) AS MM_END FROM qq\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/07 08:49:34,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"WITH qq AS (select DATE_FORMAT('2026-05-07', '%Y-%m-%d') AS DD, fx_DateTimeToStr(fx_DateNormalizeByMachine(DATE_FORMAT('2026-05-07', '%Y-%m-%d'), 'c05dcd762e4b4b5a99224c48445d7683')) AS DD_START) SELECT DD, DD_START, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_DateEndDay('2026-05-07'), 'c05dcd762e4b4b5a99224c48445d7683')) AS DD_END, YEAR( '2026-05-07' ) AS YY, WEEKOFYEAR( '2026-05-07' ) AS WW, MONTH ( '2026-05-07' ) AS MM, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_WeekToDate (YEAR ( '2026-05-07' ), WEEKOFYEAR( '2026-05-07' )), 'c05dcd762e4b4b5a99224c48445d7683')) AS WW_START, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_LastDateTimeInWeek ( '2026-05-07' ), 'c05dcd762e4b4b5a99224c48445d7683')) AS WW_END, fx_DateTimeToStr(fx_DateNormalizeByMachine(DATE_FORMAT('2026-05-07', '%Y-%m-01'), 'c05dcd762e4b4b5a99224c48445d7683')) AS MM_START, fx_DateTimeToStr(fx_DateNormalizeByMachine(fx_LastDateTimeInMonth( '2026-05-07' ), 'c05dcd762e4b4b5a99224c48445d7683')) AS MM_END FROM qq\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/07 08:49:34,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: Query execution was interrupted (max_statement_time exceeded)\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/07 08:49:18,stderr,"TBaseMacchinaStatiDB: QueryError0: {\"uuid\":null,\"query\":\"SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",\"type\":null,\"state\":\"Err\",\"qryResult\":\"Error: Query execution was interrupted (max_statement_time exceeded)\",\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/07 08:49:34,stdout,7 May 08:49:20 - [error] [function:ms_OEEtasks] dbError - null
+
+2026/05/07 08:49:34,stdout,7 May 08:49:20 - [error] [function:ms_OEEtasks] dbErrorInit - null
+
+2026/05/07 08:49:34,stdout,7 May 08:49:18 - [error] [function:ms_RecalcTotLots] dbError - Error: Query execution was interrupted (max_statement_time exceeded)
+
+2026/05/07 08:49:34,stdout,7 May 08:49:18 - [error] [function:ms_RecalcTotLots] dbErrorInit - Error: Query execution was interrupted (max_statement_time exceeded)
+
+2026/05/07 08:49:34,stdout,7 May 08:49:18 - [error] [function:ms_RecalcTotLots] QueryError - Error: Query execution was interrupted (max_statement_time exceeded)
+
+2026/05/07 08:49:34,stdout,}
+
+2026/05/07 08:49:34,stdout,  }
+
+2026/05/07 08:49:34,stdout,      '    at Socket.Readable.push (node:internal/streams/readable:392:5)'
+
+2026/05/07 08:49:34,stdout,      '    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n' +
+
+2026/05/07 08:49:34,stdout,      '    at addChunk (node:internal/streams/readable:561:12)\n' +
+
+2026/05/07 08:49:34,stdout,      '    at Socket.emit (node:events:524:28)\n' +
+
+2026/05/07 08:49:34,stdout,      '    at Socket.<anonymous> (/data/node_modules/mysql2/lib/base/connection.js:100:25)\n' +
+
+2026/05/07 08:49:34,stdout,      '    at PacketParser.executeStart (/data/node_modules/mysql2/lib/packet_parser.js:75:16)\n' +
+
+2026/05/07 08:49:34,stdout,      '    at PacketParser.onPacket (/data/node_modules/mysql2/lib/base/connection.js:93:12)\n' +
+
+2026/05/07 08:49:34,stdout,      '    at PoolConnection.handlePacket (/data/node_modules/mysql2/lib/base/connection.js:475:34)\n' +
+
+2026/05/07 08:49:34,stdout,      '    at Query.execute (/data/node_modules/mysql2/lib/commands/command.js:29:26)\n' +
+
+2026/05/07 08:49:34,stdout,      '    at Packet.asError (/data/node_modules/mysql2/lib/packets/packet.js:740:17)\n' +
+
+2026/05/07 08:49:34,stdout,    stack: 'Error: Query execution was interrupted (max_statement_time exceeded)\n' +
+
+2026/05/07 08:49:34,stdout,"    code: undefined,
+"
+2026/05/07 08:49:34,stdout,"    },
+"
+2026/05/07 08:49:34,stdout,      count: 1
+
+2026/05/07 08:49:34,stdout,"      name: 'DBmain:QueriesExec',
+"
+2026/05/07 08:49:34,stdout,"      type: 'mysql',
+"
+2026/05/07 08:49:34,stdout,"      id: '9c22ea5298c90b4b',
+"
+2026/05/07 08:49:34,stdout,    source: {
+
+2026/05/07 08:49:34,stdout,"    message: 'Error: Query execution was interrupted (max_statement_time exceeded)',
+"
+2026/05/07 08:49:34,stdout,  error: {
+
+2026/05/07 08:49:34,stdout,"  _msgid: 'fc858d29e7558cb7',
+"
+2026/05/07 08:49:34,stdout,"  queryUrl: 'ms_RecalcTotLots.queryW',
+"
+2026/05/07 08:49:34,stdout,"  topic: \"SET STATEMENT max_statement_time = 9 FOR SELECT MAX(lm.RECALCULATED_AT) AS LAST_RECALCULATED_AT, fx_DateTimeToStr(MAX(lm.RECALCULATED_AT)) AS LAST_RECALCULATED_AT_STR FROM LOT_MACHINE lm WHERE lm.MACHINE_ID = 'c05dcd762e4b4b5a99224c48445d7683';\",
+"
+2026/05/07 08:49:34,stdout,{
+
+2026/05/07 08:49:34,stdout,7 May 08:49:18 - [info] [debug:SqlErr] 
+
+2026/05/07 08:49:09,stdout,7 May 08:49:09 - [error] [function:ms_OEEtasks] dbErrorEnd - null
+
+2026/05/07 08:48:38,stdout,7 May 08:48:38 - [error] [function:ms_OEEtasks] dbError - null
+
+2026/05/07 08:48:38,stdout,7 May 08:48:38 - [error] [function:ms_OEEtasks] dbErrorInit - null
+
+2026/05/07 08:48:38,stderr,"TBaseMacchinaStatiDB: QueryRetry raggiunto queryW.retryMax: {\"uuid\":null,\"query\":\"UPDATE MACHINE_OEE_DAY mo SET mo.TOTALE_MINUTI = 40.668593699999995, mo.OFFLINE_TIME = 0, mo.PRODUCTION_TIME = 40.3647764, mo.HELD_TIME = 4.6557576, mo.PRODUZIONE = 10, mo.SCARTI = 0, mo.FROM_DATE = '2026-05-07 00:00:00.000000', mo.TO_DATE = '2026-05-07 08:46:44.543437' WHERE mo.ID = 'cd7c8fee69c94b978323361e58baa050'\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/07 08:48:38,stderr,"TBaseMacchinaStatiDB: QueryTimeout0: {\"uuid\":null,\"query\":\"UPDATE MACHINE_OEE_DAY mo SET mo.TOTALE_MINUTI = 40.668593699999995, mo.OFFLINE_TIME = 0, mo.PRODUCTION_TIME = 40.3647764, mo.HELD_TIME = 4.6557576, mo.PRODUZIONE = 10, mo.SCARTI = 0, mo.FROM_DATE = '2026-05-07 00:00:00.000000', mo.TO_DATE = '2026-05-07 08:46:44.543437' WHERE mo.ID = 'cd7c8fee69c94b978323361e58baa050'\",\"type\":null,\"state\":\"Idle\",\"qryResult\":null,\"idx\":null,\"retryCount\":0,\"retryMax\":0}
+"
+2026/05/06 16:55:23,stdout,6 May 16:55:23 - [info] Started flows
+
+2026/05/06 16:55:23,stdout,6 May 16:55:23 - [info] Starting flows
+
+2026/05/06 16:55:23,stdout,6 May 16:55:23 - [warn] Using unencrypted credentials
+
+2026/05/06 16:55:23,stdout,6 May 16:55:23 - [info] Flows file     : /data/projects/gi4_db_tasks/flows.json
+
+2026/05/06 16:55:23,stdout,6 May 16:55:23 - [info] Active project : gi4_db_tasks
+
+2026/05/06 16:55:23,stdout,6 May 16:55:23 - [info] Server now running at http://127.0.0.1:1880/
+
+2026/05/06 16:55:23,stdout,6 May 16:55:23 - [info] Projects directory: /data/projects
+
+2026/05/06 16:55:23,stdout,6 May 16:55:23 - [info] User directory : /data
+
+2026/05/06 16:55:23,stdout,6 May 16:55:23 - [info] Context store  : 'default' [module=memory]
+
+2026/05/06 16:55:23,stdout,6 May 16:55:23 - [info] Settings file  : /data/settings.js
+
+2026/05/06 16:55:22,stdout,6 May 16:55:22 - [info] Dashboard version 3.6.5 started at /ui
+
+2026/05/06 16:55:20,stdout,6 May 16:55:20 - [info] Loading palette nodes
+
+2026/05/06 16:55:20,stdout,6 May 16:55:20 - [info] Linux 5.10.55+ x64 LE
+
+2026/05/06 16:55:20,stdout,6 May 16:55:20 - [info] Node.js  version: v20.19.4
+
+2026/05/06 16:55:20,stdout,6 May 16:55:20 - [info] Node-RED version: v4.1.0
+
+2026/05/06 16:55:20,stdout,
+
+2026/05/06 16:55:20,stdout,===================
+
+2026/05/06 16:55:20,stdout,Welcome to Node-RED
+
+2026/05/06 16:55:20,stdout,
+
+2026/05/06 16:55:20,stdout,6 May 16:55:20 - [info] 
+
+2026/05/06 16:55:20,stdout,[uuid] ACTIVATED
+
+2026/05/06 16:55:20,stdout,[path] ACTIVATED
+
+2026/05/06 16:55:20,stdout,[fs] ACTIVATED
+
+2026/05/06 16:55:20,stdout,[OPCUA] OPCUA nodes will be DISABLED (PLC_TYPE != OPC-UA)
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: RECIPE_CONF_TYPE = NODERED
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: FLY_RUN_STATUS = ICO_FUNZ_IPM_0_1_11_21
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: LOT_TERMINATE_TYPE = PLC
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: PLC_TYPE = S7
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: PROD_RESUME_TYPE = NO
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_INDEX_MADATORY = false
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_ERR = 0
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: LOT_CONF_TYPE = GI4
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: TRACKING_DETAIL_MANDATORY = false
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: PROD_STATUS_TYPE = NODERED
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: USE_GI4_DB = true
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: TRACKING_TYPE = PROD_GOOD_BAD
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: TRACKING_ANSWERS_OK = 0
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: FLY_PROD_GOOD_BAD = YES_GOOD_BAD_01
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: AUTO_LOTTO = 0
+
+2026/05/06 16:55:20,stdout,[appParams] Overridden from ENV: waitSecOnRecipeChange = 3
+
+2026/05/06 16:55:20,stdout,[appParams] CREATED with configuration nessuno and path /data/projects/
+
+2026/05/06 16:55:20,stdout,"Creation TAppParams(nessuno, /data/projects/)
+"
+2026/05/06 16:55:20,stdout,TAppParams ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TAppParams.js
+
+2026/05/06 16:55:20,stdout,TValueSendWait ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueSendWait.js
+
+2026/05/06 16:55:20,stdout,TValueOpcDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TValueOpcDisp.js
+
+2026/05/06 16:55:20,stdout,TStsDisp ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TStsDisp.js
+
+2026/05/06 16:55:20,stdout,TSetValueOnTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TSetValueOnTag.js
+
+2026/05/06 16:55:20,stdout,TQuery ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQuery.js
+
+2026/05/06 16:55:20,stdout,TQueries ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TQueries.js
+
+2026/05/06 16:55:20,stdout,TFormatSQL ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TFormatSQL.js
+
+2026/05/06 16:55:20,stdout,TDebugGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TDebugGem.js
+
+2026/05/06 16:55:20,stdout,TConvKeysightE4980 ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvKeysightE4980.js
+
+2026/05/06 16:55:20,stdout,TConvert ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConvert.js
+
+2026/05/06 16:55:20,stdout,TConsoleGem ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TConsoleGem.js
+
+2026/05/06 16:55:20,stdout,TBaseMacchinaStatiValueTag ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiValueTag.js
+
+2026/05/06 16:55:20,stdout,TBaseMacchinaStatiDB ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStatiDB.js
+
+2026/05/06 16:55:20,stdout,TBaseMacchinaStati ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseMacchinaStati.js
+
+2026/05/06 16:55:20,stdout,TBaseConv ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TBaseConv.js
+
+2026/05/06 16:55:20,stdout,TArrayCircolare ACTIVATED from /data/projects/gem-lib-nodered/GemLibsJs/TArrayCircolare.js
+
+2026/05/06 16:55:19,stdout,Avviando Node-RED con entrypoint originale...
+
+2026/05/06 16:55:19,stdout,Configurazione SSH completata!
+
+2026/05/06 16:55:19,stdout,"Hi lucagem! You've successfully authenticated, but GitHub does not provide shell access.
+"
+2026/05/06 16:55:17,stdout,Test connessione GitHub...
+
+2026/05/06 16:55:17,stdout,✓ Chiave pubblica trovata e permessi impostati
+
+2026/05/06 16:55:17,stdout,✓ Chiave privata trovata e permessi impostati
+
+2026/05/06 16:55:17,stdout,Inizializzazione configurazione SSH...
+
+2026/05/06 16:55:17,stdout,Eseguendo inizializzazione SSH...
+
+2026/05/06 16:55:17,stdout,=== Custom entrypoint avviato ===
+

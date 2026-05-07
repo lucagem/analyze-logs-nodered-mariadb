@@ -197,6 +197,7 @@ class Analyzer {
         category: meta.category,
         ruleId: 'ax_state_${e.state}',
         excerpt: '$unit$routine: $msg',
+        sourceEvent: e,
         metadata: {
           'state': e.state,
           'recordId': e.recordId,
@@ -250,6 +251,22 @@ class Analyzer {
 
     final sourceStats = sourceStatsBuilders.map((b) => b.build(inRange)).toList();
 
+    final eventsBySource = <String, List<LogEvent>>{};
+    for (final e in containerEvents) {
+      eventsBySource.putIfAbsent(e.sourceName, () => []).add(e);
+    }
+    for (final e in slowQueryEvents) {
+      eventsBySource.putIfAbsent(e.sourceName, () => []).add(e);
+    }
+    for (final e in axLogEvents) {
+      eventsBySource.putIfAbsent(e.sourceName, () => []).add(e);
+    }
+    // Lists are already timestamp-sorted (parsers sort), but multiple
+    // sources can be concatenated above; sort defensively just in case.
+    for (final list in eventsBySource.values) {
+      list.sort((a, b) => a.timestamp.compareTo(b.timestamp));
+    }
+
     return AnalysisResult(
       generatedAt: DateTime.now(),
       requestedFrom: input.from,
@@ -263,6 +280,7 @@ class Analyzer {
       sources: input.sources,
       sourceStats: sourceStats,
       warnings: warnings,
+      eventsBySource: eventsBySource,
     );
   }
 }

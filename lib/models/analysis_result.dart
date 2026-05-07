@@ -81,6 +81,7 @@ class AnalysisResult {
     required this.sources,
     required this.sourceStats,
     required this.warnings,
+    required this.eventsBySource,
   });
 
   final DateTime generatedAt;
@@ -95,4 +96,10 @@ class AnalysisResult {
   final List<LogSource> sources;
   final List<SourceStats> sourceStats;
   final List<String> warnings;
+
+  /// Every parsed event, grouped by source-file display name and sorted by
+  /// timestamp. Includes events outside the effective window — used by the
+  /// Context viewer to slice [-N, +M] lines around a clicked suspicious
+  /// event.
+  final Map<String, List<LogEvent>> eventsBySource;
 }

@@ -12,6 +12,7 @@ import '../models/severity.dart';
 import '../models/suspicious_event.dart';
 import '../services/file_opener.dart';
 import '../services/settings_service.dart';
+import 'context_viewer_screen.dart';
 
 class ReportScreen extends StatefulWidget {
   const ReportScreen({
@@ -501,6 +502,11 @@ class _ReportScreenState extends State<ReportScreen> {
                 _legendChip('AX DEBUG', _axDebugBg, _highlightFg),
               ],
             ),
+            const SizedBox(height: 4),
+            const Text(
+              'Click a row to open 20 lines of context before / 10 after, with a JSON formatter pane.',
+              style: TextStyle(fontSize: 11, color: Colors.black54),
+            ),
             const SizedBox(height: 8),
             for (final ev in shown) _timelineRow(ev),
           ],
@@ -514,43 +520,79 @@ class _ReportScreenState extends State<ReportScreen> {
     final excerpt = ev.excerpt.length > 400
         ? '${ev.excerpt.substring(0, 400)}…'
         : ev.excerpt;
+    final canOpen = ev.sourceEvent != null &&
+        widget.result.eventsBySource[ev.sourceName] != null;
+
+    final row = DefaultTextStyle.merge(
+      style: TextStyle(color: fg, fontSize: 12.5, height: 1.3),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            width: 140,
+            child: Text(_tsFmt.format(ev.timestamp),
+                style: const TextStyle(
+                    fontFeatures: [FontFeature.tabularFigures()])),
+          ),
+          SizedBox(
+            width: 75,
+            child: Text(ev.severity.label,
+                style: const TextStyle(fontWeight: FontWeight.w600)),
+          ),
+          SizedBox(
+            width: 170,
+            child: Text(ev.sourceName, overflow: TextOverflow.ellipsis),
+          ),
+          SizedBox(
+            width: 170,
+            child: Text(ev.category, overflow: TextOverflow.ellipsis),
+          ),
+          Expanded(
+            child: Text(excerpt, maxLines: 3, overflow: TextOverflow.ellipsis),
+          ),
+          if (canOpen)
+            Padding(
+              padding: const EdgeInsets.only(left: 6),
+              child: Icon(Icons.unfold_more, size: 16, color: fg ?? Colors.black45),
+            ),
+        ],
+      ),
+    );
+
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 1),
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
       decoration: BoxDecoration(
         color: bg,
         borderRadius: BorderRadius.circular(4),
       ),
-      child: DefaultTextStyle.merge(
-        style: TextStyle(color: fg, fontSize: 12.5, height: 1.3),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              width: 140,
-              child: Text(_tsFmt.format(ev.timestamp),
-                  style: const TextStyle(fontFeatures: [FontFeature.tabularFigures()])),
-            ),
-            SizedBox(
-              width: 75,
-              child: Text(ev.severity.label,
-                  style: const TextStyle(fontWeight: FontWeight.w600)),
-            ),
-            SizedBox(
-              width: 170,
-              child: Text(ev.sourceName, overflow: TextOverflow.ellipsis),
-            ),
-            SizedBox(
-              width: 170,
-              child: Text(ev.category, overflow: TextOverflow.ellipsis),
-            ),
-            Expanded(
-              child: SelectableText(excerpt),
-            ),
-          ],
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: canOpen ? () => _openContext(ev) : null,
+          borderRadius: BorderRadius.circular(4),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+            child: row,
+          ),
         ),
       ),
     );
+  }
+
+  void _openContext(SuspiciousEvent ev) {
+    final list = widget.result.eventsBySource[ev.sourceName];
+    final source = ev.sourceEvent;
+    if (list == null || source == null) return;
+    final idx = list.indexOf(source);
+    if (idx < 0) return;
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (_) => ContextViewerScreen(
+        events: list,
+        focusedIndex: idx,
+        sourceKind: ev.sourceKind,
+        sourceName: ev.sourceName,
+      ),
+    ));
   }
 
   Widget _slowQueries(AnalysisResult r) {

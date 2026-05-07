@@ -23,6 +23,7 @@ class SlowQueryAnalyzer {
           category: 'Slow query',
           ruleId: 'sq_duration',
           excerpt: _excerpt(e),
+          sourceEvent: e,
           metadata: {
             'queryTime': e.queryTime,
             'rowsExamined': e.rowsExamined,
@@ -39,6 +40,7 @@ class SlowQueryAnalyzer {
           category: 'Slow query · lock',
           ruleId: 'sq_lock',
           excerpt: _excerpt(e),
+          sourceEvent: e,
           metadata: {'lockTime': e.lockTime},
         ));
       }
@@ -55,6 +57,7 @@ class SlowQueryAnalyzer {
           category: 'Slow query · selectivity',
           ruleId: 'sq_selectivity',
           excerpt: _excerpt(e),
+          sourceEvent: e,
           metadata: {
             'rowsExamined': e.rowsExamined,
             'rowsSent': e.rowsSent,
@@ -94,6 +97,7 @@ class SlowQueryAnalyzer {
             category: 'Slow query · repeated',
             ruleId: 'sq_repeated',
             excerpt: _excerpt(mid),
+            sourceEvent: mid,
             metadata: {
               'count': count,
               'windowSeconds': rules.repeatWindowSeconds,

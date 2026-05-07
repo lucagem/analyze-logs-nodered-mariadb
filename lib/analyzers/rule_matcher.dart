@@ -25,6 +25,7 @@ class RuleMatcher {
           category: pattern.category,
           ruleId: pattern.id,
           excerpt: _flatten(body),
+          sourceEvent: event,
           metadata: const {},
         );
         return;

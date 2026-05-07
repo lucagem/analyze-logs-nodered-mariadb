@@ -1,3 +1,4 @@
+import 'log_event.dart';
 import 'log_source.dart';
 import 'severity.dart';
 
@@ -10,6 +11,7 @@ class SuspiciousEvent {
     required this.category,
     required this.ruleId,
     required this.excerpt,
+    this.sourceEvent,
     this.metadata = const {},
   });
 
@@ -20,5 +22,10 @@ class SuspiciousEvent {
   final String category;
   final String ruleId;
   final String excerpt;
+
+  /// Back-reference to the original parsed log event. Used by the Context
+  /// viewer to slice [-N, +M] lines around it.
+  final LogEvent? sourceEvent;
+
   final Map<String, Object?> metadata;
 }
