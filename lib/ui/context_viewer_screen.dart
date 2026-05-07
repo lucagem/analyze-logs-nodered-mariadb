@@ -5,15 +5,17 @@ import 'package:intl/intl.dart';
 import '../models/log_event.dart';
 import '../models/log_source.dart';
 import '../utils/json_extractor.dart';
+import '../utils/json_highlighter.dart';
 
 /// Shows a sliding window of [contextBefore] + 1 + [contextAfter] events
 /// around a focused [LogEvent], plus a JSON formatter pane on the right.
 ///
 /// JSON snippets detected inside any visible line are surfaced as small
-/// chips; clicking one loads the formatted value into the right pane.
-/// The user can also paste arbitrary text into the pane and click
-/// "Format" — useful for snippets that aren't strict JSON until cleaned
-/// up by hand.
+/// chips; clicking one loads the formatted (and syntax-highlighted)
+/// value into the right pane. The user can also paste arbitrary text
+/// into the pane and click "Format" — useful for snippets that aren't
+/// strict JSON until cleaned up by hand. The two panes are separated by
+/// a draggable splitter.
 class ContextViewerScreen extends StatefulWidget {
   const ContextViewerScreen({
     super.key,
@@ -38,22 +40,35 @@ class ContextViewerScreen extends StatefulWidget {
 
 class _ContextViewerScreenState extends State<ContextViewerScreen> {
   static final _tsFmt = DateFormat('yyyy-MM-dd HH:mm:ss');
+  final _highlighter = JsonHighlighter();
 
   final _pasteController = TextEditingController();
-  String? _formatted; // pretty-printed JSON shown in the right pane
+  final _vScroll = ScrollController();
+  final _hScroll = ScrollController();
+
+  // Right-pane state (formatted JSON viewer)
+  dynamic _formattedValue; // parsed JSON value, used for highlight
+  String? _formattedRaw; // pretty-printed text (used for copy)
   String? _formatterError;
   String? _formatterTitle;
   bool _formatterUnescaped = false;
+  bool _wordWrap = false;
+
+  // Splitter ratio (left pane fraction of total width).
+  double _ratio = 0.6;
 
   @override
   void dispose() {
     _pasteController.dispose();
+    _vScroll.dispose();
+    _hScroll.dispose();
     super.dispose();
   }
 
   void _showJson(JsonMatch m, {String? title}) {
     setState(() {
-      _formatted = m.pretty;
+      _formattedValue = m.parsed;
+      _formattedRaw = m.pretty;
       _formatterError = null;
       _formatterTitle = title ?? 'JSON snippet';
       _formatterUnescaped = m.unescaped;
@@ -65,7 +80,8 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
     final m = JsonExtractor.tryParseWhole(text);
     if (m != null) {
       setState(() {
-        _formatted = m.pretty;
+        _formattedValue = m.parsed;
+        _formattedRaw = m.pretty;
         _formatterError = null;
         _formatterTitle = 'Pasted JSON';
         _formatterUnescaped = m.unescaped;
@@ -73,7 +89,8 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
       return;
     }
     setState(() {
-      _formatted = null;
+      _formattedValue = null;
+      _formattedRaw = null;
       _formatterError = 'No valid JSON found in the pasted text.';
       _formatterTitle = null;
       _formatterUnescaped = false;
@@ -82,7 +99,8 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
 
   void _clearFormatter() {
     setState(() {
-      _formatted = null;
+      _formattedValue = null;
+      _formattedRaw = null;
       _formatterError = null;
       _formatterTitle = null;
       _formatterUnescaped = false;
@@ -91,7 +109,7 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
   }
 
   Future<void> _copyFormatted() async {
-    final v = _formatted;
+    final v = _formattedRaw;
     if (v == null) return;
     await Clipboard.setData(ClipboardData(text: v));
     if (!mounted) return;
@@ -112,14 +130,33 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
         title: Text(
             'Context · ${widget.sourceKind.label} · ${widget.sourceName} · ${_tsFmt.format(focused.timestamp)}'),
       ),
-      body: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Expanded(flex: 3, child: _contextPane(slice, start)),
-          const VerticalDivider(width: 1),
-          Expanded(flex: 2, child: _jsonPane()),
-        ],
-      ),
+      body: LayoutBuilder(builder: (context, constraints) {
+        const dividerWidth = 8.0;
+        final available = constraints.maxWidth - dividerWidth;
+        final leftWidth = (available * _ratio).clamp(220.0, available - 220.0);
+        final rightWidth = available - leftWidth;
+        return Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            SizedBox(
+              width: leftWidth,
+              child: _contextPane(slice, start),
+            ),
+            _SplitterHandle(
+              width: dividerWidth,
+              onDrag: (dx) {
+                setState(() {
+                  _ratio = ((leftWidth + dx) / available).clamp(0.2, 0.85);
+                });
+              },
+            ),
+            SizedBox(
+              width: rightWidth,
+              child: _jsonPane(),
+            ),
+          ],
+        );
+      }),
     );
   }
 
@@ -147,7 +184,8 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
           child: ListView.separated(
             padding: const EdgeInsets.symmetric(vertical: 8),
             itemCount: slice.length,
-            separatorBuilder: (_, _) => const Divider(height: 1, indent: 24, endIndent: 24),
+            separatorBuilder: (_, _) =>
+                const Divider(height: 1, indent: 24, endIndent: 24),
             itemBuilder: (context, i) {
               final relIndex = (sliceStart + i) - widget.focusedIndex;
               final isFocused = relIndex == 0;
@@ -233,7 +271,7 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           color: Colors.grey.shade100,
           child: Row(
             children: [
@@ -265,7 +303,14 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
                   ],
                 ),
               ),
-              if (_formatted != null) ...[
+              IconButton(
+                tooltip: _wordWrap ? 'Disable word wrap' : 'Enable word wrap',
+                isSelected: _wordWrap,
+                selectedIcon: const Icon(Icons.wrap_text, size: 18),
+                icon: const Icon(Icons.wrap_text_outlined, size: 18),
+                onPressed: () => setState(() => _wordWrap = !_wordWrap),
+              ),
+              if (_formattedValue != null) ...[
                 IconButton(
                   tooltip: 'Copy',
                   icon: const Icon(Icons.copy, size: 18),
@@ -328,17 +373,17 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
   }
 
   Widget _formattedView() {
-    if (_formatterError != null && _formatted == null) {
-      return Center(
-        child: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Text(_formatterError!,
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.red.shade700)),
-        ),
-      );
-    }
-    if (_formatted == null) {
+    if (_formattedValue == null) {
+      if (_formatterError != null) {
+        return Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Text(_formatterError!,
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.red.shade700)),
+          ),
+        );
+      }
       return const Center(
         child: Padding(
           padding: EdgeInsets.all(24),
@@ -350,34 +395,88 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
         ),
       );
     }
-    return Stack(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(12),
+
+    final span = _highlighter.highlight(_formattedValue);
+    final body = SelectableText.rich(span);
+
+    if (_wordWrap) {
+      return Scrollbar(
+        controller: _vScroll,
+        thumbVisibility: true,
+        child: SingleChildScrollView(
+          controller: _vScroll,
+          padding: const EdgeInsets.fromLTRB(12, 12, 18, 12),
+          child: body,
+        ),
+      );
+    }
+
+    // No-wrap: 2-D scroll. Outer scrollbar controls vertical, inner
+    // horizontal. `IntrinsicWidth` lets the rich text take its natural
+    // width so long lines don't wrap.
+    return Scrollbar(
+      controller: _vScroll,
+      thumbVisibility: true,
+      child: SingleChildScrollView(
+        controller: _vScroll,
+        child: Scrollbar(
+          controller: _hScroll,
+          thumbVisibility: true,
+          notificationPredicate: (n) => n.depth == 1,
           child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: SelectableText(
-                _formatted!,
-                style: const TextStyle(fontFamily: 'monospace', fontSize: 12.5, height: 1.4),
+            controller: _hScroll,
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.fromLTRB(12, 12, 18, 18),
+            child: IntrinsicWidth(child: body),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Small draggable handle used as the divider between the two panes.
+class _SplitterHandle extends StatefulWidget {
+  const _SplitterHandle({required this.width, required this.onDrag});
+
+  final double width;
+  final void Function(double dx) onDrag;
+
+  @override
+  State<_SplitterHandle> createState() => _SplitterHandleState();
+}
+
+class _SplitterHandleState extends State<_SplitterHandle> {
+  bool _hover = false;
+  bool _dragging = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final highlight = _hover || _dragging;
+    return MouseRegion(
+      cursor: SystemMouseCursors.resizeColumn,
+      onEnter: (_) => setState(() => _hover = true),
+      onExit: (_) => setState(() => _hover = false),
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onHorizontalDragStart: (_) => setState(() => _dragging = true),
+        onHorizontalDragEnd: (_) => setState(() => _dragging = false),
+        onHorizontalDragCancel: () => setState(() => _dragging = false),
+        onHorizontalDragUpdate: (d) => widget.onDrag(d.delta.dx),
+        child: Container(
+          width: widget.width,
+          color: highlight ? Colors.indigo.withValues(alpha: 0.20) : Colors.grey.shade200,
+          child: Center(
+            child: Container(
+              width: 2,
+              decoration: BoxDecoration(
+                color: highlight ? Colors.indigo : Colors.grey.shade400,
+                borderRadius: BorderRadius.circular(1),
               ),
             ),
           ),
         ),
-        if (_formatterError != null)
-          Positioned(
-            left: 0,
-            right: 0,
-            bottom: 0,
-            child: Container(
-              color: Colors.amber.withValues(alpha: 0.2),
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-              child: Text(_formatterError!,
-                  style: const TextStyle(fontSize: 12, color: Colors.black87)),
-            ),
-          ),
-      ],
+      ),
     );
   }
 }
