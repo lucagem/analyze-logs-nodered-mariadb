@@ -43,6 +43,7 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
   String? _formatted; // pretty-printed JSON shown in the right pane
   String? _formatterError;
   String? _formatterTitle;
+  bool _formatterUnescaped = false;
 
   @override
   void dispose() {
@@ -55,6 +56,7 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
       _formatted = m.pretty;
       _formatterError = null;
       _formatterTitle = title ?? 'JSON snippet';
+      _formatterUnescaped = m.unescaped;
     });
   }
 
@@ -66,18 +68,7 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
         _formatted = m.pretty;
         _formatterError = null;
         _formatterTitle = 'Pasted JSON';
-      });
-      return;
-    }
-    // Fallback: maybe the user pasted a whole log line — try to find the
-    // first valid JSON snippet within it.
-    final all = JsonExtractor.findAll(text);
-    if (all.isNotEmpty) {
-      setState(() {
-        _formatted = all.first.pretty;
-        _formatterError =
-            all.length > 1 ? 'Showing first of ${all.length} JSON snippets' : null;
-        _formatterTitle = 'Pasted JSON';
+        _formatterUnescaped = m.unescaped;
       });
       return;
     }
@@ -85,6 +76,7 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
       _formatted = null;
       _formatterError = 'No valid JSON found in the pasted text.';
       _formatterTitle = null;
+      _formatterUnescaped = false;
     });
   }
 
@@ -93,6 +85,7 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
       _formatted = null;
       _formatterError = null;
       _formatterTitle = null;
+      _formatterUnescaped = false;
       _pasteController.clear();
     });
   }
@@ -247,8 +240,30 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
               const Icon(Icons.data_object, size: 18),
               const SizedBox(width: 8),
               Expanded(
-                child: Text(_formatterTitle ?? 'JSON viewer',
-                    style: const TextStyle(fontWeight: FontWeight.w600)),
+                child: Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  spacing: 6,
+                  children: [
+                    Text(_formatterTitle ?? 'JSON viewer',
+                        style: const TextStyle(fontWeight: FontWeight.w600)),
+                    if (_formatterUnescaped)
+                      Container(
+                        padding:
+                            const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        decoration: BoxDecoration(
+                          color: Colors.indigo.shade50,
+                          border:
+                              Border.all(color: Colors.indigo.withValues(alpha: 0.3)),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: const Text('auto-unescaped',
+                            style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xFF3949AB))),
+                      ),
+                  ],
+                ),
               ),
               if (_formatted != null) ...[
                 IconButton(
