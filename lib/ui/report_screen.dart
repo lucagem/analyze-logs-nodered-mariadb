@@ -522,6 +522,10 @@ class _ReportScreenState extends State<ReportScreen> {
         : ev.excerpt;
     final canOpen = ev.sourceEvent != null &&
         widget.result.eventsBySource[ev.sourceName] != null;
+    final isSynthetic = ev.sourceEvent?.synthetic ?? false;
+    final tsLabel = isSynthetic
+        ? '~${_tsFmt.format(ev.timestamp)}'
+        : _tsFmt.format(ev.timestamp);
 
     final row = DefaultTextStyle.merge(
       style: TextStyle(color: fg, fontSize: 12.5, height: 1.3),
@@ -529,10 +533,16 @@ class _ReportScreenState extends State<ReportScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            width: 140,
-            child: Text(_tsFmt.format(ev.timestamp),
-                style: const TextStyle(
-                    fontFeatures: [FontFeature.tabularFigures()])),
+            width: 150,
+            child: Tooltip(
+              message: isSynthetic
+                  ? 'Synthetic timestamp — interpolated between adjacent records'
+                  : '',
+              child: Text(tsLabel,
+                  style: TextStyle(
+                      fontStyle: isSynthetic ? FontStyle.italic : FontStyle.normal,
+                      fontFeatures: const [FontFeature.tabularFigures()])),
+            ),
           ),
           SizedBox(
             width: 75,

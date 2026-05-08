@@ -7,6 +7,7 @@ class LogEvent {
     required this.sourceName,
     required this.content,
     this.stream,
+    this.synthetic = false,
   });
 
   final DateTime timestamp;
@@ -14,6 +15,12 @@ class LogEvent {
   final String sourceName;
   final String content;
   final String? stream;
+
+  /// True when [timestamp] was synthesized by the parser because the source
+  /// line had no leading timestamp (typically pre-startup banner output that
+  /// the container emitted before its logging framework attached). The value
+  /// is interpolated between the previous and next real timestamps.
+  final bool synthetic;
 }
 
 class AxLogEvent extends LogEvent {

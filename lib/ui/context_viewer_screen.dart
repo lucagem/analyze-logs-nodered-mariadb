@@ -220,6 +220,9 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
     final relLabel = relIndex == 0
         ? '★'
         : (relIndex < 0 ? '$relIndex' : '+$relIndex');
+    final tsLabel = e.synthetic
+        ? '~${_tsFmt.format(e.timestamp)}'
+        : _tsFmt.format(e.timestamp);
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
       color: isFocused ? Colors.indigo.withValues(alpha: 0.10) : null,
@@ -238,12 +241,20 @@ class _ContextViewerScreenState extends State<ContextViewerScreen> {
           ),
           const SizedBox(width: 8),
           SizedBox(
-            width: 150,
-            child: Text(_tsFmt.format(e.timestamp),
-                style: const TextStyle(
-                    fontFamily: 'monospace',
-                    fontSize: 12,
-                    fontFeatures: [FontFeature.tabularFigures()])),
+            width: 160,
+            child: Tooltip(
+              message: e.synthetic
+                  ? 'Synthetic timestamp — line had no leading date; '
+                      'interpolated between adjacent records'
+                  : '',
+              child: Text(tsLabel,
+                  style: TextStyle(
+                      fontFamily: 'monospace',
+                      fontSize: 12,
+                      fontStyle: e.synthetic ? FontStyle.italic : FontStyle.normal,
+                      color: e.synthetic ? Colors.indigo.shade400 : null,
+                      fontFeatures: const [FontFeature.tabularFigures()])),
+            ),
           ),
           const SizedBox(width: 8),
           Expanded(
